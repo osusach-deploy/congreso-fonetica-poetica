@@ -1,16 +1,15 @@
-import { defineConfig } from 'astro/config';
+import { defineConfig } from "astro/config";
 import tailwind from "@astrojs/tailwind";
 import svelte from "@astrojs/svelte";
-
 
 // https://astro.build/config
 export default defineConfig({
   integrations: [tailwind(), svelte()],
   i18n: {
-    defaultLocale: 'es',
-    locales: ['es', 'en', 'it'],
+    defaultLocale: "es",
+    locales: ["es", "en", "it"],
     routing: {
-      prefixDefaultLocale: false
-    }
-  }
+      prefixDefaultLocale: false,
+    },
+  },
 });
