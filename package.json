@@ -13,8 +13,12 @@
     "@astrojs/svelte": "^5.4.0",
     "@astrojs/tailwind": "^5.1.0",
     "astro": "^4.7.0",
-    "svelte": "^4.2.15",
+    "astro-google-fonts-optimizer": "^0.2.2",
+    "svelte": "^4.2.17",
     "tailwindcss": "^3.4.3",
     "typescript": "^5.4.5"
+  },
+  "devDependencies": {
+    "svelte-reveal": "^1.1.0"
   }
 }

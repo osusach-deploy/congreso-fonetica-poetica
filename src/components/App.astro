@@ -1,5 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import Home from './Home.svelte';
+import { reveal } from 'svelte-reveal';
 
 import { getI18N } from '../i18n';
 const { currentLocale = 'es' } = Astro
@@ -7,8 +9,8 @@ const i18n = getI18N(currentLocale);
 ---
 
 <Layout title="Welcome to Astro.">
-	<div class="mx-auto">
+	<div class="flex flex-col items-center">
 		Algo internacional de Algo
-		<p>Este texto esta en {i18n.title}</p>
+		<Home/>
 	</div>
 </Layout>
