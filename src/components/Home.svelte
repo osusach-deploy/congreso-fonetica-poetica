@@ -1,26 +1,35 @@
 <script lang="ts">
   import Participantes from "./Participantes.svelte";
-  import { reveal, type RevealOptions } from "svelte-reveal";
+  import Formulario from "./Formulario.svelte";
+  import { reveal, setDefaultOptions } from "svelte-reveal";
 
-  const config: RevealOptions = {
-    preset: "fade",
-    easing: "easeInOutCubic",
-    duration: 500,
-  };
+  function scrollToBottom() {
+    window.scrollTo({
+      top: document.body.scrollHeight,
+      behavior: 'smooth'
+    });
+  }
+
+  setDefaultOptions({
+		easing: 'easeOutCubic',
+		duration: 500
+	});
+
+  let email = '';
 </script>
 
-<div class="flex flex-col w-full items-center">
-  <div class=" flex flex-row w-[60%] justify-between">
-    <div class="flex flex-col w-[30%] text-center">
-      <p class=" text-3xl">1er CONGRESO NACIONAL DE FONÉTICA Y POÉTICA</p>
-      <p class=" font-light">15 de Noviembre 2024</p>
+<div class="flex flex-col w-full items-center mt-20">
+  <div class=" flex flex-row my-10 w-[60%] justify-between">
+    <div class="flex flex-col w-[40%] gap-3 text-center  align-middle justify-center">
+      <p class=" font-light text-5xl">1er CONGRESO NACIONAL DE FONÉTICA Y POÉTICA</p>
+      <p class=" font-light text-lg">15 de Noviembre 2024</p>
     </div>
     <div
-      use:reveal={config}
-      class="flex flex-col gap-2 bg-slate-200 rounded-xl p-4 w-fit text-center items-center"
+      
+      class="flex flex-col my-auto gap-2 bg-white bg-opacity-40 rounded-xl p-5 w-[40%] text-center items-center"
     >
-      <p class=" text-2xl font-black">¿Deseas ser oyente?</p>
-      <p class=" text-sm font-light">
+      <p class=" text-3xl font-black">¿Deseas ser oyente?</p>
+      <p class="font-light text-lg">
         Déjanos tu correo electrónico y te enviaremos las noticias más recientes
         sobre el congreso
       </p>
@@ -30,15 +39,21 @@
             class="rounded-l-full pl-3 py-2"
             name="email"
             type="email"
+            bind:value={email}
             placeholder="Introduce tu correo"
           />
         </label>
-        <button
-          class=" text-white font-black px-4 bg-blue-400 hover:bg-blue-500 transition-all rounded-r-full"
+        <button type="submit"
+          class=" w-full bg-indigo-400 hover:bg-indigo-500 transition-all text-white font-bold py-2 px-4 rounded-r-full"
           >Suscribirse</button
         >
       </form>
     </div>
   </div>
-  <Participantes />
+  <Participantes/>
+  <div class="flex flex-col gap-7 items-center mb-10">
+    <p class=" font-light text-xl">¿Te gustaría participar como exponente?</p>
+    <button on:click={scrollToBottom}><svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" viewBox="0 0 1024 1024"><path fill="black" d="M8.2 275.4c0-8.6 3.4-17.401 10-24.001c13.2-13.2 34.8-13.2 48 0l451.8 451.8l445.2-445.2c13.2-13.2 34.8-13.2 48 0s13.2 34.8 0 48L542 775.399c-13.2 13.2-34.8 13.2-48 0l-475.8-475.8c-6.8-6.8-10-15.4-10-24.199"/></svg></button>
+  </div>
+  <Formulario/>
 </div>
