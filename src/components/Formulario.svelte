@@ -23,7 +23,7 @@
     <div class="w-[35%] mt-10 text-lg">
         <form on:submit|preventDefault={handleSubmit} class="bg-white bg-opacity-50 p-5 rounded-lg">
           <div class="mb-4">
-            <p class=" text-lg font-bold mb-4">Información Personal</p>
+            <p class=" text-lg font-semibold mb-4">Información Personal</p>
             <input type="text" bind:value={nombre} placeholder="Nombre" class="appearance-none border rounded-lg w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"/>
           </div>
           <div class="mb-4">
@@ -33,7 +33,7 @@
             <input type="text" bind:value={institucion} placeholder="Institución" class="appearance-none border rounded-lg w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"/>
           </div>
           <div class="mb-4">
-            <p class=" text-lg font-bold mb-4">Información Exposición</p>
+            <p class=" text-lg font-semibold mb-4">Información Exposición</p>
             <input type="text" bind:value={titulo} placeholder="Título presentación" class="appearance-none border rounded-lg w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"/>
           </div>
           <div class="mb-6">
@@ -44,7 +44,7 @@
               {/each}
             </select>
           </div>
-          <button type="submit" class="w-full bg-indigo-400 hover:bg-indigo-500 transition-all text-white font-bold py-2 px-4 rounded ">
+          <button type="submit" class="w-full bg-indigo-400 hover:bg-indigo-500 transition-all text-white font-semibold py-2 px-4 rounded ">
             Enviar Declaración
           </button>
         </form>
