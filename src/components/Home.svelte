@@ -18,31 +18,31 @@
   let email = '';
 </script>
 
-<div class="flex flex-col w-full items-center mt-20">
-  <div class=" animate-fade-up animate-ease-in-out flex flex-row my-10 w-[60%] justify-between">
-    <div class="flex flex-col w-[40%] gap-3 text-center  align-middle justify-center">
+<div class="flex flex-col w-full items-center mt-24 sm:mt-20">
+  <div class=" animate-fade-up animate-ease-in-out flex flex-col gap-20 sm:flex-row sm:my-10 w-full sm:w-[60%] sm:justify-between">
+    <div class="flex flex-col sm:w-[40%] gap-3 text-center  align-middle justify-center">
       <p class=" font-light text-5xl">1er CONGRESO NACIONAL DE FONÉTICA Y POÉTICA</p>
       <p class=" font-extralight text-2xl">15 de Noviembre 2024</p>
     </div>
     <div
       
-      class="flex flex-col my-auto gap-2 bg-white bg-opacity-40 rounded-xl p-5 w-[40%] text-center items-center"
+      class="flex flex-col my-auto gap-2 bg-white bg-opacity-40 rounded-xl p-5 mx-5 sm:w-[40%] text-center items-center"
     >
       <p class=" text-3xl font-bold">¿Deseas ser oyente?</p>
       <p class="font-light text-lg">
         Déjanos tu correo electrónico y te enviaremos las noticias más recientes
         sobre el congreso
       </p>
-      <form class="w-[100%] justify-center flex flex-row px-5 py-2 rounded-lg" method="POST">
+      <form class="w-[100%] justify-center flex flex-row px-2 sm:px-5 py-2 rounded-lg" method="POST">
           <input
-            class="rounded-l-full w-full pl-3 py-2 appearance-none focus:outline-none focus:shadow-outline"
+            class="rounded-l-full w-[65%] sm:w-full pl-3 py-2 appearance-none focus:outline-none focus:shadow-outline"
             name="email"
             type="email"
             bind:value={email}
             placeholder="Introduce tu correo"
           />
         <button type="submit"
-          class="flex w-[30%] justify-center bg-indigo-400 hover:bg-indigo-500 transition-all text-white font-semibold py-2 px-4 rounded-r-full"
+          class="flex w-[35%] sm:w-[30%] justify-center bg-indigo-400 hover:bg-indigo-500 transition-all text-white font-semibold py-2 sm:px-4 rounded-r-full"
           >Suscribirse</button
         >
       </form>

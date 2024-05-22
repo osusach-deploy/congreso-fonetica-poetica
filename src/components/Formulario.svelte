@@ -13,14 +13,14 @@
 
 </script>
 
-<div class="flex flex-row w-[60%] justify-between mt-20 mb-44">
-    <div class="flex flex-col w-[35%] gap-3 text-center justify-center">
+<div class="flex flex-col sm:flex-row sm:w-[60%] sm:justify-between mx-10 mt-10 sm:mt-20 mb-20 sm:mb-44">
+    <div class="flex flex-col sm:w-[35%] gap-3 text-center justify-center">
         <p class="font-bold text-4xl">Declaración de Interés</p>
         <p class="text-lg font-light">Si te interesa ser parte del primer congreso de fonética y poética completa este formulario para que podamos
           planificar tu participación.
         </p>
     </div>
-    <div class="w-[35%] mt-10 text-lg">
+    <div class="sm:w-[35%] mt-10 text-lg">
         <form on:submit|preventDefault={handleSubmit} class="bg-white bg-opacity-50 p-5 rounded-lg">
           <div class="mb-4">
             <p class=" text-lg font-semibold mb-4">Información Personal</p>
