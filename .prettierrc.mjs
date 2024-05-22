@@ -5,6 +5,8 @@ export default {
     {
       files: "*.astro",
       options: {
+        tabWidth: 2,
+        useTabs: false,
         parser: "astro",
       },
     },
