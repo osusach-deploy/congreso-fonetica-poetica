@@ -3,19 +3,40 @@
   import Formulario from "./Formulario.svelte";
   import { reveal, setDefaultOptions } from "svelte-reveal";
 
+  const API_URL = import.meta.env.PUBLIC_API_URL;
+
   function scrollToBottom() {
     window.scrollTo({
       top: document.body.scrollHeight,
-      behavior: 'smooth'
+      behavior: "smooth",
     });
   }
 
-  setDefaultOptions({
-		easing: 'easeOutCubic',
-		duration: 500
-	});
+  function handleClick() {
+    const body = {
+      email: email
+    };
+    console.log(body);
+    
+    fetch(API_URL + "listeners", {
+      method: "POST",
+      body: JSON.stringify(body),
+    })
+      .then((x) => {
+        console.log(x);
+        alert("LISTENER");
+      })
+      .catch((e) => {
+        console.log(e);
+      });
+    }
 
-  let email = '';
+  setDefaultOptions({
+    easing: "easeOutCubic",
+    duration: 500,
+  });
+
+  let email = "";
 </script>
 
 <div class="flex flex-col w-full items-center mt-24 sm:mt-20">
@@ -48,10 +69,23 @@
       </form>
     </div>
   </div>
-  <Participantes/>
-  <div class="flex flex-col gap-7 items-center mb-10 animate-fade-up animate-delay-700">
+  <Participantes />
+  <div
+    class="flex flex-col gap-7 items-center mb-10 animate-fade-up animate-delay-700"
+  >
     <p class=" font-light text-xl">¿Te gustaría participar como exponente?</p>
-    <button on:click={scrollToBottom} class="hover:animate-bounce"><svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" viewBox="0 0 1024 1024"><path fill="black" d="M8.2 275.4c0-8.6 3.4-17.401 10-24.001c13.2-13.2 34.8-13.2 48 0l451.8 451.8l445.2-445.2c13.2-13.2 34.8-13.2 48 0s13.2 34.8 0 48L542 775.399c-13.2 13.2-34.8 13.2-48 0l-475.8-475.8c-6.8-6.8-10-15.4-10-24.199"/></svg></button>
+    <button on:click={scrollToBottom} class="hover:animate-bounce py-4"
+      ><svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="2em"
+        height="2em"
+        viewBox="0 0 1024 1024"
+        ><path
+          fill="black"
+          d="M8.2 275.4c0-8.6 3.4-17.401 10-24.001c13.2-13.2 34.8-13.2 48 0l451.8 451.8l445.2-445.2c13.2-13.2 34.8-13.2 48 0s13.2 34.8 0 48L542 775.399c-13.2 13.2-34.8 13.2-48 0l-475.8-475.8c-6.8-6.8-10-15.4-10-24.199"
+        /></svg
+      ></button
+    >
   </div>
-  <Formulario/>
+  <Formulario />
 </div>

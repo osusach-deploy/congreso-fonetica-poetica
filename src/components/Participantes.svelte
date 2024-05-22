@@ -1,7 +1,9 @@
 <script>
 </script>
 
-<div class="flex flex-col gap-10 my-24 text-center animate-fade-up animate-delay-700">
+<div
+  class="flex flex-col gap-10 my-24 text-center animate-fade-up animate-delay-700"
+>
   <p class="font-light text-2xl">Organizan</p>
   <div class="flex flex-col sm:flex-row items-center gap-10">
     <img src="/img/usach.png" class="h-24" alt="" />
