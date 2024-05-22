@@ -3,12 +3,33 @@
   import Formulario from "./Formulario.svelte";
   import { reveal, setDefaultOptions } from "svelte-reveal";
 
+  const API_URL = import.meta.env.PUBLIC_API_URL;
+
   function scrollToBottom() {
     window.scrollTo({
       top: document.body.scrollHeight,
       behavior: "smooth",
     });
   }
+
+  function handleClick() {
+    const body = {
+      email: email
+    };
+    console.log(body);
+    
+    fetch(API_URL + "listeners", {
+      method: "POST",
+      body: JSON.stringify(body),
+    })
+      .then((x) => {
+        console.log(x);
+        alert("LISTENER");
+      })
+      .catch((e) => {
+        console.log(e);
+      });
+    }
 
   setDefaultOptions({
     easing: "easeOutCubic",
@@ -39,8 +60,8 @@
         sobre el congreso
       </p>
       <form
+        on:submit|preventDefault={handleClick}
         class="w-[100%] justify-center flex flex-row px-5 py-2 rounded-lg"
-        method="POST"
       >
         <input
           class="rounded-l-full w-full pl-3 py-2 appearance-none focus:outline-none focus:shadow-outline"
@@ -62,9 +83,7 @@
     class="flex flex-col gap-7 items-center mb-10 animate-fade-up animate-delay-700"
   >
     <p class=" font-light text-xl">¿Te gustaría participar como exponente?</p>
-    <button
-      on:click={scrollToBottom}
-      class="hover:animate-bounce py-4"
+    <button on:click={scrollToBottom} class="hover:animate-bounce py-4"
       ><svg
         xmlns="http://www.w3.org/2000/svg"
         width="2em"

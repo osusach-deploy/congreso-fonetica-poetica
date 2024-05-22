@@ -14,7 +14,7 @@
     "Arte y Humanidades",
   ];
 
-  function handleSubmit() {      
+  function handleSubmit() {
     const body = {
       name: nombre,
       email: email,
