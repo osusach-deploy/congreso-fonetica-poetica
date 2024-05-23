@@ -1,5 +1,5 @@
 <script lang="ts">
-    const API_URL = import.meta.env.PUBLIC_API_URL;
+  const API_URL = import.meta.env.PUBLIC_API_URL;
   let nombre = "";
   let email = "";
   let institucion = "";
@@ -51,28 +51,6 @@
             <input type="text" bind:value={nombre} placeholder="Nombre" class="appearance-none border rounded-lg w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"/>
           </div>
           <div class="mb-4">
-            <input type="email" bind:value={email} placeholder="Email" class="appearance-none border rounded-lg w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"/>
-          </div>
-          <div class="mb-4">
-            <input type="text" bind:value={institucion} placeholder="Institución" class="appearance-none border rounded-lg w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"/>
-          </div>
-          <div class="mb-4">
-            <p class=" text-lg font-semibold mb-4">Información Exposición</p>
-            <input type="text" bind:value={titulo} placeholder="Título presentación" class="appearance-none border rounded-lg w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"/>
-          </div>
-          <div class="mb-6">
-            <select bind:value={areaTematica} class="block appearance-none w-full bg-white border  px-4 py-2 pr-8 rounded-lg leading-tight focus:outline-none focus:shadow-outline">
-              <option value="">Seleccione una opción</option>
-              {#each areas as area}
-                <option value={area}>{area}</option>
-              {/each}
-            </select>
-          </div>
-          <button type="submit" class="w-full bg-indigo-400 hover:bg-indigo-500 transition-all text-white font-semibold py-2 px-4 rounded ">
-            Enviar Declaración
-          </button>
-        </form>
-      </div>
       <div class="mb-4">
         <input
           type="email"
@@ -101,9 +79,9 @@
       <div class="mb-6">
         <select
           bind:value={areaTematica}
-          class="block appearance-none w-full bg-white border px-4 py-2 pr-8 rounded-lg leading-tight focus:outline-none focus:shadow-outline"
+          class="block w-full bg-white border px-4 py-2 pr-8 rounded-lg leading-tight focus:outline-none focus:shadow-outline"
         >
-          <option value="">Seleccione una opción</option>
+          <option disabled value="">Seleccione una categoría</option>
           {#each areas as area}
             <option value={area}>{area}</option>
           {/each}
