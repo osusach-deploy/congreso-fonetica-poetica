@@ -7,12 +7,11 @@ import { reveal } from "svelte-reveal";
 import { getI18N } from "../i18n";
 const { currentLocale = "es" } = Astro;
 const i18n = getI18N(currentLocale);
-
 ---
 
 <Layout title="Congreso Poética">
   <div class="flex flex-col items-center">
     <Header />
-    <Home client:load />
+    <Home client:load i18n={i18n} />
   </div>
 </Layout>

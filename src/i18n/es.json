@@ -1,3 +1,30 @@
 {
-  "title": "esperanto"
+  "title": "1er CONGRESO NACIONAL DE FONÉTICA Y POÉTICA",
+  "date": "15 de Noviembre 2024",
+  "listener_title": "¿Deseas ser oyente?",
+  "listener_subtitle": "Déjanos tu correo electrónico y te enviaremos las noticias más recientes sobre el congreso",
+  "email_placeholder": "Introduce tu correo",
+  "subscribe_button": "Suscribirse",
+  "participant_title": "¿Te gustaría participar como exponente?",
+  "interest_declaration_title": "Declaración de Interés",
+  "interest_declaration_subtitle": "Si te interesa ser parte del primer congreso de fonética y poética completa este formulario para que podamos planificar tu participación.",
+  "participant": {
+    "organizers_title": "Organizan"
+  },
+  "form": {
+    "personal_info_title": "Información Personal",
+    "name_placeholder": "Nombre",
+    "email_placeholder": "Email",
+    "institution_placeholder": "Institución",
+    "exposition_info_title": "Información Exposición",
+    "presentation_title_placeholder": "Título presentación",
+    "category_select_placeholder": "Seleccione una categoría",
+    "categories": [
+      "Ciencias Naturales",
+      "Ciencias Sociales",
+      "Matemáticas",
+      "Arte y Humanidades"
+    ],
+    "submit_button": "Enviar Declaración"
+  }
 }

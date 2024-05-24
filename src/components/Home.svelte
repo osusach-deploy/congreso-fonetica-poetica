@@ -5,6 +5,8 @@
 
   const API_URL = import.meta.env.PUBLIC_API_URL;
 
+  export let i18n;
+
   function scrollToBottom() {
     window.scrollTo({
       top: document.body.scrollHeight,
@@ -42,17 +44,16 @@
 <div class="flex flex-col w-full items-center mt-24 sm:mt-20">
   <div class=" animate-fade-up animate-ease-in-out flex flex-col gap-20 sm:flex-row sm:my-10 w-full sm:w-[60%] sm:justify-between">
     <div class="flex flex-col sm:w-[40%] gap-3 text-center  align-middle justify-center">
-      <p class=" font-light text-5xl">1er CONGRESO NACIONAL DE FONÉTICA Y POÉTICA</p>
-      <p class=" font-extralight text-2xl">15 de Noviembre 2024</p>
+      <p class=" font-light text-5xl">{ i18n.title }</p>
+      <p class=" font-extralight text-2xl">{ i18n.date }</p>
     </div>
     <div
       
       class="flex flex-col my-auto gap-2 bg-white bg-opacity-40 rounded-xl p-5 mx-5 sm:w-[40%] text-center items-center"
     >
-      <p class=" text-3xl font-bold">¿Deseas ser oyente?</p>
+      <p class=" text-3xl font-bold">{ i18n.listener_title }</p>
       <p class="font-light text-lg">
-        Déjanos tu correo electrónico y te enviaremos las noticias más recientes
-        sobre el congreso
+        { i18n.listener_subtitle }
       </p>
       <form class="w-[100%] justify-center flex flex-row px-2 sm:px-5 py-2 rounded-lg" method="POST">
           <input
@@ -60,20 +61,20 @@
             name="email"
             type="email"
             bind:value={email}
-            placeholder="Introduce tu correo"
+            placeholder="{ i18n.email_placeholder }"
           />
         <button type="submit"
           class="flex w-[35%] sm:w-[30%] justify-center bg-indigo-400 hover:bg-indigo-500 transition-all text-white font-semibold py-2 sm:px-4 rounded-r-full"
-          >Suscribirse</button
+          >{ i18n.subscribe_button }</button
         >
       </form>
     </div>
   </div>
-  <Participantes />
+  <Participantes i18n={i18n}/>
   <div
     class="flex flex-col gap-7 items-center mb-10 animate-fade-up animate-delay-700"
   >
-    <p class=" font-light text-xl">¿Te gustaría participar como exponente?</p>
+    <p class=" font-light text-xl">{ i18n.participant_title }</p>
     <button on:click={scrollToBottom} class="hover:animate-bounce py-4"
       ><svg
         xmlns="http://www.w3.org/2000/svg"
@@ -87,5 +88,5 @@
       ></button
     >
   </div>
-  <Formulario />
+  <Formulario i18n={i18n}/>
 </div>

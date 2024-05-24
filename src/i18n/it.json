@@ -1,3 +1,30 @@
 {
-  "title": "italano"
+  "title": "1° CONGRESSO NAZIONALE DI FONETICA E POETICA",
+  "date": "15 novembre 2024",
+  "listener_title": "Vuoi essere un ascoltatore?",
+  "listener_subtitle": "Lasciaci il tuo indirizzo email e ti invieremo le ultime notizie sul congresso",
+  "email_placeholder": "Inserisci la tua email",
+  "subscribe_button": "Iscriviti",
+  "participant_title": "Vuoi partecipare come relatore?",
+  "interest_declaration_title": "Dichiarazione di Interesse",
+  "interest_declaration_subtitle": "Se sei interessato a far parte del primo congresso di fonetica e poetica, completa questo modulo per poter pianificare la tua partecipazione.",
+  "participant": {
+    "organizers_title": "Organizzano"
+  },
+  "form": {
+    "personal_info_title": "Informazioni Personali",
+    "name_placeholder": "Nome",
+    "email_placeholder": "Email",
+    "institution_placeholder": "Istituzione",
+    "exposition_info_title": "Informazioni sull'Esposizione",
+    "presentation_title_placeholder": "Titolo della presentazione",
+    "category_select_placeholder": "Seleziona una categoria",
+    "categories": [
+      "Scienze Naturali",
+      "Scienze Sociali",
+      "Matematica",
+      "Arti e Umanistiche"
+    ],
+    "submit_button": "Invia Dichiarazione"
+  }
 }
