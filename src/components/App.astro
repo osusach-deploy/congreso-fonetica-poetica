@@ -11,7 +11,7 @@ const i18n = getI18N(currentLocale);
 
 <Layout title="Congreso Poética">
   <div class="flex flex-col items-center">
-    <Header client:load i18n={i18n}/>
+    <Header client:load i18n={i18n} {currentLocale}/>
     <Home client:load i18n={i18n} />
   </div>
 </Layout>

@@ -1,31 +1,27 @@
 <script>
-  import { onMount } from 'svelte';
   export let i18n;
-
-  export let selectedLanguage = 'Español';
+  export let currentLocale;
+  let selectedLanguage = 'Español';
   let showDropdown = false;
 
-  function selectLanguage(language) {
-    selectedLanguage = language;
-    localStorage.setItem('selectedLanguage', language);
-    showDropdown = false;
+  function changeLanguage(currentLocale) {
+      if (currentLocale == 'it'){
+        selectedLanguage = "Italiano"
+      }
+      if (currentLocale == 'es'){
+        selectedLanguage = "Español"
+      }
+      if (currentLocale == 'en'){
+        selectedLanguage = "English"
+      }
   }
+  // no es necesario que sea reactivo, que se ejecute al cargar la pagina nomas
+  changeLanguage(currentLocale)
 
   function toggleDropdown() {
     showDropdown = !showDropdown;
   }
 
-  onMount(() => {
-    const savedLanguage = localStorage.getItem('selectedLanguage');
-    if (savedLanguage) {
-      selectedLanguage = savedLanguage;
-    }
-    document.addEventListener('click', (event) => {
-      if (!event.target.closest('.dropdown')) {
-        showDropdown = false;
-      }
-    });
-  });
 </script>
   
 <div class="dropdown flex mr-5">
@@ -33,9 +29,9 @@
         <p class="text-white text-lg bg-white bg-opacity-15 rounded-lg px-3 py-1">{ i18n.language }: <b>{selectedLanguage}</b></p>
     </button>
     <div class="dropdown-content top-16 right-0.5 rounded-lg {showDropdown ? 'show' : ''}">
-        <a href="/"><button on:click={() => selectLanguage('Español')}>Español</button></a>
-        <a href="/en"><button on:click={() => selectLanguage('English')}>English</button></a>
-        <a href="/it"><button on:click={() => selectLanguage('Italiano')}>Italiano</button></a>
+        <a href="/">Español</a>
+        <a href="/en">English</a>
+        <a href="/it">Italiano</a>
     </div>
 </div>
   
