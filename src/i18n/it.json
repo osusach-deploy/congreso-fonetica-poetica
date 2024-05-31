@@ -21,11 +21,13 @@
     "presentation_title_placeholder": "Titolo della presentazione",
     "category_select_placeholder": "Seleziona una categoria",
     "categories": [
-      "Scienze Naturali",
-      "Scienze Sociali",
-      "Matematica",
-      "Arti e Umanistiche"
+      "Fonetica e Poesia",
+      "Fonetica e Poesia Applicata",
+      "Fonetica, Cognizione e Poetica",
+      "Metrica",
+      "Altro"
     ],
+    "category_other_placeholder": "Specifica l'area tematica",
     "submit_button": "Invia Dichiarazione"
   }
 }

@@ -21,11 +21,13 @@
     "presentation_title_placeholder": "Presentation Title",
     "category_select_placeholder": "Select a category",
     "categories": [
-      "Natural Sciences",
-      "Social Sciences",
-      "Mathematics",
-      "Arts and Humanities"
+      "Phonetics and Poetry",
+      "Applied Phonetics and Poetry",
+      "Phonetics, Cognition, and Poetics",
+      "Metrics",
+      "Other"
     ],
+    "category_other_placeholder": "Specify the thematic area",
     "submit_button": "Submit Statement"
   }
 }

@@ -5,6 +5,7 @@
   let institucion = "";
   let titulo = "";
   let areaTematica = "";
+  let areaOtro = "";
 
   export let i18n;
 
@@ -84,7 +85,7 @@
             class="appearance-none border rounded-lg w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
           />
         </div>
-        <div class="mb-6">
+        <div class="mb-4">
           <select
             bind:value={areaTematica}
             class="block w-full bg-white border px-4 py-2 pr-8 rounded-lg leading-tight focus:outline-none focus:shadow-outline"
@@ -96,6 +97,12 @@
             {/each}
           </select>
         </div>
+        {#if areaTematica == "Otro" || areaTematica == "Other" || areaTematica == "Altro"}
+            <input type="text"
+            bind:value={areaOtro}
+            placeholder={form.category_other_placeholder}
+            class="appearance-none border rounded-lg mb-6 w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+          {/if}
         <button
           type="submit"
           class="w-full bg-indigo-400 hover:bg-indigo-500 transition-all text-white font-semibold py-2 px-4 rounded"
