@@ -41,30 +41,30 @@
   let email = "";
 </script>
 
-<div class="flex flex-col w-full items-center mt-24 md:mt-20">
-  <div class=" animate-fade-up animate-ease-in-out flex flex-col gap-20 md:flex-row md:my-10 w-full md:w-[60%] md:justify-between">
-    <div class="flex flex-col md:w-[40%] gap-3 text-center  align-middle justify-center">
+<div class="flex flex-col w-full items-center mt-24 lg:mt-20 asd">
+  <div class=" animate-fade-up animate-ease-in-out flex flex-col gap-20 lg:flex-row lg:my-10 w-4/5 lg:mx-0 lg:w-[60%] lg:justify-between">
+    <div class="flex flex-col lg:w-[40%] gap-3 text-center  align-middle justify-center">
       <p class=" font-light text-5xl">{ i18n.title }</p>
       <p class=" font-extralight text-2xl">{ i18n.date }</p>
     </div>
     <div
       
-      class="flex flex-col my-auto gap-2 bg-white bg-opacity-40 rounded-xl p-5 mx-5 md:w-[40%] text-center items-center"
+      class="flex flex-col my-auto gap-2 bg-white bg-opacity-40 rounded-xl p-5 mx-5 lg:w-[40%] text-center items-center"
     >
       <p class=" text-3xl font-bold">{ i18n.listener_title }</p>
       <p class="font-light text-lg">
         { i18n.listener_subtitle }
       </p>
-      <form class="w-[100%] justify-center flex flex-row px-2 md:px-5 py-2 rounded-lg" method="POST">
+      <form class="w-[100%] justify-center flex flex-row px-2 lg:px-5 py-2 rounded-lg" method="POST">
           <input
-            class="rounded-l-full w-[65%] md:w-full pl-3 py-2 appearance-none focus:outline-none focus:shadow-outline"
+            class="rounded-l-full w-[65%] lg:w-full pl-3 py-2 appearance-none focus:outline-none focus:shadow-outline"
             name="email"
             type="email"
             bind:value={email}
             placeholder="{ i18n.email_placeholder }"
           />
         <button type="submit"
-          class="flex w-[35%] md:w-[30%] justify-center bg-indigo-400 hover:bg-indigo-500 transition-all text-white font-semibold py-2 md:px-4 rounded-r-full"
+          class="flex w-fit justify-center bg-indigo-400 hover:bg-indigo-500 transition-all text-white font-semibold py-2 lg:px-2 rounded-r-full"
           >{ i18n.subscribe_button }</button
         >
       </form>

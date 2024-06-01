@@ -37,13 +37,13 @@
 </script>
 
 <div
-  class="flex flex-col md:flex-row md:w-[60%] md:justify-between mx-10 mt-10 md:mt-20 mb-20 md:mb-44"
+  class="flex flex-col lg:flex-row w-4/5 lg:w-[60%] lg:justify-between mx-10 mt-10 lg:mt-20 mb-20 lg:mb-44"
 >
-  <div class="flex flex-col md:w-[35%] gap-3 text-center justify-center">
+  <div class="flex flex-col lg:w-[35%] gap-3 text-center justify-center">
     <p class="font-bold text-4xl">{i18n.interest_declaration_title}</p>
     <p class="text-lg font-light">{i18n.interest_declaration_subtitle}</p>
   </div>
-  <div class="md:w-[35%] mt-10 text-lg">
+  <div class="lg:w-[40%] mt-10 text-lg">
     <form
       on:submit|preventDefault={handleSubmit}
       class="bg-white bg-opacity-50 p-5 rounded-lg"
