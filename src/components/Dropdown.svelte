@@ -24,7 +24,7 @@
 
 </script>
   
-<div class="dropdown flex mr-5">
+<div class="dropdown flex lg:mr-5">
     <button on:click={toggleDropdown}>
         <p class="text-white text-lg bg-white bg-opacity-15 rounded-lg px-3 py-1">{ i18n.language }: <b>{selectedLanguage}</b></p>
     </button>

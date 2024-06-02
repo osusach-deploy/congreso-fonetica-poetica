@@ -29,5 +29,10 @@
     ],
     "category_other_placeholder": "Especifique el área temática",
     "submit_button": "Enviar Declaración"
+  },
+  "footer": {
+    "organizers_title": "Organizadores",
+    "developers_title": "Desarrolladores",
+    "osusach_organizers": "Organización"
   }
 }

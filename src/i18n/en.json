@@ -29,5 +29,10 @@
     ],
     "category_other_placeholder": "Specify the thematic area",
     "submit_button": "Submit Statement"
+  },
+  "footer": {
+    "organizers_title": "Organizers",
+    "developers_title": "Developers",
+    "osusach_organizers": "Organization"
   }
 }
