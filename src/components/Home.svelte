@@ -8,8 +8,8 @@
   export let i18n;
 
   function scrollToBottom() {
-    window.scrollTo({
-      top: document.body.scrollHeight,
+    window.scrollBy({
+      top: 750,
       behavior: "smooth",
     });
   }
