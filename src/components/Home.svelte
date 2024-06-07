@@ -49,7 +49,7 @@
     </div>
     <div
       
-      class="flex flex-col my-auto gap-2 bg-white bg-opacity-40 rounded-xl p-5 md:mx-5 lg:w-[40%] text-center items-center"
+      class="flex flex-col my-auto gap-2 bg-white bg-opacity-40 rounded-xl p-5 md:mx-5 lg:w-[40%] text-center items-center min-w-72"
     >
       <p class=" text-3xl font-bold">{ i18n.listener_title }</p>
       <p class="font-light text-lg">

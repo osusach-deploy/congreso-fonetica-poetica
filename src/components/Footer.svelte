@@ -7,7 +7,7 @@
     <div class="flex flex-col lg:flex-row lg:gap-0 gap-10 lg:justify-between items-center">
         <div class="flex flex-col mx-auto pt-5 text-center gap-5">
             <p class=" text-xl font-bold uppercase">{i18n.footer.organizers_title}</p>
-            <div class="grid grid-cols-1 place-items-center md:grid-rows-2 md:place-items-start md:grid-flow-col gap-7 mx-auto">
+            <div class="flex flex-wrap items-center justify-center max-w-3xl gap-7 mx-auto content-center">
                 <img src="/img/fonetica.png" class="h-16" alt="" />
                 <img src="/img/conce.png" class="h-16" alt="" />
                 <img src="/img/granada.png" class="h-16" alt="" />
@@ -50,7 +50,7 @@
                     >Github</a
                 >
                 <a
-                    href="https://github.com/osusach/recursos-virtuales-fonetica"
+                    href="https://github.com/osusach/congreso-fonetica-poetica/"
                     class="text-lg hover:underline"
                     >Source Code Git</a
                 >
