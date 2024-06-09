@@ -28,6 +28,7 @@
       "Other"
     ],
     "category_other_placeholder": "Specify the thematic area",
+    "policy_privacy": "The data sent through this form will only be used to contact the applicants of the congress and will not be shared with third parties.",
     "submit_button": "Submit Statement"
   },
   "footer": {

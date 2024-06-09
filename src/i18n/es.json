@@ -28,6 +28,7 @@
       "Otro"
     ],
     "category_other_placeholder": "Especifique el área temática",
+    "policy_privacy": "Los datos enviados a través de este formulario solo serán usados para contactar a los postulantes del congreso y no serán compartidos con terceros.",
     "submit_button": "Enviar Declaración"
   },
   "footer": {

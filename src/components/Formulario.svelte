@@ -101,7 +101,7 @@
             <input type="text"
             bind:value={areaOtro}
             placeholder={form.category_other_placeholder}
-            class="appearance-none border rounded-lg mb-6 w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+            class="appearance-none border rounded-lg mb-4 w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
           {/if}
         <button
           type="submit"
@@ -109,6 +109,9 @@
         >
           {form.submit_button}
         </button>
+        <p class="mt-6 px-1 text-xs font-light text-center">
+          {form.policy_privacy}
+        </p>
       </div>
     </form>
   </div>
