@@ -8,7 +8,7 @@
         <div class="flex flex-col mx-auto pt-5 text-center gap-5">
             <p class=" text-xl font-bold uppercase">{i18n.footer.organizers_title}</p>
             <div class="flex flex-wrap items-center justify-center max-w-3xl gap-7 mx-auto content-center">
-                <img src="/img/fonetica.png" class="h-16" alt="" />
+                <img src="/img/fonetica.png" class="h-20 rounded-full bg-white" alt="" />
                 <img src="/img/conce.png" class="h-16" alt="" />
                 <img src="/img/granada.png" class="h-16" alt="" />
                 <img src="/img/eu.png" class="h-16" alt="" />
