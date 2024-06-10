@@ -58,7 +58,7 @@
             <nav>
                 <h6 class="font-bold text-xl uppercase">{i18n.footer.osusach_organizers}</h6>
                 <a href="https://domingo-roman.net" class="text-lg hover:underline"
-                    >Domingo Román</a
+                    >Grupo Fonética y Poética</a
                 >
             </nav>
         </div>

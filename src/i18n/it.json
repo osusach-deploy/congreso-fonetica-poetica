@@ -1,14 +1,14 @@
 {
   "language": "Lingua",
   "title": "1° CONGRESSO INTERNAZIONALE DI FONETICA E POETICA",
-  "date": "15 novembre 2024",
+  "date": "14-15 novembre 2024",
   "listener_title": "Vuoi essere un ascoltatore?",
   "listener_subtitle": "Lasciaci il tuo indirizzo email e ti invieremo le ultime notizie sul congresso",
   "email_placeholder": "Inserisci la tua email",
   "subscribe_button": "Iscriviti",
   "participant_title": "Vuoi partecipare come relatore?",
   "interest_declaration_title": "Dichiarazione di Interesse",
-  "interest_declaration_subtitle": "Se sei interessato a far parte del primo congresso di fonetica e poetica, completa questo modulo per poter pianificare la tua partecipazione.",
+  "interest_declaration_subtitle": "Vi invitiamo a partecipare al Primo Congresso Internazionale di Fonetica e Poetica. Vi preghiamo di compilare questo modulo in modo da poter pianificare la vostra partecipazione.",
   "participant": {
     "organizers_title": "Organizzano"
   },
@@ -17,19 +17,19 @@
     "name_placeholder": "Nome",
     "email_placeholder": "Email",
     "institution_placeholder": "Istituzione",
-    "exposition_info_title": "Informazioni sull'Esposizione",
+    "exposition_info_title": "Informazioni sull'esposizione",
     "presentation_title_placeholder": "Titolo della presentazione",
     "category_select_placeholder": "Seleziona una categoria",
     "categories": [
-      "Fonetica e Poesia",
-      "Fonetica e Poesia Applicata",
-      "Fonetica, Cognizione e Poetica",
+      "Fonetica e poesia",
+      "Fonetica e poesia applicata",
+      "Fonetica, cognizione e poetica",
       "Metrica",
       "Altro"
     ],
     "category_other_placeholder": "Specifica l'area tematica",
     "policy_privacy": "I dati inviati tramite questo modulo saranno utilizzati solo per contattare i candidati del congresso e non saranno condivisi con terzi.",
-    "submit_button": "Invia Dichiarazione"
+    "submit_button": "Invia dichiarazione"
   },
   "footer": {
     "organizers_title": "Organizzatori",

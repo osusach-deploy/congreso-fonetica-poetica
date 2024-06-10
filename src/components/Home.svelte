@@ -44,7 +44,7 @@
 <div class="flex flex-col w-full items-center mt-24 lg:mt-20 asd">
   <div class=" animate-fade-up animate-ease-in-out flex flex-col gap-20 lg:flex-row lg:my-10 w-[90%] lg:mx-0 lg:w-[60%] lg:justify-between">
     <div class="flex flex-col lg:w-[40%] gap-3 text-center  align-middle justify-center">
-      <p class=" font-light text-5xl">{ i18n.title }</p>
+      <p class=" font-light text-5xl">{@html i18n.title }</p>
       <p class=" font-extralight text-2xl">{ i18n.date }</p>
     </div>
     <div

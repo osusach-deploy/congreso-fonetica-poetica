@@ -1,14 +1,14 @@
 {
   "language": "Idioma",
-  "title": "1er CONGRESO INTERNACIONAL DE FONÉTICA Y POÉTICA",
-  "date": "15 de Noviembre 2024",
+  "title": "1<sup>er</sup> CONGRESO INTERNACIONAL DE FONÉTICA Y POÉTICA",
+  "date": "14-15 de noviembre 2024",
   "listener_title": "¿Deseas ser oyente?",
   "listener_subtitle": "Déjanos tu correo electrónico y te enviaremos las noticias más recientes sobre el congreso",
   "email_placeholder": "Introduce tu correo",
   "subscribe_button": "Suscribirse",
   "participant_title": "¿Te gustaría participar como exponente?",
   "interest_declaration_title": "Declaración de Interés",
-  "interest_declaration_subtitle": "Si te interesa ser parte del primer congreso de fonética y poética completa este formulario para que podamos planificar tu participación.",
+  "interest_declaration_subtitle": "Te invitamos a ser parte del Primer Congreso Internacional de Fonética y Poética. Completa este formulario para que podamos planificar tu participación.",
   "participant": {
     "organizers_title": "Organizan"
   },
@@ -17,19 +17,19 @@
     "name_placeholder": "Nombre",
     "email_placeholder": "Email",
     "institution_placeholder": "Institución",
-    "exposition_info_title": "Información Exposición",
+    "exposition_info_title": "Información exposición",
     "presentation_title_placeholder": "Título presentación",
     "category_select_placeholder": "Seleccione una categoría",
     "categories": [
-      "Fonética y Poesía",
-      "Fonética y Poesía Aplicada",
-      "Fonética, Cognición y Poética",
+      "Fonética y poesía",
+      "Fonética y poesía aplicada",
+      "Fonética, cognición y poética",
       "Métrica",
       "Otro"
     ],
     "category_other_placeholder": "Especifique el área temática",
     "policy_privacy": "Los datos enviados a través de este formulario solo serán usados para contactar a los postulantes del congreso y no serán compartidos con terceros.",
-    "submit_button": "Enviar Declaración"
+    "submit_button": "Enviar declaración"
   },
   "footer": {
     "organizers_title": "Organizadores",
