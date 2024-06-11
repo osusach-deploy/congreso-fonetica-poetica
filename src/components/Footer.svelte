@@ -4,7 +4,7 @@
 </script>
 
 <div
-  class="flex flex-col bg-slate-600 text-white p-3 gap-7 divide-y divide-slate-500 px-10"
+  class="flex flex-col bg-slate-500 text-white p-3 gap-7 divide-y divide-slate-400 px-10"
 >
   <div class="flex flex-col mx-auto pt-5 text-center gap-5">
     <p class=" text-xl font-bold uppercase">{i18n.footer.organizers_title}</p>
@@ -69,7 +69,7 @@
       >
     </nav>
   </div>
-  <div class="flex flex-row flex-wrap md:gap-0 gap-5 pt-5">
+  <div class="flex flex-row flex-wrap md:gap-0 gap-5 pt-5 mb-3">
     <div class="m-auto flex flex-col">
       <img src="img/acreditacion.png" alt="Acreditación 7 años" />
     </div>

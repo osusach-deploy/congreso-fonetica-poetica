@@ -13,17 +13,29 @@
     "organizers_title": "Organizzano"
   },
   "presentation_title": "Il I Congresso Internazionale di Fonetica e Poetica",
-  "presentation_text": "-creato dall'omonimo gruppo che unisce le università di Granada, Santiago del Cile e Concepción, in collaborazione con il progetto europeo Voices of Spanish Poets- è il primo incontro scientifico degli ultimi tempi dedicato alla divulgazione dello studio fonetico-acustico della poesia in una prospettiva interdisciplinare. Sarà completamente virtuale e gratuito, per favorire la partecipazione di tutti i ricercatori di quest'area di studio sparsi in tutto il mondo.",
+  "presentation_text": "Il I Congresso Internazionale di Fonetica e Poetica -creato dall'omonimo gruppo che unisce le università di Granada, Santiago del Cile e Concepción, in collaborazione con il progetto europeo Voices of Spanish Poets- è il primo incontro scientifico degli ultimi tempi dedicato alla divulgazione dello studio fonetico-acustico della poesia in una prospettiva interdisciplinare. Sarà completamente virtuale e gratuito, per favorire la partecipazione di tutti i ricercatori di quest'area di studio sparsi in tutto il mondo.",
   "dates": {
     "title": "Date rilevanti",
-    "date_1": "Dichiarazione di interesse a partecipare: 02/08/2024",
-    "date_2": "Ricevimento delle proposte: 02/09/2024",
-    "date_3": "Notifica di accettazione: 02/10/2024",
-    "date_4": "Data del congresso: 14-15/11/2024",
+    "date_1": {
+      "title": "Dichiarazione di interesse",
+      "date": "02/08/2024"      
+    },
+    "date_2": {
+      "title": "Ricevimento delle proposte",
+      "date": "02/09/2024"
+    },
+    "date_3": {
+      "title": "Notifica di accettazione",
+      "date": "02/10/2024"
+    },
+    "date_4": {
+      "title": "Data del congresso",
+      "date": "14 - 15/11/2024"
+    },
     "date_4_detail": "Modalità: online"
   },
   "form": {
-    "personal_info_title": "Informazioni Personali",
+    "personal_info_title": "Informazioni personali",
     "name_placeholder": "Nome",
     "email_placeholder": "Email",
     "institution_placeholder": "Istituzione",

@@ -2,6 +2,7 @@
   import Participantes from "./Participantes.svelte";
   import Formulario from "./Formulario.svelte";
   import { reveal, setDefaultOptions } from "svelte-reveal";
+  import Timeline from "./Timeline.svelte";
 
   const API_URL = import.meta.env.PUBLIC_API_URL;
 
@@ -9,7 +10,7 @@
 
   function scrollToBottom() {
     window.scrollBy({
-      top: 750,
+      top: 1550,
       behavior: "smooth",
     });
   }
@@ -41,7 +42,7 @@
   let email = "";
 </script>
 
-<div class="flex flex-col w-full items-center mt-24 lg:mt-20 asd">
+<div class="flex flex-col w-full items-center mt-24 lg:mt-14 asd">
   <div
     class=" animate-fade-up animate-ease-in-out flex flex-col gap-20 lg:flex-row lg:my-10 w-[90%] lg:mx-0 lg:w-[60%] lg:justify-between"
   >
@@ -79,10 +80,10 @@
   </div>
   <Participantes {i18n} />
   <div
-    class="flex flex-col gap-7 items-center mb-10 animate-fade-up animate-delay-700"
+    class="flex flex-col gap-5 items-center mb-10 animate-fade-up animate-delay-700"
   >
     <p class=" font-light text-xl">{i18n.participant_title}</p>
-    <button on:click={scrollToBottom} class="hover:animate-bounce py-4"
+    <button on:click={scrollToBottom} class="hover:animate-bounce py-2"
       ><svg
         xmlns="http://www.w3.org/2000/svg"
         width="2em"
@@ -95,22 +96,13 @@
       ></button
     >
   </div>
-  <section class="mx-44">
-    <h2 class="text-5xl">{i18n.presentation_title}</h2>
-    <p class="text-2xl text-pretty">{i18n.presentation_text}</p>
+  <section class="mx-10 my-20 lg:w-[60%] lg:my-28">
+    <p class="text-lg lg:text-2xl font-light text-center">{i18n.presentation_text}</p>
   </section>
 
-  <section class="mx-44">
-    <h2 class="text-5xl">{i18n.dates.title}</h2>
-    <p>{i18n.dates.date_1}</p>
-
-    <p>{i18n.dates.date_2}</p>
-
-    <p>{i18n.dates.date_3}</p>
-
-    <p>{i18n.dates.date_4}
-      {i18n.dates.date_4_detail}
-    </p>
+  <section class="flex flex-col w-[90%] gap-14 items-center mb-7 lg:mx-44">
+    <h2 class="font-bold text-4xl">{i18n.dates.title}</h2>
+    <Timeline i18n={i18n} />
   </section>
   <Formulario {i18n} />
 </div>
