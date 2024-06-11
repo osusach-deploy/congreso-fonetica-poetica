@@ -12,6 +12,16 @@
   "participant": {
     "organizers_title": "Organized by"
   },
+  "presentation_title": "The 1st International Congress on Phonetics and Poetics",
+  "presentation_text": "-created by the homonymous group that connects the universities of Granada, Santiago de Chile and Concepción, in collaboration with the European project Voices of Spanish Poets- is the first scientific meeting -in recent times- dedicated to the dissemination of the phonetic-acoustic study of poetry and from an interdisciplinary perspective. Its modality will be completely virtual and free of charge, in order to favor the participation of all researchers in this area of study and who are deployed around the world.",
+  "dates": {
+    "title": "Relevant dates",
+    "date_1": "Declaration of interest in participating: 02/08/2024",
+    "date_2": "Receipt of proposals: 02/09/2024",
+    "date_3": "Communication of acceptance: 02/10/2024",
+    "date_4": "Date of the congress: 14-15/11/2024",
+    "date_4_detail": "Modality: online"
+  },
   "form": {
     "personal_info_title": "Personal Information",
     "name_placeholder": "Name",

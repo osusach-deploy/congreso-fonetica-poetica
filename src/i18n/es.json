@@ -12,6 +12,16 @@
   "participant": {
     "organizers_title": "Organizan"
   },
+  "presentation_title": "El I Congreso Internacional de Fonética y Poética",
+  "presentation_text": "—creado por el grupo homónimo que conecta las universidades de Granada, de Santiago de Chile y de Concepción, en colaboración con el proyecto europeo Voices of Spanish Poets— constituye el primer encuentro científico —del último tiempo— dedicado a la divulgación del estudio fonético-acústico de la poesía y desde una perspectiva interdisciplinar. Su modalidad será completamente virtual y gratuita, para favorecer la participación de todos los investigadores de esta área de estudios y que se encuentran desplegados por el mundo",
+  "dates": {
+    "title": "Fechas relevantes",
+    "date_1": "Declaración de interés en participar: 02/08/2024",
+    "date_2": "Recepción de propuestas: 02/09/2024",
+    "date_3": "Comunicación de aceptación: 02/10/2024",
+    "date_4": "Fecha del congreso: 14-15/11/2024",
+    "date_4_detail": "Modalidad: en línea"
+  },
   "form": {
     "personal_info_title": "Información Personal",
     "name_placeholder": "Nombre",

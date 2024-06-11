@@ -16,10 +16,10 @@
 
   function handleClick() {
     const body = {
-      email: email
+      email: email,
     };
     console.log(body);
-    
+
     fetch(API_URL + "listeners", {
       method: "POST",
       body: JSON.stringify(body),
@@ -31,7 +31,7 @@
       .catch((e) => {
         console.log(e);
       });
-    }
+  }
 
   setDefaultOptions({
     easing: "easeOutCubic",
@@ -42,39 +42,46 @@
 </script>
 
 <div class="flex flex-col w-full items-center mt-24 lg:mt-20 asd">
-  <div class=" animate-fade-up animate-ease-in-out flex flex-col gap-20 lg:flex-row lg:my-10 w-[90%] lg:mx-0 lg:w-[60%] lg:justify-between">
-    <div class="flex flex-col lg:w-[40%] gap-3 text-center  align-middle justify-center">
-      <p class=" font-light text-4xl sm:text-5xl">{@html i18n.title }</p>
-      <p class=" font-extralight text-2xl">{ i18n.date }</p>
+  <div
+    class=" animate-fade-up animate-ease-in-out flex flex-col gap-20 lg:flex-row lg:my-10 w-[90%] lg:mx-0 lg:w-[60%] lg:justify-between"
+  >
+    <div
+      class="flex flex-col lg:w-[40%] gap-3 text-center align-middle justify-center"
+    >
+      <p class=" font-light text-4xl sm:text-5xl">{@html i18n.title}</p>
+      <p class=" font-extralight text-2xl">{i18n.date}</p>
     </div>
     <div
-      
       class="flex flex-col my-auto gap-2 bg-white bg-opacity-40 rounded-xl p-5 md:mx-5 lg:w-[40%] text-center items-center min-w-72"
     >
-      <p class=" text-3xl font-bold">{ i18n.listener_title }</p>
+      <p class=" text-3xl font-bold">{i18n.listener_title}</p>
       <p class="font-light text-lg">
-        { i18n.listener_subtitle }
+        {i18n.listener_subtitle}
       </p>
-      <form class="w-[100%] justify-center flex flex-row px-2 lg:px-5 py-2 rounded-lg" method="POST">
-          <input
-            class="rounded-l-full w-[65%] lg:w-full pl-3 py-2 appearance-none focus:outline-none focus:shadow-outline"
-            name="email"
-            type="email"
-            bind:value={email}
-            placeholder="{ i18n.email_placeholder }"
-          />
-        <button type="submit"
+      <form
+        class="w-[100%] justify-center flex flex-row px-2 lg:px-5 py-2 rounded-lg"
+        method="POST"
+      >
+        <input
+          class="rounded-l-full w-[65%] lg:w-full pl-3 py-2 appearance-none focus:outline-none focus:shadow-outline"
+          name="email"
+          type="email"
+          bind:value={email}
+          placeholder={i18n.email_placeholder}
+        />
+        <button
+          type="submit"
           class="flex w-[35%] justify-center bg-indigo-400 hover:bg-indigo-500 transition-all text-white font-semibold py-2 lg:px-2 rounded-r-full"
-          >{ i18n.subscribe_button }</button
+          >{i18n.subscribe_button}</button
         >
       </form>
     </div>
   </div>
-  <Participantes i18n={i18n}/>
+  <Participantes {i18n} />
   <div
     class="flex flex-col gap-7 items-center mb-10 animate-fade-up animate-delay-700"
   >
-    <p class=" font-light text-xl">{ i18n.participant_title }</p>
+    <p class=" font-light text-xl">{i18n.participant_title}</p>
     <button on:click={scrollToBottom} class="hover:animate-bounce py-4"
       ><svg
         xmlns="http://www.w3.org/2000/svg"
@@ -88,5 +95,22 @@
       ></button
     >
   </div>
-  <Formulario i18n={i18n}/>
+  <section class="mx-44">
+    <h2 class="text-5xl">{i18n.presentation_title}</h2>
+    <p class="text-2xl text-pretty">{i18n.presentation_text}</p>
+  </section>
+
+  <section class="mx-44">
+    <h2 class="text-5xl">{i18n.dates.title}</h2>
+    <p>{i18n.dates.date_1}</p>
+
+    <p>{i18n.dates.date_2}</p>
+
+    <p>{i18n.dates.date_3}</p>
+
+    <p>{i18n.dates.date_4}
+      {i18n.dates.date_4_detail}
+    </p>
+  </section>
+  <Formulario {i18n} />
 </div>
