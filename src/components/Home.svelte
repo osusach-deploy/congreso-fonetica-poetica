@@ -53,7 +53,7 @@
       <p class=" font-extralight text-2xl">{i18n.date}</p>
     </div>
     <div
-      class="flex flex-col my-auto gap-2 bg-white bg-opacity-40 rounded-xl p-5 md:mx-5 lg:w-[40%] text-center items-center min-w-72"
+      class="flex flex-col my-auto gap-2 bg-white bg-opacity-40 rounded-xl p-5 md:mx-5 lg:w-[40%] text-center items-center sm:min-w-72"
     >
       <p class=" text-3xl font-bold">{i18n.listener_title}</p>
       <p class="font-light text-lg">
@@ -64,7 +64,7 @@
         method="POST"
       >
         <input
-          class="rounded-l-full w-[65%] lg:w-full pl-3 py-2 appearance-none focus:outline-none focus:shadow-outline"
+          class="rounded-l-full w-[75%] lg:w-full pl-3 py-2 appearance-none focus:outline-none focus:shadow-outline"
           name="email"
           type="email"
           bind:value={email}
@@ -72,8 +72,15 @@
         />
         <button
           type="submit"
-          class="flex w-[35%] justify-center bg-indigo-400 hover:bg-indigo-500 transition-all text-white font-semibold py-2 lg:px-2 rounded-r-full"
+          class="hidden sm:flex w-fit justify-center bg-indigo-400 hover:bg-indigo-500 transition-all text-white font-semibold py-2 px-2 rounded-r-full"
           >{i18n.subscribe_button}</button
+        >
+        <button
+          type="submit"
+          class="flex sm:hidden justify-center bg-indigo-400 hover:bg-indigo-500 transition-all text-white font-semibold p-2 lg:px-2 rounded-r-full"
+          >
+          <img src="/img/send.svg" alt="" class="w-8">
+          </button
         >
       </form>
     </div>

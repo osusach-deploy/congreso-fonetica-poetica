@@ -11,7 +11,7 @@
     <div
       class="flex flex-wrap items-center justify-center max-w-3xl gap-7 mx-auto content-center"
     >
-      <img src="/img/logo.png" class="h-20" alt="" />
+      <img src="/img/fonetica.png" class="h-20" alt="" />
       <img src="/img/granada_neg.png" class="h-20" alt="" />
       <img src="/img/conce_neg.png" class="h-16" alt="" />
       <img src="/img/eu_neg.png" class="h-16" alt="" />

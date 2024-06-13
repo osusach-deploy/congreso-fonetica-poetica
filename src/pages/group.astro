@@ -1,0 +1,34 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Home from "./Home.svelte";
+import Header from "./Header.svelte";
+import Footer from "./Footer.svelte";
+
+import { getI18N } from "../i18n";
+const { currentLocale = "es" } = Astro;
+const i18n = getI18N(currentLocale);
+---
+
+<Layout title="Congreso Poética">
+  <div class="flex flex-col items-center">
+    <p class="">
+      ¿Quiénes somos?- Presentación Un grupo al que los une la idea de que los
+      estudios fonéticos y los estudios poéticos están estrechamente
+      relacionados. Miembros: Valentina Colonna (Universidad de Granada) Domingo
+      Román Montes de Oca (Universidad de Santiago de Chile) Nicolás Retamal
+      Venegas (Universidad de Concepción) Antonio Pamies Bertrán (Universidad de
+      Granada) Objetivos: Abordar el estudio fonético instrumental de la poesía,
+      a partir de la en lengua española Difundir el estudio fonético
+      instrumental de la poesía como un área de investigación legítima (y
+      descuidada). Construir una red internacional de investigadores que
+      trabajen el tema con enfoques científicos parecidos y distintos Proponer
+      diversas instancias para difundir esta perspectiva de investigación del
+      objeto poético. Instituciones relacionadas: Universidad de Granada,
+      Universidad de Santiago de Chile, Laboratorio de Fonética de la
+      Universidad de Santiago de Chile, Universidad de Concepción, Voices of
+      Spanish Poets, Unión Europea En colaboración con el proyecto Voices of
+      Spanish Poets: Vocal Archive and Experimental Study on Poetry Reading,
+      Financiado por la Unión Europea
+    </p>
+  </div>
+</Layout>
