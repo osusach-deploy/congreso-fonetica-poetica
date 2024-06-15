@@ -1,4 +1,6 @@
 <script lang="ts">
+    import { getLocaleId } from "../i18n";
+
   const API_URL = import.meta.env.PUBLIC_API_URL;
   let nombre = "";
   let email = "";
@@ -8,6 +10,7 @@
   let areaOtro = "";
 
   export let i18n;
+  export let currentLocale: string;
 
   const { form } = i18n;
 
@@ -20,10 +23,11 @@
       institution: institucion,
       title: titulo,
       theme: areaTematica,
+      lang: getLocaleId(currentLocale)
     };
-    console.log(body);
+    // console.log(body);
 
-    fetch(API_URL + "forms", {
+    fetch(API_URL + "interested", {
       method: "POST",
       body: JSON.stringify(body),
     })

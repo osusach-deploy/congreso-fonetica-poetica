@@ -3,10 +3,12 @@
   import Formulario from "./Formulario.svelte";
   import { reveal, setDefaultOptions } from "svelte-reveal";
   import Timeline from "./Timeline.svelte";
+    import { getLocaleId } from "../i18n";
 
   const API_URL = import.meta.env.PUBLIC_API_URL;
 
   export let i18n;
+  export let currentLocale: string;
 
   function scrollToBottom() {
     window.scrollBy({
@@ -18,19 +20,20 @@
   function handleClick() {
     const body = {
       email: email,
+      lang: getLocaleId(currentLocale)
     };
-    console.log(body);
+    // console.log(body);
 
-    fetch(API_URL + "listeners", {
+    fetch(API_URL + "listener", {
       method: "POST",
       body: JSON.stringify(body),
     })
       .then((x) => {
-        console.log(x);
-        alert("LISTENER");
+        // console.log(x);
+        // alert("LISTENER");
       })
       .catch((e) => {
-        console.log(e);
+        // console.log(e);
       });
   }
 
@@ -61,7 +64,7 @@
       </p>
       <form
         class="w-[100%] justify-center flex flex-row px-2 lg:px-5 py-2 rounded-lg"
-        method="POST"
+        on:submit|preventDefault={handleClick}
       >
         <input
           class="rounded-l-full w-[75%] lg:w-full pl-3 py-2 appearance-none focus:outline-none focus:shadow-outline"
@@ -111,5 +114,5 @@
     <h2 class="font-bold text-4xl">{i18n.dates.title}</h2>
     <Timeline i18n={i18n} />
   </section>
-  <Formulario {i18n} />
+  <Formulario i18n={i18n} currentLocale={currentLocale}/>
 </div>
