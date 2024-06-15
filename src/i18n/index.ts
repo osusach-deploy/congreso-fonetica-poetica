@@ -14,3 +14,10 @@ export const getI18N = (currentLocale: string) => {
   if (currentLocale === LANGUAGES.ITALIAN) return italian;
   return spanish;
 };
+
+export const getLocaleId = (currentLocale: string) => {
+  if (currentLocale === LANGUAGES.SPANISH) return 1;
+  if (currentLocale === LANGUAGES.ENGLISH) return 2;
+  if (currentLocale === LANGUAGES.ITALIAN) return 3;
+  return 1;
+}
