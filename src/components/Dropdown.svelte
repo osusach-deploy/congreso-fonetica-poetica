@@ -2,26 +2,12 @@
   export let i18n;
   export let currentLocale;
   export let pathname;
-  let pathTo = "";
   let selectedLanguage = 'Español';
   let showDropdown = false;
-
-  console.log("/" + pathname.split("/"));
-  console.log("/en" + pathname);
+  
+  let pathTo = "/" + (pathname.split("/").pop() ?? "")
 
   function changeLanguage(currentLocale) {
-      if (currentLocale == 'it'){
-        selectedLanguage = "Italiano"
-      }
-      if (currentLocale == 'es'){
-        selectedLanguage = "Español"
-      }
-      if (currentLocale == 'en'){
-        selectedLanguage = "English"
-      }
-  }
-
-  function changePrefix(currentLocale) {
       if (currentLocale == 'it'){
         selectedLanguage = "Italiano"
       }
@@ -46,9 +32,9 @@
         <p class="text-white text-base sm:text-lg bg-white bg-opacity-15 rounded-lg px-3 py-1">{ i18n.language }: <b>{selectedLanguage}</b></p>
     </button>
     <div class="dropdown-content top-16 right-0.5 rounded-lg {showDropdown ? 'show' : ''}">
-        <a href={"/" + pathname} class="rounded-lg hover:bg-slate-100">Español</a>
-        <a href="/en" class="rounded-lg hover:bg-slate-100">English</a>
-        <a href="/it" class="rounded-lg hover:bg-slate-100">Italiano</a>
+        <a href={pathTo} class="rounded-lg hover:bg-slate-100">Español</a>
+        <a href={"/en" + pathTo} class="rounded-lg hover:bg-slate-100">English</a>
+        <a href={"/it" + pathTo} class="rounded-lg hover:bg-slate-100">Italiano</a>
     </div>
 </div>
   
