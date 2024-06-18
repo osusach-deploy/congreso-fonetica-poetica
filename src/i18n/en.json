@@ -18,7 +18,7 @@
     "title": "Relevant dates",
     "date_1": {
       "title": "Declaration of interest",
-      "date": "August 2, 2024"      
+      "date": "August 2, 2024"
     },
     "date_2": {
       "title": "Receipt of proposals",
@@ -117,7 +117,9 @@
     ],
     "colaborating": "In collaboration with the project Voices of Spanish Poets: Vocal Archive and Experimental Study on Poetry Reading, Funded by the European Union",
     "subtitle_5": "Events:",
-    "content_5": ["1st Edition of the International Congress of Phonetics and Poetics"],
+    "content_5": [
+      "1st Edition of the International Congress of Phonetics and Poetics"
+    ],
     "subtitle_6": "Contact:",
     "content_6": "fypcongreso@gmail.com"
   },

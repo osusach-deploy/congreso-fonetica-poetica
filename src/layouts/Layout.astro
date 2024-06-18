@@ -28,18 +28,19 @@ const pathname = Astro.url.pathname;
     <title>{title}</title>
   </head>
   <body class="fondo">
-      <Header client:load i18n={i18n} {currentLocale} {pathname} />
-      <slot />
-      <Footer client:load i18n={i18n}/>
-    </main>
-  </body><style is:global>
-    .fondo {
-      background: rgb(233, 228, 240);
-      background: linear-gradient(
-        90deg,
-        rgba(233, 228, 240, 1) 0%,
-        rgba(211, 204, 227, 1) 100%
-      );
-    }
-  </style>
+    <Header client:load i18n={i18n} {currentLocale} {pathname} />
+    <slot />
+    <Footer client:load i18n={i18n} />
+
+    <style is:global>
+      .fondo {
+        background: rgb(233, 228, 240);
+        background: linear-gradient(
+          90deg,
+          rgba(233, 228, 240, 1) 0%,
+          rgba(211, 204, 227, 1) 100%
+        );
+      }
+    </style>
+  </body>
 </html>
