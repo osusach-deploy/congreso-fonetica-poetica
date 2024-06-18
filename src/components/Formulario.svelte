@@ -41,6 +41,7 @@
 </script>
 
 <div
+  id="form"
   class="flex flex-col lg:flex-row w-4/5 lg:w-[60%] lg:justify-between mx-10 mt-10 lg:mt-20 mb-20 lg:mb-44"
 >
   <div class="flex flex-col lg:w-[35%] gap-3 text-center justify-center">
