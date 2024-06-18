@@ -9,63 +9,32 @@ const i18n = getI18N(currentLocale);
 <Layout title="Congreso Poética">
   <div class="flex flex-col items-center">
     <article class="text-pretty text-xl py-4 flex flex-col gap-4 mx-20">
-      <h1>Grupo de investigación Fonética y Poética</h1>
-      <h2 class="text-3xl font-semibold">¿Quiénes somos?</h2>
-      <p>
-        Un grupo al que los une la idea de que los estudios fonéticos y los
-        estudios poéticos están estrechamente relacionados.
-      </p>
+      <h1>{i18n.group.title}</h1>
+      <h2 class="text-3xl font-semibold">{i18n.group.subtitle_1}</h2>
+      <p>{i18n.group.content_1}</p>
 
-      <h2 class="text-3xl font-semibold">Miembros:</h2>
+      <h2 class="text-3xl font-semibold">{i18n.group.subtitle_2}</h2>
       <ul class="list-disc">
-        <li>Valentina Colonna (Universidad de Granada)</li>
-        <li>Domingo Román Montes de Oca (Universidad de Santiago de Chile)</li>
-        <li>Nicolás Retamal Venegas (Universidad de Concepción)</li>
-        <li>Antonio Pamies Bertrán (Universidad de Granada)</li>
+        {i18n.group.content_2.map((text) => <li>{text}</li>)}
       </ul>
 
-      <h2 class="text-3xl font-semibold">Objetivos:</h2>
+      <h2 class="text-3xl font-semibold">{i18n.group.subtitle_3}</h2>
       <ul class="list-disc">
-        <li>
-          Abordar el estudio fonético instrumental de la poesía, a partir de la
-          en lengua española
-        </li>
-        <li>
-          Difundir el estudio fonético instrumental de la poesía como un área de
-          investigación legítima (y descuidada).
-        </li>
-        <li>
-          Construir una red internacional de investigadores que trabajen el tema
-          con enfoques científicos parecidos y distintos
-        </li>
-        <li>
-          Proponer diversas instancias para difundir esta perspectiva de
-          investigación del objeto poético.
-        </li>
+        {i18n.group.content_3.map((text) => <li>{text}</li>)}
       </ul>
 
-      <h2 class="text-3xl font-semibold">Instituciones relacionadas:</h2>
-      <p>
-        Universidad de Granada, Universidad de Santiago de Chile, Laboratorio de
-        Fonética de la Universidad de Santiago de Chile, Universidad de
-        Concepción, Voices of Spanish Poets, Unión Europea
-      </p>
-      <p>
-        En colaboración con el proyecto Voices of Spanish Poets: Vocal Archive
-        and Experimental Study on Poetry Reading, Financiado por la Unión
-        Europea
-      </p>
-
-      <h2 class="text-3xl font-semibold">Eventos:</h2>
-
-      <ul>
-        <li class="list-disc">
-          I edición del Congreso internacional de fonética y poética
-        </li>
+      <h2 class="text-3xl font-semibold">{i18n.group.subtitle_4}</h2>
+      <ul class="list-disc">
+        {i18n.group.content_4.map((text) => <li>{text}</li>)}
       </ul>
+      <p>{i18n.group.colaborating}</p>
 
-      <h2 class="text-3xl font-semibold">Contacto:</h2>
-      <p>fypcongreso@gmail.com</p>
+      <h2 class="text-3xl font-semibold">{i18n.group.subtitle_5}</h2>
+      <ul class="list-disc">
+        {i18n.group.content_5.map((text) => <li>{text}</li>)}
+      </ul>
+      <h2 class="text-3xl font-semibold">{i18n.group.subtitle_6}</h2>
+      <p>{i18n.group.content_6}</p>
     </article>
   </div>
 </Layout>

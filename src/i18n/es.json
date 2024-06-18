@@ -18,7 +18,7 @@
     "title": "Fechas relevantes",
     "date_1": {
       "title": "Declaración de interés",
-      "date": "02/08/2024"      
+      "date": "02/08/2024"
     },
     "date_2": {
       "title": "Recepción de propuestas",
@@ -57,5 +57,69 @@
     "organizers_title": "Organizadores",
     "developers_title": "Desarrolladores",
     "osusach_organizers": "Organización"
-  }
+  },
+  "comitees": {
+    "title": "Comités participantes",
+    "subtitle_1": "Comité científico",
+    "content_1": [
+      "Valentina Colonna (Universidad de Granada)",
+      "Domingo Román (Universidad de Santiago de Chile)",
+      "Nicolás Retamal (Universidad de Concepción)",
+      "Antonio Pamies (Universidad de Granada)",
+      "Antonio Romano (Università di Torino)",
+      "Valeria Cofré (Universidad de Santiago de Chile)",
+      "Stefan Blohm (Leibniz-Institut für Deutsche Sprache)",
+      "Anastasia Boldireff (Université de Québec)",
+      "Jaime Soto (Universidad de Concepción)",
+      "Isolina Lara (Universidad de Concepción)",
+      "Stefano Versace (Independent Researcher / Leopardi Centre University of Birmingham)",
+      "Federico Lo Iacono (Università di Genova-Torino)"
+    ],
+    "subtitle_2": "Comité organizador",
+    "content_2": [
+      "Valentina Colonna (Universidad de Granada, MSCA)",
+      "Domingo Román (Universidad de Santiago de Chile, Lab. de Fonética)",
+      "Nicolás Retamal (Universidad de Concepción)"
+    ],
+    "subtitle_3": "Secretaría",
+    "content_3": [
+      "Federico Lo Iacono (Universidad de Granada)",
+      "Ana Vinuesa (Universidad de Granada)",
+      "Camila Colicheo Cabrera (Universidad Católica de Santiago de Chile)"
+    ]
+  },
+  "group": {
+    "title": "Grupo de investigación Fonética y Poética",
+    "subtitle_1": "¿Quiénes somos?",
+    "content_1": "Un grupo al que los une la idea de que los estudios fonéticos y los estudios poéticos están estrechamente relacionados.",
+    "subtitle_2": "Miembros:",
+    "content_2": [
+      "Valentina Colonna (Universidad de Granada)",
+      "Domingo Román Montes de Oca (Universidad de Santiago de Chile)",
+      "Nicolás Retamal Venegas (Universidad de Concepción)",
+      "Antonio Pamies Bertrán (Universidad de Granada)"
+    ],
+    "subtitle_3": "Objetivos:",
+    "content_3": [
+      "Abordar el estudio fonético instrumental de la poesía, a partir de la en lengua española",
+      "Difundir el estudio fonético instrumental de la poesía como un área de investigación legítima (y descuidada).",
+      "Construir una red internacional de investigadores que trabajen el tema con enfoques científicos parecidos y distintos",
+      "Proponer diversas instancias para difundir esta perspectiva de investigación del objeto poético."
+    ],
+    "subtitle_4": "Instituciones relacionadas:",
+    "content_4": [
+      "Universidad de Granada",
+      "Universidad de Santiago de Chile",
+      "Laboratorio de Fonética de la Universidad de Santiago de Chile",
+      "Universidad de Concepción",
+      "Voices of Spanish Poets",
+      "Unión Europea"
+    ],
+    "colaborating": "En colaboración con el proyecto Voices of Spanish Poets: Vocal Archive and Experimental Study on Poetry Reading, Financiado por la Unión Europea",
+    "subtitle_5": "Eventos:",
+    "content_5": ["I edición del Congreso internacional de fonética y poética"],
+    "subtitle_6": "Contacto:",
+    "content_6": "fypcongreso@gmail.com"
+  },
+  "proposals": {}
 }

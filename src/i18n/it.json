@@ -57,5 +57,69 @@
     "organizers_title": "Organizzatori",
     "developers_title": "Sviluppatori",
     "osusach_organizers": "Organizzazione"
-  }
+  },
+  "comitees": {
+    "title": "Comitati partecipanti",
+    "subtitle_1": "Comitato scientifico",
+    "content_1": [
+      "Valentina Colonna (Università di Granada)",
+      "Domingo Román (Università di Santiago del Cile)",
+      "Nicolás Retamal (Università di Concepción)",
+      "Antonio Pamies (Università di Granada)",
+      "Antonio Romano (Università di Torino)",
+      "Valeria Cofré (Università di Santiago del Cile)",
+      "Stefan Blohm (Leibniz-Institut für Deutsche Sprache)",
+      "Anastasia Boldireff (Université du Québec)",
+      "Jaime Soto (Università di Concepción)",
+      "Isolina Lara (Università di Concepción)",
+      "Stefano Versace (Ricercatore indipendente / Leopardi Centre University of Birmingham)",
+      "Federico Lo Iacono (Università di Genova-Torino)"
+    ],
+    "subtitle_2": "Comitato organizzatore",
+    "content_2": [
+      "Valentina Colonna (Università di Granada, MSCA)",
+      "Domingo Román (Università di Santiago del Cile, Lab. di Fonetica)",
+      "Nicolás Retamal (Università di Concepción)"
+    ],
+    "subtitle_3": "Segreteria",
+    "content_3": [
+      "Federico Lo Iacono (Università di Granada)",
+      "Ana Vinuesa (Università di Granada)",
+      "Camila Colicheo Cabrera (Università Cattolica di Santiago del Cile)"
+    ]
+  },
+  "group": {
+    "title": "Gruppo di ricerca Fonetica e Poetica",
+    "subtitle_1": "Chi siamo?",
+    "content_1": "Un gruppo unito dall'idea che gli studi fonetici e gli studi poetici siano strettamente correlati.",
+    "subtitle_2": "Membri:",
+    "content_2": [
+      "Valentina Colonna (Università di Granada)",
+      "Domingo Román Montes de Oca (Università di Santiago del Cile)",
+      "Nicolás Retamal Venegas (Università di Concepción)",
+      "Antonio Pamies Bertrán (Università di Granada)"
+    ],
+    "subtitle_3": "Obiettivi:",
+    "content_3": [
+      "Affrontare lo studio fonetico strumentale della poesia, a partire dalla lingua spagnola",
+      "Diffondere lo studio fonetico strumentale della poesia come un'area di ricerca legittima (e trascurata).",
+      "Costruire una rete internazionale di ricercatori che lavorano sull'argomento con approcci scientifici simili e diversi",
+      "Proporre diverse istanze per diffondere questa prospettiva di ricerca dell'oggetto poetico."
+    ],
+    "subtitle_4": "Istituzioni correlate:",
+    "content_4": [
+      "Università di Granada",
+      "Università di Santiago del Cile",
+      "Laboratorio di Fonetica dell'Università di Santiago del Cile",
+      "Università di Concepción",
+      "Voices of Spanish Poets",
+      "Unione Europea"
+    ],
+    "colaborating": "In collaborazione con il progetto Voices of Spanish Poets: Archivio Vocale e Studio Sperimentale sulla Lettura della Poesia, Finanziato dall'Unione Europea",
+    "subtitle_5": "Eventi:",
+    "content_5": ["1a edizione del Congresso Internazionale di Fonetica e Poetica"],
+    "subtitle_6": "Contatto:",
+    "content_6": "fypcongreso@gmail.com"
+  },
+  "proposals": {}
 }

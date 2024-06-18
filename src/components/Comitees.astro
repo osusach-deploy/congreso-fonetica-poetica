@@ -8,39 +8,20 @@ const i18n = getI18N(currentLocale);
 
 <Layout title="Congreso Poética">
   <article class="text-pretty text-xl py-4 flex flex-col gap-4 mx-20">
-    <h1 class="text-5xl font-semibold">Comités participantes</h1>
-    <h2 class="text-3xl font-semibold">Comité científico</h2>
+    <h1 class="text-5xl font-semibold">{i18n.comitees.title}</h1>
+    <h2 class="text-3xl font-semibold">{i18n.comitees.subtitle_1}</h2>
     <ul class="list-disc">
-      <li>Valentina Colonna (Universidad de Granada)</li>
-      <li>Domingo Román (Universidad de Santiago de Chile)</li>
-      <li>Nicolás Retamal (Universidad de Concepción)</li>
-      <li>Antonio Pamies (Universidad de Granada)</li>
-      <li>Antonio Romano (Università di Torino)</li>
-      <li>Valeria Cofré (Universidad de Santiago de Chile)</li>
-      <li>Stefan Blohm (Leibniz-Institut für Deutsche Sprache)</li>
-      <li>Anastasia Boldireff (Université de Québec)</li>
-      <li>Jaime Soto (Universidad de Concepción)</li>
-      <li>Isolina Lara (Universidad de Concepción)</li>
-      <li>
-        Stefano Versace (Independent Researcher / Leopardi Centre University of
-        Birmingham)
-      </li>
-      <li>Federico Lo Iacono (Università di Genova-Torino)</li>
-    </ul>
-    <h2 class="text-3xl font-semibold">Comité organizador</h2>
-    <ul class="list-disc">
-      <li>Valentina Colonna (Universidad de Granada, MSCA) Domingo</li>
-      <li>Román (Universidad de Santiago de Chile, Lab. de Fonética)</li>
-      <li>Nicolás Retamal (Universidad de Concepción)</li>
+      {i18n.comitees.content_1.map((text) => <li>{text}</li>)}
     </ul>
 
-    <h2 class="text-3xl font-semibold">Secretaría</h2>
+    <h2 class="text-3xl font-semibold">{i18n.comitees.subtitle_2}</h2>
     <ul class="list-disc">
-      <li>Federico Lo Iacono (Universidad de Granada)</li>
-      <li>Ana Vinuesa (Universidad de Granada)</li>
-      <li>
-        Camila Colicheo Cabrera (Universidad Católica de Santiago de Chile)
-      </li>
+      {i18n.comitees.content_2.map((text) => <li>{text}</li>)}
+    </ul>
+
+    <h2 class="text-3xl font-semibold">{i18n.comitees.subtitle_3}</h2>
+    <ul class="list-disc">
+      {i18n.comitees.content_3.map((text) => <li>{text}</li>)}
     </ul>
   </article>
 </Layout>
