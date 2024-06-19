@@ -12,7 +12,7 @@
 </script>
 
 
-<div>
+<div class="block lg:hidden z-20">
     <button on:click={toggleMenu}>
         <svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" viewBox="0 0 24 24" class="flex lg:hidden mr-2"><path fill="white" d="M3 18v-2h18v2zm0-5v-2h18v2zm0-5V6h18v2z"/></svg>
     </button>

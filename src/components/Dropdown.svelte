@@ -27,10 +27,8 @@
     showDropdown = !showDropdown;
   }
 </script>
-
-</script>
   
-<div class="dropdown flex mr-2 lg:mr-5 lg:mx-auto sm:mx-0">
+<div class="dropdown flex mr-2 lg:mr-5 lg:mx-auto sm:mx-0 bg-inherit rounded-lg z-20">
     <button on:click={toggleDropdown}>
         <p class="text-white text-base sm:text-lg bg-white bg-opacity-15 rounded-lg px-3 py-1">{ i18n.language }: <b>{selectedLanguage}</b></p>
     </button>

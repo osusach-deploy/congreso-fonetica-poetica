@@ -45,7 +45,7 @@
   let email = "";
 </script>
 
-<div class="flex flex-col w-full items-center mt-24 lg:mt-14 -z-10 asd">
+<div class="flex flex-col w-full items-center mt-24 lg:mt-14">
   <div
     class=" animate-fade-up animate-ease-in-out flex flex-col gap-20 lg:flex-row lg:my-10 w-[90%] lg:mx-0 lg:w-[60%] lg:justify-between"
   >
@@ -58,7 +58,7 @@
     <div
       class="flex flex-col my-auto gap-2 bg-white bg-opacity-40 rounded-xl p-5 md:mx-5 lg:w-[40%] text-center items-center sm:min-w-72"
     >
-      <p class=" text-3xl font-bold">{i18n.listener_title}</p>
+      <p class="text-3xl font-bold">{i18n.listener_title}</p>
       <p class="font-light text-lg">
         {i18n.listener_subtitle}
       </p>
@@ -91,7 +91,7 @@
   <div
     class="flex flex-col gap-5 items-center mb-10 animate-fade-up animate-delay-700"
   >
-    <p class=" font-light text-xl">{i18n.participant_title}</p>
+    <p class="text-center font-light text-xl">{i18n.participant_title}</p>
     <button on:click={scrollToBottom} class="hover:animate-bounce py-2"
       ><svg
         xmlns="http://www.w3.org/2000/svg"

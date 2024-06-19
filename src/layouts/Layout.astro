@@ -28,9 +28,9 @@ const pathname = Astro.url.pathname;
     <title>{title}</title>
   </head>
   <body class="fondo">
-    <Header client:load i18n={i18n} {currentLocale} {pathname} />
+    <Header client:load {i18n} {currentLocale} {pathname} />
     <slot />
-    <Footer client:load i18n={i18n} />
+    <Footer client:load {i18n} />
 
     <style is:global>
       .fondo {
