@@ -25,7 +25,7 @@
     "title": "Relevant dates",
     "date_1": {
       "title": "Declaration of interest",
-      "date": "August 2, 2024"      
+      "date": "August 2, 2024"
     },
     "date_2": {
       "title": "Receipt of proposals",
@@ -92,7 +92,7 @@
     "content_3": [
       "Federico Lo Iacono (University of Granada)",
       "Ana Vinuesa (University of Granada)",
-      "Camila Colicheo Cabrera (Catholic University of Santiago, Chile)"
+      "Camila Colicheo Cabrera (Pontifical Catholic University of Chile)"
     ]
   },
   "group": {
@@ -108,10 +108,10 @@
     ],
     "subtitle_3": "Objectives:",
     "content_3": [
-      "To approach the instrumental phonetic study of poetry, starting with the Spanish language",
-      "To promote the instrumental phonetic study of poetry as a legitimate (and neglected) research area.",
+      "To approach the instrumental phonetic study of Spanish language poetry",
+      "To promote the instrumental phonetic study of poetry as a legitimate (and neglected) research area",
       "To build an international network of researchers working on the topic with similar and different scientific approaches",
-      "To propose various instances to disseminate this research perspective of the poetic object."
+      "To propose various instances to disseminate this research perspective of the poetic object"
     ],
     "subtitle_4": "Related Institutions:",
     "content_4": [
@@ -124,7 +124,9 @@
     ],
     "colaborating": "In collaboration with the project Voices of Spanish Poets: Vocal Archive and Experimental Study on Poetry Reading, Funded by the European Union",
     "subtitle_5": "Events:",
-    "content_5": ["1st Edition of the International Congress of Phonetics and Poetics"],
+    "content_5": [
+      "1st Edition of the International Congress of Phonetics and Poetics"
+    ],
     "subtitle_6": "Contact:",
     "content_6": "fypcongreso@gmail.com"
   },

@@ -1,5 +1,5 @@
 <script lang="ts">
-    import { getLocaleId } from "../i18n";
+  import { getLocaleId } from "../i18n";
 
   const API_URL = import.meta.env.PUBLIC_API_URL;
   let nombre = "";
@@ -23,7 +23,7 @@
       institution: institucion,
       title: titulo,
       theme: areaTematica,
-      lang: getLocaleId(currentLocale)
+      lang: getLocaleId(currentLocale),
     };
     // console.log(body);
 
@@ -103,11 +103,13 @@
           </select>
         </div>
         {#if areaTematica == "Otro" || areaTematica == "Other" || areaTematica == "Altro"}
-            <input type="text"
+          <input
+            type="text"
             bind:value={areaOtro}
             placeholder={form.category_other_placeholder}
-            class="appearance-none border rounded-lg mb-4 w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
-          {/if}
+            class="appearance-none border rounded-lg mb-4 w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+          />
+        {/if}
         <button
           type="submit"
           class="w-full bg-indigo-400 hover:bg-indigo-500 transition-all text-white font-semibold py-2 px-4 rounded"

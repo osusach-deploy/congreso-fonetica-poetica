@@ -64,8 +64,7 @@
       <h6 class="font-bold text-xl uppercase">
         {i18n.footer.osusach_organizers}
       </h6>
-      <a href="todo" class="text-lg hover:underline"
-        >Grupo Fonética y Poética</a
+      <a href="/group" class="text-lg hover:underline">Grupo Fonética y Poética</a
       >
     </nav>
   </div>

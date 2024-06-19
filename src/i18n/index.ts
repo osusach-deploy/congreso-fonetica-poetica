@@ -20,4 +20,4 @@ export const getLocaleId = (currentLocale: string) => {
   if (currentLocale === LANGUAGES.ENGLISH) return 2;
   if (currentLocale === LANGUAGES.ITALIAN) return 3;
   return 1;
-}
+};

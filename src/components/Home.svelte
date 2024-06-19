@@ -3,7 +3,7 @@
   import Formulario from "./Formulario.svelte";
   import { reveal, setDefaultOptions } from "svelte-reveal";
   import Timeline from "./Timeline.svelte";
-    import { getLocaleId } from "../i18n";
+  import { getLocaleId } from "../i18n";
 
   const API_URL = import.meta.env.PUBLIC_API_URL;
 
@@ -20,7 +20,7 @@
   function handleClick() {
     const body = {
       email: email,
-      lang: getLocaleId(currentLocale)
+      lang: getLocaleId(currentLocale),
     };
     // console.log(body);
 
@@ -81,10 +81,9 @@
         <button
           type="submit"
           class="flex sm:hidden justify-center bg-indigo-400 hover:bg-indigo-500 transition-all text-white font-semibold p-2 lg:px-2 rounded-r-full"
-          >
-          <img src="/img/send.svg" alt="" class="w-8">
-          </button
         >
+          <img src="/img/send.svg" alt="" class="w-8" />
+        </button>
       </form>
     </div>
   </div>
@@ -107,12 +106,14 @@
     >
   </div>
   <section class="mx-10 my-20 lg:w-[60%] lg:my-28">
-    <p class="text-lg lg:text-2xl font-light text-center">{i18n.presentation_text}</p>
+    <p class="text-lg lg:text-2xl font-light text-center">
+      {i18n.presentation_text}
+    </p>
   </section>
 
   <section class="flex flex-col w-[90%] gap-14 items-center mb-7 lg:mx-44">
     <h2 class="font-bold text-4xl">{i18n.dates.title}</h2>
-    <Timeline i18n={i18n} />
+    <Timeline {i18n} />
   </section>
-  <Formulario i18n={i18n} currentLocale={currentLocale}/>
+  <Formulario {i18n} {currentLocale} />
 </div>
