@@ -72,7 +72,7 @@
 
 <style>
   h2 {
-    @apply text-5xl font-bold;
+    @apply text-5xl font-semibold;
   }
   h3 {
     @apply text-3xl font-semibold;

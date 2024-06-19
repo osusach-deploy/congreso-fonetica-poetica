@@ -33,6 +33,9 @@
     })
       .then((x) => {
         console.log(x);
+        if (x.status == 200) {
+          window.location.href = "/instructions";
+        }
       })
       .catch((e) => {
         console.log(e);
@@ -56,6 +59,7 @@
       <div class="mb-4">
         <p class=" text-lg font-semibold mb-4">{form.personal_info_title}</p>
         <input
+          required
           type="text"
           bind:value={nombre}
           placeholder={form.name_placeholder}
@@ -65,6 +69,7 @@
       <div class="mb-4">
         <div class="mb-4">
           <input
+            required
             type="email"
             bind:value={email}
             placeholder={form.email_placeholder}
@@ -73,6 +78,7 @@
         </div>
         <div class="mb-4">
           <input
+            required
             type="text"
             bind:value={institucion}
             placeholder={form.institution_placeholder}
@@ -84,6 +90,7 @@
             {form.exposition_info_title}
           </p>
           <input
+            required
             type="text"
             bind:value={titulo}
             placeholder={form.presentation_title_placeholder}
@@ -92,6 +99,7 @@
         </div>
         <div class="mb-4">
           <select
+            required
             bind:value={areaTematica}
             class="block w-full bg-white border px-4 py-2 pr-8 rounded-lg leading-tight focus:outline-none focus:shadow-outline"
           >

@@ -117,5 +117,4 @@
     <Timeline {i18n} />
   </section>
   <Formulario {i18n} {currentLocale} />
-  <Details/>
 </div>
