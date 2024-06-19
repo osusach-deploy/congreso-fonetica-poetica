@@ -53,13 +53,13 @@
     <div
       class="flex flex-col lg:w-[40%] gap-3 text-center align-middle justify-center"
     >
-      <p class=" font-light text-4xl sm:text-5xl">{@html i18n.title}</p>
+      <h1 class=" font-light text-4xl sm:text-5xl">{@html i18n.title}</h1>
       <p class=" font-extralight text-2xl">{i18n.date}</p>
     </div>
     <div
       class="flex flex-col my-auto gap-2 bg-white bg-opacity-40 rounded-xl p-5 md:mx-5 lg:w-[40%] text-center items-center sm:min-w-72"
     >
-      <p class="text-3xl font-bold">{i18n.listener_title}</p>
+      <h2 class="text-3xl font-bold">{i18n.listener_title}</h2>
       <p class="font-light text-lg">
         {i18n.listener_subtitle}
       </p>
@@ -68,6 +68,7 @@
         on:submit|preventDefault={handleClick}
       >
         <input
+          aria-label="enter your email to get notifications as a listener"
           class="rounded-l-full w-[75%] lg:w-full pl-3 py-2 appearance-none focus:outline-none focus:shadow-outline"
           name="email"
           type="email"
@@ -75,15 +76,17 @@
           placeholder={i18n.email_placeholder}
         />
         <button
+          aria-label="submit your email as a listener, wide button"
           type="submit"
-          class="hidden sm:flex w-fit justify-center bg-indigo-400 hover:bg-indigo-500 transition-all text-white font-semibold py-2 px-2 rounded-r-full"
+          class="hidden sm:flex w-fit justify-center bg-indigo-600 hover:bg-indigo-700 transition-all text-white font-semibold py-2 px-2 rounded-r-full"
           >{i18n.subscribe_button}</button
         >
         <button
+          aria-label="submit your email as a listener, mobile button"
           type="submit"
-          class="flex sm:hidden justify-center bg-indigo-400 hover:bg-indigo-500 transition-all text-white font-semibold p-2 lg:px-2 rounded-r-full"
+          class="flex sm:hidden justify-center bg-indigo-600 hover:bg-indigo-700 transition-all text-white font-semibold p-2 lg:px-2 rounded-r-full"
         >
-          <img src="/img/send.svg" alt="" class="w-8" />
+          <img src="/img/send.svg" alt="send icon" class="w-8" />
         </button>
       </form>
     </div>
@@ -93,7 +96,10 @@
     class="flex flex-col gap-5 items-center mb-10 animate-fade-up animate-delay-700"
   >
     <p class="text-center font-light text-xl">{i18n.participant_title}</p>
-    <button on:click={scrollToBottom} class="hover:animate-bounce py-2"
+    <button
+      on:click={scrollToBottom}
+      class="hover:animate-bounce py-2"
+      aria-label="Scroll to form button"
       ><svg
         xmlns="http://www.w3.org/2000/svg"
         width="2em"
@@ -107,9 +113,9 @@
     >
   </div>
   <section class="mx-10 my-20 lg:w-[60%] lg:my-28">
-    <p class="text-lg lg:text-2xl font-light text-center">
+    <h2 class="text-lg lg:text-2xl font-light text-center">
       {i18n.presentation_text}
-    </p>
+    </h2>
   </section>
 
   <section class="flex flex-col w-[90%] gap-14 items-center mb-7 lg:mx-44">

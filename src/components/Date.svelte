@@ -14,7 +14,7 @@
     <p class="h-24 w-1 lg:h-1 lg:w-72 bg-indigo-500"></p>
   </div>
   <div class="flex flex-col w-full lg:w-52">
-    <p class="font-bold text-lg">{title}</p>
+    <h3 class="font-bold text-lg">{title}</h3>
     <p class="text-lg">{date}</p>
     {#if extra != ""}
       <p class="text-lg italic font-light">{extra}</p>

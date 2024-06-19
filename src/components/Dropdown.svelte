@@ -27,16 +27,26 @@
     showDropdown = !showDropdown;
   }
 </script>
-  
-<div class="dropdown flex mr-2 lg:mr-5 lg:mx-auto sm:mx-0 bg-inherit rounded-lg z-20">
-    <button on:click={toggleDropdown}>
-        <p class="text-white text-base sm:text-lg bg-white bg-opacity-15 rounded-lg px-3 py-1">{ i18n.language }: <b>{selectedLanguage}</b></p>
-    </button>
-    <div class="dropdown-content top-16 right-0.5 rounded-lg {showDropdown ? 'show' : ''}">
-        <a href={pathTo} class="rounded-lg hover:bg-slate-100">Español</a>
-        <a href={"/en" + pathTo} class="rounded-lg hover:bg-slate-100">English</a>
-        <a href={"/it" + pathTo} class="rounded-lg hover:bg-slate-100">Italiano</a>
-    </div>
+
+<div
+  class="dropdown flex mr-2 lg:mr-5 lg:mx-auto sm:mx-0 bg-inherit rounded-lg z-20"
+>
+  <button on:click={toggleDropdown}>
+    <p
+      class="text-white text-base sm:text-lg bg-white bg-opacity-15 rounded-lg px-3 py-1"
+    >
+      {i18n.language}: <b>{selectedLanguage}</b>
+    </p>
+  </button>
+  <div
+    class="dropdown-content top-16 right-0.5 rounded-lg {showDropdown
+      ? 'show'
+      : ''}"
+  >
+    <a href={pathTo} class="rounded-lg hover:bg-slate-100">Español</a>
+    <a href={"/en" + pathTo} class="rounded-lg hover:bg-slate-100">English</a>
+    <a href={"/it" + pathTo} class="rounded-lg hover:bg-slate-100">Italiano</a>
+  </div>
 </div>
 
 <style>

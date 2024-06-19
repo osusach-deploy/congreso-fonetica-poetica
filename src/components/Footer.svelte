@@ -7,15 +7,27 @@
   class="flex flex-col bg-slate-700 text-white p-3 gap-7 divide-y divide-slate-400 px-10"
 >
   <div class="flex flex-col mx-auto pt-5 text-center gap-5">
-    <p class=" text-xl font-bold uppercase">{i18n.footer.organizers_title}</p>
+    <h2 class=" text-xl font-bold uppercase">{i18n.footer.organizers_title}</h2>
     <div
       class="flex flex-wrap items-center justify-center max-w-3xl gap-7 mx-auto content-center"
     >
-      <img src="/img/fonetica.png" class="h-20" alt="" />
-      <img src="/img/granada_neg.png" class="h-20" alt="" />
-      <img src="/img/conce_neg.png" class="h-16" alt="" />
-      <img src="/img/eu_neg.png" class="h-16" alt="" />
-      <img src="/img/vsp.png" class="h-20" alt="" />
+      <img src="/img/fonetica.png" class="h-20" alt="logo lab fonética usach" />
+      <img
+        src="/img/granada_neg.png"
+        class="h-20"
+        alt="logo university of granada"
+      />
+      <img
+        src="/img/conce_neg.png"
+        class="h-16"
+        alt="logo university of concepcion"
+      />
+      <img
+        src="/img/eu_neg.png"
+        class="h-16"
+        alt="logo funded by european union"
+      />
+      <img src="/img/vsp.png" class="h-20" alt="logo voices of spanish poets" />
     </div>
   </div>
   <div
@@ -27,12 +39,12 @@
         src="img/logo_transparent.svg"
         alt="Open Source Usach logo"
       />
-      <h1 class="text-3xl font-bold">Open Source USACH</h1>
+      <h2 class="text-3xl font-bold">Open Source USACH</h2>
     </aside>
     <nav>
-      <h6 class="font-bold text-xl uppercase">
+      <h3 class="font-bold text-xl uppercase">
         {i18n.footer.developers_title}
-      </h6>
+      </h3>
       <a href="https://github.com/kappita/" class="text-lg hover:underline"
         >Ignacio Lara</a
       >
@@ -48,7 +60,7 @@
       >
     </nav>
     <nav>
-      <h6 class="font-bold text-xl">OSUSACH</h6>
+      <h3 class="font-bold text-xl">OSUSACH</h3>
       <a href="https://www.osusach.com/" class="text-lg hover:underline"
         >Website</a
       >
@@ -61,10 +73,11 @@
       >
     </nav>
     <nav>
-      <h6 class="font-bold text-xl uppercase">
+      <h3 class="font-bold text-xl uppercase">
         {i18n.footer.osusach_organizers}
-      </h6>
-      <a href="/group" class="text-lg hover:underline">Grupo Fonética y Poética</a
+      </h3>
+      <a href="/group" class="text-lg hover:underline"
+        >Grupo Fonética y Poética</a
       >
     </nav>
   </div>
