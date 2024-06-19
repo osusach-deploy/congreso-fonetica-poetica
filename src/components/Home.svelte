@@ -45,7 +45,7 @@
   let email = "";
 </script>
 
-<div class="flex flex-col w-full items-center mt-24 lg:mt-14 asd">
+<div class="flex flex-col w-full items-center mt-24 lg:mt-14 -z-10 asd">
   <div
     class=" animate-fade-up animate-ease-in-out flex flex-col gap-20 lg:flex-row lg:my-10 w-[90%] lg:mx-0 lg:w-[60%] lg:justify-between"
   >

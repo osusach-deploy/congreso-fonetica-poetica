@@ -1,4 +1,11 @@
 {
+  "header": {
+    "congress": "Congresso",
+    "investigation": "Gruppo di ricerca",
+    "committees": "Comitati",
+    "announcement": "Convocazione",
+    "proposals": "Proposte"
+  },
   "language": "Lingua",
   "title": "1° CONGRESSO INTERNAZIONALE DI FONETICA E POETICA",
   "date": "14-15 novembre 2024",

@@ -1,4 +1,11 @@
 {
+  "header": {
+    "congress": "Congreso",
+    "investigation": "Grupo de investigacion",
+    "committees": "Comités",
+    "announcement": "Convocatoria",
+    "proposals": "Propuestas"
+  },
   "language": "Idioma",
   "title": "1<sup>er</sup> CONGRESO INTERNACIONAL DE FONÉTICA Y POÉTICA",
   "date": "14-15 de noviembre 2024",
