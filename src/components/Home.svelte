@@ -1,4 +1,5 @@
 <script lang="ts">
+  import Details from "./Details.svelte";
   import Participantes from "./Participantes.svelte";
   import Formulario from "./Formulario.svelte";
   import { reveal, setDefaultOptions } from "svelte-reveal";
@@ -116,4 +117,5 @@
     <Timeline {i18n} />
   </section>
   <Formulario {i18n} {currentLocale} />
+  <Details/>
 </div>

@@ -20,8 +20,8 @@
       <a class="flex items-center hover:bg-slate-600 px-3 py-1 transition-all" href={langPath + "/group"}
         >{i18n.header.investigation}</a>
       <a class="flex items-center hover:bg-slate-600 px-3 py-1 transition-all" href={langPath + "/comitees"}>{i18n.header.committees}</a>
-      <a class="flex items-center hover:bg-slate-600 px-3 py-1 transition-all" href={langPath + "/#form"}>{i18n.header.announcement}</a>
-      <a class="flex items-center hover:bg-slate-600 px-3 py-1 transition-all" href={langPath + "/proposals"}>{i18n.header.proposals}</a>
+      <a class="flex items-center hover:bg-slate-600 px-3 py-1 transition-all" href={langPath + "/announcement"}>{i18n.header.announcement}</a>
+      <a class="flex items-center hover:bg-slate-600 px-3 py-1 transition-all" href={langPath + "/#form"}>{i18n.header.proposals}</a>
     </div>
   </div>
   <Dropdown {i18n} {currentLocale} {pathname} />

@@ -42,11 +42,11 @@
 
 <div
   id="form"
-  class="flex flex-col lg:flex-row w-4/5 lg:w-[60%] lg:justify-between mx-10 mt-10 lg:mt-20 mb-20 lg:mb-44"
+  class="flex flex-col lg:flex-row w-4/5 lg:w-[60%] lg:justify-between mx-10 mt-10 lg:mt-20 mb-20"
 >
   <div class="flex flex-col lg:w-[35%] gap-3 text-center justify-center">
     <p class="font-bold text-4xl">{i18n.interest_declaration_title}</p>
-    <p class="text-lg font-light">{i18n.interest_declaration_subtitle}</p>
+    <p class="text-xl font-light">{i18n.interest_declaration_subtitle}</p>
   </div>
   <div class="lg:w-[40%] mt-10 text-lg">
     <form
