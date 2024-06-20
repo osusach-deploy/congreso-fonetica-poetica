@@ -103,6 +103,94 @@
           />
         </div>
         <div class="mb-4">
+          <input
+            aria-label="presentation title field"
+            required
+            type="text"
+            bind:value={titulo}
+            placeholder={"Autores y filiación:"}
+            class="appearance-none border rounded-lg w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+          />
+        </div>
+        <div class="mb-4">
+          <input
+            aria-label="presentation title field"
+            required
+            type="text"
+            bind:value={titulo}
+            placeholder="Presentadores"
+            class="appearance-none border rounded-lg w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+          />
+        </div>
+        <div class="mb-8 gap-4 flex flex-col">
+          <p>Palabras Clave</p>
+          <input
+            aria-label="presentation title field"
+            required
+            type="text"
+            bind:value={titulo}
+            placeholder="Palabra clave 1"
+            class="appearance-none border rounded-lg w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+          />
+          <input
+            aria-label="presentation title field"
+            required
+            type="text"
+            bind:value={titulo}
+            placeholder="Palabra clave 2"
+            class="appearance-none border rounded-lg w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+          />
+          <input
+            aria-label="presentation title field"
+            required
+            type="text"
+            bind:value={titulo}
+            placeholder="Palabra clave 3"
+            class="appearance-none border rounded-lg w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+          />
+          <input
+            aria-label="presentation title field"
+            required
+            type="text"
+            bind:value={titulo}
+            placeholder="Palabra clave 4"
+            class="appearance-none border rounded-lg w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+          />
+          <input
+            aria-label="presentation title field"
+            required
+            type="text"
+            bind:value={titulo}
+            placeholder="Palabra clave 5"
+            class="appearance-none border rounded-lg w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+          />
+        </div>
+        <div class="mb-4">
+          <input
+            aria-label="presentation title field"
+            required
+            type="text"
+            bind:value={titulo}
+            placeholder="País de residencia:"
+            class="appearance-none border rounded-lg w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+          />
+        </div>
+
+        <div class="mb-4">
+          <select
+            aria-label="category selector for the theme of the presentation"
+            required
+            bind:value={areaTematica}
+            class="block w-full bg-white border px-4 py-2 pr-8 rounded-lg leading-tight focus:outline-none focus:shadow-outline"
+          >
+            <option disabled value="">{"Idioma de la presentación:"}</option>
+            {#each ["English", "Español", "Italiano"] as area}
+              <option value={area}>{area}</option>
+            {/each}
+          </select>
+        </div>
+
+        <div class="mb-4">
           <select
             aria-label="category selector for the theme of the presentation"
             required
@@ -124,6 +212,24 @@
             class="appearance-none border rounded-lg mb-4 w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
           />
         {/if}
+
+        <div class="flex flex-col gap-4 mb-4">
+          <label for="resume"
+            >Resumen de la presentación (Max 250 palabras)</label
+          >
+          <textarea
+            class="w-full p-2"
+            name="resume"
+            id="resume"
+            maxlength="250"
+            required
+          />
+        </div>
+
+        <div class="mb-4 flex flex-col gap-4">
+          <label for="pdf">Subir pdf</label>
+          <input type="file" id="pdf">
+        </div>
         <button
           aria-label="sumbit your information"
           type="submit"
