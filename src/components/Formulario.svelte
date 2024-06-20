@@ -1,5 +1,6 @@
 <script lang="ts">
   import { getLocaleId } from "../i18n";
+  import Tags from "svelte-tags-input";
 
   const API_URL = import.meta.env.PUBLIC_API_URL;
   let nombre = "";
@@ -8,6 +9,8 @@
   let titulo = "";
   let areaTematica = "";
   let areaOtro = "";
+  let tags = [];
+  console.log(tags);
 
   export let i18n;
   export let currentLocale: string;
@@ -47,7 +50,7 @@
   id="form"
   class="flex flex-col lg:flex-row w-4/5 lg:w-[60%] lg:justify-between mx-10 mt-10 lg:mt-20 mb-20"
 >
-  <div class="flex flex-col lg:w-[35%] gap-3 text-center justify-center">
+  <div class="flex flex-col lg:w-[35%] gap-3 text-center pt-16">
     <h2 class="font-bold text-4xl">{i18n.interest_declaration_title}</h2>
     <p class="text-xl font-light">{i18n.interest_declaration_subtitle}</p>
   </div>
@@ -122,48 +125,8 @@
             class="appearance-none border rounded-lg w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
           />
         </div>
-        <div class="mb-8 gap-4 flex flex-col">
-          <p>Palabras Clave</p>
-          <input
-            aria-label="presentation title field"
-            required
-            type="text"
-            bind:value={titulo}
-            placeholder="Palabra clave 1"
-            class="appearance-none border rounded-lg w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-          />
-          <input
-            aria-label="presentation title field"
-            required
-            type="text"
-            bind:value={titulo}
-            placeholder="Palabra clave 2"
-            class="appearance-none border rounded-lg w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-          />
-          <input
-            aria-label="presentation title field"
-            required
-            type="text"
-            bind:value={titulo}
-            placeholder="Palabra clave 3"
-            class="appearance-none border rounded-lg w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-          />
-          <input
-            aria-label="presentation title field"
-            required
-            type="text"
-            bind:value={titulo}
-            placeholder="Palabra clave 4"
-            class="appearance-none border rounded-lg w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-          />
-          <input
-            aria-label="presentation title field"
-            required
-            type="text"
-            bind:value={titulo}
-            placeholder="Palabra clave 5"
-            class="appearance-none border rounded-lg w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-          />
+        <div class="mb-4 gap-4 flex flex-col">
+          <Tags bind:tags={tags} maxTags={5} addKeys={[32,13]} onlyUnique={true} placeholder={"Ingresa 5 palabras clave"}  />
         </div>
         <div class="mb-4">
           <input
