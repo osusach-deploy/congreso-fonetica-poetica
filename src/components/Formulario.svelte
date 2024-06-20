@@ -1,6 +1,6 @@
 <script lang="ts">
   import { getLocaleId } from "../i18n";
-  import Tags from "svelte-tags-input";
+  import { InputChip, FileDropzone } from "@skeletonlabs/skeleton";
 
   const API_URL = import.meta.env.PUBLIC_API_URL;
   let nombre = "";
@@ -9,9 +9,10 @@
   let titulo = "";
   let areaTematica = "";
   let areaOtro = "";
-  let tags = [];
-  console.log(tags);
-
+  let tags: string[] = [];
+  let files: FileList;
+  $: console.log(files);
+  
   export let i18n;
   export let currentLocale: string;
 
@@ -125,9 +126,25 @@
             class="appearance-none border rounded-lg w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
           />
         </div>
-        <div class="mb-4 gap-4 flex flex-col">
-          <Tags bind:tags={tags} maxTags={5} addKeys={[32,13]} onlyUnique={true} placeholder={"Ingresa 5 palabras clave"}  />
-        </div>
+        <InputChip
+          class="border-none mb-4"
+          chips="bg-white text-base rounded-lg"
+          regionInput="bg-white border-none rounded-lg py-2 px-3 leading-tight focus:outline-none focus:shadow-outline"
+          regionChipList=""
+          regionChipWrapper=""
+          padding="p-0"
+
+          name="keywords"
+          bind:value={tags}
+          placeholder="Ingresa 5 palabras clave"
+          maxlength={16}
+          max={5}
+          allowUpperCase
+          label="keyword chip list"
+          required
+        />
+        <!-- <Tags class="bg-white" bind:tags={tags} maxTags={5} addKeys={[32,13]} onlyUnique={true} placeholder={"Ingresa 5 palabras clave"}  /> -->
+
         <div class="mb-4">
           <input
             aria-label="presentation title field"
@@ -177,22 +194,33 @@
         {/if}
 
         <div class="flex flex-col gap-4 mb-4">
-          <label for="resume"
+          <label class="text-lg font-semibold" for="resume"
             >Resumen de la presentación (Max 250 palabras)</label
           >
           <textarea
-            class="w-full p-2"
+            class="w-full p-2 rounded-lg"
             name="resume"
             id="resume"
             maxlength="250"
             required
           />
         </div>
+          <FileDropzone name="pdf" bind:files={files} class="mb-4" aria-label="file dropzone to upload your presentation in pdf format">
+            <svelte:fragment slot="lead"><img src="/img/file_upload.svg" alt="file upload icon" class="h-16 mx-auto"></svelte:fragment>
+            <svelte:fragment slot="message">
+              {#if files == undefined}
+                <p>
+                  Archivo pdf con la presentación
+                </p>
+                <p>(todos los asistentes la podrán descargar)</p>
+              {:else}
+                  <div>{files[0].name}</div>
+              {/if}
 
-        <div class="mb-4 flex flex-col gap-4">
-          <label for="pdf">Subir pdf</label>
-          <input type="file" id="pdf">
-        </div>
+
+            </svelte:fragment>
+          </FileDropzone>
+
         <button
           aria-label="sumbit your information"
           type="submit"
