@@ -12,7 +12,7 @@
   let tags: string[] = [];
   let files: FileList;
   $: console.log(files);
-  
+
   export let i18n;
   export let currentLocale: string;
 
@@ -49,8 +49,7 @@
 
 <div
   id="form"
-  class="flex flex-col lg:flex-row w-4/5 lg:w-[60%] lg:justify-between mx-10 mt-10 lg:mt-20 mb-20"
->
+  class="flex flex-col lg:flex-row w-4/5 lg:w-[60%] lg:justify-between mx-10 mt-10 lg:mt-20 mb-20">
   <div class="flex flex-col lg:w-[35%] gap-3 text-center pt-16">
     <h2 class="font-bold text-4xl">{i18n.interest_declaration_title}</h2>
     <p class="text-xl font-light">{i18n.interest_declaration_subtitle}</p>
@@ -59,8 +58,7 @@
     <form
       aria-label="form to get a invitation to participate"
       on:submit|preventDefault={handleSubmit}
-      class="bg-white bg-opacity-50 p-5 rounded-lg"
-    >
+      class="bg-white bg-opacity-50 p-5 rounded-lg">
       <div class="mb-4">
         <p class=" text-lg font-semibold mb-4">{form.personal_info_title}</p>
         <input
@@ -69,8 +67,7 @@
           type="text"
           bind:value={nombre}
           placeholder={form.name_placeholder}
-          class="appearance-none border rounded-lg w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-        />
+          class="appearance-none border rounded-lg w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" />
       </div>
       <div class="mb-4">
         <div class="mb-4">
@@ -80,8 +77,7 @@
             type="email"
             bind:value={email}
             placeholder={form.email_placeholder}
-            class="appearance-none border rounded-lg w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-          />
+            class="appearance-none border rounded-lg w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" />
         </div>
         <div class="mb-4">
           <input
@@ -90,8 +86,7 @@
             type="text"
             bind:value={institucion}
             placeholder={form.institution_placeholder}
-            class="appearance-none border rounded-lg w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-          />
+            class="appearance-none border rounded-lg w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" />
         </div>
         <div class="mb-4">
           <p class=" text-lg font-semibold mb-4">
@@ -103,8 +98,7 @@
             type="text"
             bind:value={titulo}
             placeholder={form.presentation_title_placeholder}
-            class="appearance-none border rounded-lg w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-          />
+            class="appearance-none border rounded-lg w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" />
         </div>
         <div class="mb-4">
           <input
@@ -113,8 +107,7 @@
             type="text"
             bind:value={titulo}
             placeholder={"Autores y filiación:"}
-            class="appearance-none border rounded-lg w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-          />
+            class="appearance-none border rounded-lg w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" />
         </div>
         <div class="mb-4">
           <input
@@ -123,8 +116,7 @@
             type="text"
             bind:value={titulo}
             placeholder="Presentadores"
-            class="appearance-none border rounded-lg w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-          />
+            class="appearance-none border rounded-lg w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" />
         </div>
         <InputChip
           class="border-none mb-4"
@@ -133,7 +125,6 @@
           regionChipList=""
           regionChipWrapper=""
           padding="p-0"
-
           name="keywords"
           bind:value={tags}
           placeholder="Ingresa 5 palabras clave"
@@ -141,8 +132,7 @@
           max={5}
           allowUpperCase
           label="keyword chip list"
-          required
-        />
+          required />
         <!-- <Tags class="bg-white" bind:tags={tags} maxTags={5} addKeys={[32,13]} onlyUnique={true} placeholder={"Ingresa 5 palabras clave"}  /> -->
 
         <div class="mb-4">
@@ -152,8 +142,7 @@
             type="text"
             bind:value={titulo}
             placeholder="País de residencia:"
-            class="appearance-none border rounded-lg w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-          />
+            class="appearance-none border rounded-lg w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" />
         </div>
 
         <div class="mb-4">
@@ -161,9 +150,9 @@
             aria-label="category selector for the theme of the presentation"
             required
             bind:value={areaTematica}
-            class="block w-full bg-white border px-4 py-2 pr-8 rounded-lg leading-tight focus:outline-none focus:shadow-outline"
-          >
-            <option hidden disabled value="">{"Idioma de la presentación"}</option>
+            class="block w-full bg-white border px-4 py-2 pr-8 rounded-lg leading-tight focus:outline-none focus:shadow-outline">
+            <option hidden disabled value=""
+              >{"Idioma de la presentación"}</option>
             {#each ["English", "Español", "Italiano"] as area}
               <option value={area}>{area}</option>
             {/each}
@@ -175,10 +164,9 @@
             aria-label="category selector for the theme of the presentation"
             required
             bind:value={areaTematica}
-            class="block w-full bg-white border px-4 py-2 pr-8 rounded-lg leading-tight focus:outline-none focus:shadow-outline"
-          >
-            <option disabled hidden value="">{form.category_select_placeholder}</option
-            >
+            class="block w-full bg-white border px-4 py-2 pr-8 rounded-lg leading-tight focus:outline-none focus:shadow-outline">
+            <option disabled hidden value=""
+              >{form.category_select_placeholder}</option>
             {#each areas as area}
               <option value={area}>{area}</option>
             {/each}
@@ -189,44 +177,45 @@
             type="text"
             bind:value={areaOtro}
             placeholder={form.category_other_placeholder}
-            class="appearance-none border rounded-lg mb-4 w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-          />
+            class="appearance-none border rounded-lg mb-4 w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" />
         {/if}
 
         <div class="flex flex-col gap-4 mb-4">
-          <label class="text-lg font-semibold" for="resume"
-            ></label
-          >
+          <label class="text-lg font-semibold" for="resume"></label>
           <textarea
             class="w-full px-2 py-1 rounded-lg"
             name="resume"
             id="resume"
             maxlength="250"
             placeholder="Resumen presentación (Máx. 250 palabras)"
-            required
-          />
+            required />
         </div>
-          <FileDropzone name="pdf" bind:files={files} class="mb-4" aria-label="file dropzone to upload your presentation in pdf format">
-            <svelte:fragment slot="lead"><img src="/img/file_upload.svg" alt="file upload icon" class="h-14 mx-auto"></svelte:fragment>
-            <svelte:fragment slot="message">
-              {#if files == undefined}
-                <p>
-                  Archivo PDF con la presentación
-                </p>
-                <p class="text-sm font-light">(Todos los asistentes la podrán descargar)</p>
-              {:else}
-                  <div>{files[0].name}</div>
-              {/if}
-
-
-            </svelte:fragment>
-          </FileDropzone>
+        <FileDropzone
+          name="pdf"
+          bind:files
+          class="mb-4"
+          aria-label="file dropzone to upload your presentation in pdf format">
+          <svelte:fragment slot="lead"
+            ><img
+              src="/img/file_upload.svg"
+              alt="file upload icon"
+              class="h-14 mx-auto" /></svelte:fragment>
+          <svelte:fragment slot="message">
+            {#if files == undefined}
+              <p>Archivo PDF con la presentación</p>
+              <p class="text-sm font-light">
+                (Todos los asistentes la podrán descargar)
+              </p>
+            {:else}
+              <div>{files[0].name}</div>
+            {/if}
+          </svelte:fragment>
+        </FileDropzone>
 
         <button
           aria-label="sumbit your information"
           type="submit"
-          class="w-full bg-indigo-600 hover:bg-indigo-700 transition-all text-white font-semibold py-2 px-4 rounded"
-        >
+          class="w-full bg-indigo-600 hover:bg-indigo-700 transition-all text-white font-semibold py-2 px-4 rounded">
           {form.submit_button}
         </button>
         <p class="mt-6 px-1 text-xs font-light text-center">

@@ -4,41 +4,34 @@
 </script>
 
 <div
-  class="flex flex-col bg-slate-700 text-white p-3 gap-7 divide-y divide-slate-400 px-10"
->
+  class="flex flex-col bg-slate-700 text-white p-3 gap-7 divide-y divide-slate-400 px-10">
   <div class="flex flex-col mx-auto pt-5 text-center gap-5">
     <h2 class=" text-xl font-bold uppercase">{i18n.footer.organizers_title}</h2>
     <div
-      class="flex flex-wrap items-center justify-center max-w-3xl gap-7 mx-auto content-center"
-    >
+      class="flex flex-wrap items-center justify-center max-w-3xl gap-7 mx-auto content-center">
       <img src="/img/fonetica.png" class="h-20" alt="logo lab fonética usach" />
       <img
         src="/img/granada_neg.png"
         class="h-20"
-        alt="logo university of granada"
-      />
+        alt="logo university of granada" />
       <img
         src="/img/conce_neg.png"
         class="h-16"
-        alt="logo university of concepcion"
-      />
+        alt="logo university of concepcion" />
       <img
         src="/img/eu_neg.png"
         class="h-16"
-        alt="logo funded by european union"
-      />
+        alt="logo funded by european union" />
       <img src="/img/vsp.png" class="h-20" alt="logo voices of spanish poets" />
     </div>
   </div>
   <div
-    class="flex flex-col w-fit md:flex-row gap-10 justify-evenly md:w-full bg-inherit py-5 self-center text-white"
-  >
+    class="flex flex-col w-fit md:flex-row gap-10 justify-evenly md:w-full bg-inherit py-5 self-center text-white">
     <aside class="flex flex-col">
       <img
         class="h-20"
         src="img/logo_transparent.svg"
-        alt="Open Source Usach logo"
-      />
+        alt="Open Source Usach logo" />
       <h2 class="text-3xl font-bold">Open Source USACH</h2>
     </aside>
     <nav>
@@ -46,39 +39,31 @@
         {i18n.footer.developers_title}
       </h3>
       <a href="https://github.com/kappita/" class="text-lg hover:underline"
-        >Ignacio Lara</a
-      >
+        >Ignacio Lara</a>
       <a href="https://github.com/Skyrdow/" class="text-lg hover:underline"
-        >Lucas Mesías</a
-      >
+        >Lucas Mesías</a>
       <a href="https://github.com/Klefur/" class="text-lg hover:underline"
-        >Joaquín Saldivia</a
-      >
+        >Joaquín Saldivia</a>
       <a
         href="https://github.com/Don-Uldaricio/"
-        class="text-lg hover:underline">Nicolás Aguilera</a
-      >
+        class="text-lg hover:underline">Nicolás Aguilera</a>
     </nav>
     <nav>
       <h3 class="font-bold text-xl">OSUSACH</h3>
       <a href="https://www.osusach.com/" class="text-lg hover:underline"
-        >Website</a
-      >
+        >Website</a>
       <a href="https://github.com/osusach/" class="text-lg hover:underline"
-        >Github</a
-      >
+        >Github</a>
       <a
         href="https://github.com/osusach/congreso-fonetica-poetica/"
-        class="text-lg hover:underline">Source Code Git</a
-      >
+        class="text-lg hover:underline">Source Code Git</a>
     </nav>
     <nav>
       <h3 class="font-bold text-xl uppercase">
         {i18n.footer.osusach_organizers}
       </h3>
       <a href="/group" class="text-lg hover:underline"
-        >Grupo Fonética y Poética</a
-      >
+        >Grupo Fonética y Poética</a>
     </nav>
   </div>
   <div class="flex flex-row flex-wrap md:gap-0 gap-5 pt-5 mb-3">
