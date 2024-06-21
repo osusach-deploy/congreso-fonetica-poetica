@@ -12,69 +12,27 @@ const i18n = getI18N(currentLocale);
     class="flex flex-col items-center mx-auto my-10 lg:my-20 w-[88%] lg:w-[65%] max-w-5xl">
     <article class="text-xl py-4 flex flex-col gap-4">
       <h1 class="text-4xl lg:text-5xl font-semibold">
-        I edición del Congreso internacional de fonética y poética FyP
+        {i18n.announcement.title}
       </h1>
 
       <h2 class="text-2xl lg:text-3xl font-semibold">
-        "La dimensión acústica de la poesía: perspectivas instrumentales e
-        interdisciplinares"
+        {i18n.announcement.subtitle}
       </h2>
       <p>
-        En los orígenes, a partir de principio del siglo XX, la fonética estuvo
-        relacionada estrechamente con los estudios poéticos e incluso con el
-        análisis instrumental del habla (Mustazza, 2019) y la relación entre
-        lingüística y poesía se ha mostrado fuertemente conectada como muestra
-        Jakobson (1966). Sin embargo, a pesar del creciente número de archivos
-        vocales y estrategias de conservación del habla poética a nivel
-        internacional (v. Colonna, 2021, Mistrorigo 2019), esta rama de
-        investigación ha sido muy poco explorada a lo largo del tiempo.
+        {i18n.announcement.paragraph_1}
       </p>
 
       <p>
-        En los últimos años, se ha producido una reducción de esta brecha en
-        distintas áreas internacionales, a partir de enfoques teóricos que han
-        abierto el debate sobre el tema (Bernstein, 1999), abarcando varias
-        ramas disciplinares, que está permitiendo empezar a dejar huellas para
-        una conciencia, una sensibilización y un incremento del estudio
-        instrumental e interdisciplinar de esta específica y tan compleja forma
-        de habla y su relación con el texto escrito (ej. Byers 1979; MacArthur
-        et al. 2018; Colonna, 2022; Barbosa, 2023). A esta específica rama de
-        investigación este congreso quiere ser un aporte.
+        {i18n.announcement.paragraph_2}
       </p>
       <p>
-        Por esta razón, el recientemente creado grupo internacional de
-        investigación Fonética y Poética, en colaboración con el proyecto Voices
-        of Spanish Poets, invita cordialmente a todas las personas interesadas
-        en esta área de investigación a participar en la primera edición del
-        Congreso internacional de fonética y poética, que se realizará el 15 de
-        noviembre de este año 2024 en modalidad online.
+        {i18n.announcement.paragraph_3}
       </p>
       <p>
-        Invitamos a todos los estudiosos que trabajen en el tema de la dimensión
-        acústica de la poesía bajo distintos enfoques, a enviar una propuesta
-        que se encuentre en una de las siguientes áreas temáticas en las que se
-        desarrolla y que se preponen para el congreso:
+        {i18n.announcement.paragraph_4}
       </p>
       <ul class="list-disc list-inside">
-        <li>
-          Fonética y poesía: dedicada al estudio de fonético de grabaciones de
-          poesía leída o poesía oral
-        </li>
-        <li>
-          Fonética y poética aplicada (didáctica): dedicada a las aplicaciones
-          de la enseñanza de la poesía a través de la fonética en distintos
-          niveles de instrucción
-        </li>
-        <li>
-          Fonética, cognición y poética: dedicada al estudio de los resultados
-          de la dimensión acústica y perceptiva de la lectura poética a través
-          de metodologías psicolingüísticas, cognitivas y de correlatos
-          psicofisiológicos
-        </li>
-        <li>
-          Métrica: dedicada a la dimensión prosódica del texto poético en
-          relación con su ejecución e interpretación en voz alta
-        </li>
+        {i18n.announcement.list.map((item) => <li> {item}</li>)}
       </ul>
 
       <section class="flex flex-col w-full gap-14 items-center mt-7">

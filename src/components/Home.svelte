@@ -96,9 +96,9 @@
       ></a>
   </div>
   <section class="mx-10 my-20 lg:w-[60%] lg:my-28">
-    <h2 class="text-lg lg:text-2xl font-light text-center">
+    <p class="text-lg lg:text-2xl font-light text-center">
       {i18n.presentation_text}
-    </h2>
+    </p>
   </section>
 
   <section class="flex flex-col w-[90%] gap-14 items-center mb-7 lg:mx-44">

@@ -5,9 +5,11 @@
   let selectedLanguage = "Español";
   let showDropdown = false;
 
+  console.log(pathname);
   // Comentar en dev, bug entre dev y build
   pathname.split("/").pop();
   let pathTo = "/" + (pathname.split("/").pop() ?? "");
+  console.log(pathTo);
 
   function changeLanguage(currentLocale) {
     if (currentLocale == "it") {
