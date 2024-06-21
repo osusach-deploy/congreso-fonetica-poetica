@@ -14,10 +14,10 @@ jobs:
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v4.1.7
+        uses: actions/checkout@v3
 
       - name: Set up Node.js
-        uses: actions/setup-node@v4.0.2
+        uses: actions/setup-node@v3
         with:
           node-version: "20"
 
@@ -26,21 +26,16 @@ jobs:
 
       - name: Run Prettier
         run: npm run format
-        
-      - name: Configure git
-        run: |
-          git config --global user.name Skyrdow
-          git config --global user.email lucas.mesias@usach.cl
 
-      - name: Commit changes
+      - name: Check for unformatted code
         run: |
-          git add .
-          git commit -m "chore: format code with prettier" || echo "No changes to commit"
-
-      - name: Push changes
-        uses: ad-m/github-push-action@master
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+          if [[ `git status --porcelain` ]]; then
+            echo "Unformatted code found. Please run 'npm run format' and commit the changes."
+            git diff
+            exit 1
+          else
+            echo "All code is properly formatted."
+          fi
 
       - name: Install Pa11y
         run: npm install -g pa11y
@@ -57,4 +52,3 @@ jobs:
 
       - name: Run Pa11y
         run: npx pa11y http://localhost:4321
-        
