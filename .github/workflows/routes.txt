@@ -1,0 +1,5 @@
+http://localhost:4321/
+http://localhost:4321/group
+http://localhost:4321/instructions
+http://localhost:4321/announcement
+http://localhost:4321/comitees
