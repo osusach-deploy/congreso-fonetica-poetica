@@ -11,13 +11,6 @@
   export let i18n;
   export let currentLocale: string;
 
-  function scrollToBottom() {
-    window.scrollBy({
-      top: 1550,
-      behavior: "smooth",
-    });
-  }
-
   function handleClick() {
     const body = {
       email: email,
@@ -86,7 +79,7 @@
           type="submit"
           class="flex sm:hidden justify-center bg-indigo-600 hover:bg-indigo-700 transition-all text-white font-semibold p-2 lg:px-2 rounded-r-full"
         >
-          <img src="/img/send.svg" alt="send icon" class="w-8" />
+          <img src="/img/send.svg" alt="send icon" class="w-6 mr-1" />
         </button>
       </form>
     </div>
@@ -96,8 +89,8 @@
     class="flex flex-col gap-5 items-center mb-10 animate-fade-up animate-delay-700"
   >
     <p class="text-center font-light text-xl">{i18n.participant_title}</p>
-    <button
-      on:click={scrollToBottom}
+    <a
+      href="/#form"
       class="hover:animate-bounce py-2"
       aria-label="Scroll to form button"
       ><svg
@@ -109,7 +102,7 @@
           fill="black"
           d="M8.2 275.4c0-8.6 3.4-17.401 10-24.001c13.2-13.2 34.8-13.2 48 0l451.8 451.8l445.2-445.2c13.2-13.2 34.8-13.2 48 0s13.2 34.8 0 48L542 775.399c-13.2 13.2-34.8 13.2-48 0l-475.8-475.8c-6.8-6.8-10-15.4-10-24.199"
         /></svg
-      ></button
+      ></a
     >
   </div>
   <section class="mx-10 my-20 lg:w-[60%] lg:my-28">

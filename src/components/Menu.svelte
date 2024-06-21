@@ -41,11 +41,11 @@
     >
     <a
       class="flex items-center hover:bg-slate-600 px-3 py-1 transition-all"
-      href={langPath + "/#form"}>{i18n.header.announcement}</a
+      href={langPath + "/announcement"}>{i18n.header.announcement}</a
     >
     <a
       class="flex items-center hover:bg-slate-600 px-3 py-1 transition-all"
-      href={langPath + "/proposals"}>{i18n.header.proposals}</a
+      href={langPath + "/#form"}>{i18n.header.proposals}</a
     >
   </div>
 </div>

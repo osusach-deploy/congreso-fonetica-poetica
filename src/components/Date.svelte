@@ -9,7 +9,7 @@
 >
   <div class="flex flex-col lg:flex-row items-center">
     <p
-      class="absolute h-5 w-5 rounded-full bg-indigo-500 hover:bg-indigo-600"
+      class="absolute h-5 w-5 rounded-full bg-indigo-500 transition-all hover:bg-indigo-600"
     ></p>
     <p class="h-24 w-1 lg:h-1 lg:w-72 bg-indigo-500"></p>
   </div>

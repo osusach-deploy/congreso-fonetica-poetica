@@ -163,21 +163,21 @@
             bind:value={areaTematica}
             class="block w-full bg-white border px-4 py-2 pr-8 rounded-lg leading-tight focus:outline-none focus:shadow-outline"
           >
-            <option disabled value="">{"Idioma de la presentación:"}</option>
+            <option hidden disabled value="">{"Idioma de la presentación"}</option>
             {#each ["English", "Español", "Italiano"] as area}
               <option value={area}>{area}</option>
             {/each}
           </select>
         </div>
 
-        <div class="mb-4">
+        <div class="">
           <select
             aria-label="category selector for the theme of the presentation"
             required
             bind:value={areaTematica}
             class="block w-full bg-white border px-4 py-2 pr-8 rounded-lg leading-tight focus:outline-none focus:shadow-outline"
           >
-            <option disabled value="">{form.category_select_placeholder}</option
+            <option disabled hidden value="">{form.category_select_placeholder}</option
             >
             {#each areas as area}
               <option value={area}>{area}</option>
@@ -195,24 +195,25 @@
 
         <div class="flex flex-col gap-4 mb-4">
           <label class="text-lg font-semibold" for="resume"
-            >Resumen de la presentación (Max 250 palabras)</label
+            ></label
           >
           <textarea
-            class="w-full p-2 rounded-lg"
+            class="w-full px-2 py-1 rounded-lg"
             name="resume"
             id="resume"
             maxlength="250"
+            placeholder="Resumen presentación (Máx. 250 palabras)"
             required
           />
         </div>
           <FileDropzone name="pdf" bind:files={files} class="mb-4" aria-label="file dropzone to upload your presentation in pdf format">
-            <svelte:fragment slot="lead"><img src="/img/file_upload.svg" alt="file upload icon" class="h-16 mx-auto"></svelte:fragment>
+            <svelte:fragment slot="lead"><img src="/img/file_upload.svg" alt="file upload icon" class="h-14 mx-auto"></svelte:fragment>
             <svelte:fragment slot="message">
               {#if files == undefined}
                 <p>
-                  Archivo pdf con la presentación
+                  Archivo PDF con la presentación
                 </p>
-                <p>(todos los asistentes la podrán descargar)</p>
+                <p class="text-sm font-light">(Todos los asistentes la podrán descargar)</p>
               {:else}
                   <div>{files[0].name}</div>
               {/if}

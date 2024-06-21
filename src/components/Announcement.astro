@@ -1,5 +1,6 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import Timeline from "./Timeline.svelte";
 
 import { getI18N } from "../i18n";
 const { currentLocale = "es" } = Astro;
@@ -7,13 +8,13 @@ const i18n = getI18N(currentLocale);
 ---
 
 <Layout title="Congreso Poética">
-  <div class="mb-20 max-w-5xl mx-auto px-4 sm:px-20">
-    <article class="text-pretty text-xl py-4 flex flex-col gap-4">
-      <h1 class="text-5xl font-semibold">
+  <div class="flex flex-col items-center mx-auto my-10 lg:my-20 w-[88%] lg:w-[65%] max-w-5xl">
+    <article class="text-xl py-4 flex flex-col gap-4">
+      <h1 class="text-4xl lg:text-5xl font-semibold">
         I edición del Congreso internacional de fonética y poética FyP
       </h1>
 
-      <h2 class="text-3xl font-semibold">
+      <h2 class="text-2xl lg:text-3xl font-semibold">
         "La dimensión acústica de la poesía: perspectivas instrumentales e
         interdisciplinares"
       </h2>
@@ -75,28 +76,9 @@ const i18n = getI18N(currentLocale);
         </li>
       </ul>
 
-      <section class="text-left mt-4 md:w-1/2 self-center">
-        <h2 class="text-center text-3xl font-semibold">Fechas relevantes</h2>
-
-        <div class="flex justify-between mb-4 gap-2">
-          <p>Declaración de interés en participar:</p>
-          <p>02/08/2024</p>
-        </div>
-
-        <div class="flex justify-between mb-4 gap-2">
-          <p>Recepción de propuestas:</p>
-          <p>02/09/2024</p>
-        </div>
-
-        <div class="flex justify-between mb-4 gap-2">
-          <p>Comunicación de aceptación:</p>
-          <p>02/10/2024</p>
-        </div>
-
-        <div class="flex justify-between mb-4">
-          <p>Fecha del congreso:</p>
-          <p>14-15/11/2024</p>
-        </div>
+      <section class="flex flex-col w-full gap-14 items-center mt-7">
+        <h2 class="font-bold text-4xl">{i18n.dates.title}</h2>
+        <Timeline client:load {i18n} />
       </section>
     </article>
   </div>
