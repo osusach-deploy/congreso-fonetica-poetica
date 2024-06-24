@@ -5,12 +5,6 @@
   let selectedLanguage = "Español";
   let showDropdown = false;
 
-  console.log(pathname);
-  // Comentar en dev, bug entre dev y build
-  pathname.split("/").pop();
-  let pathTo = "/" + (pathname.split("/").pop() ?? "");
-  console.log(pathTo);
-
   function changeLanguage(currentLocale) {
     if (currentLocale == "it") {
       selectedLanguage = "Italiano";
@@ -51,9 +45,9 @@
     class="dropdown-content top-[70px] right-0.5 rounded-lg {showDropdown
       ? 'show'
       : ''}">
-    <a href={pathTo} class="rounded-lg hover:bg-slate-100">Español</a>
-    <a href={"/en" + pathTo} class="rounded-lg hover:bg-slate-100">English</a>
-    <a href={"/it" + pathTo} class="rounded-lg hover:bg-slate-100">Italiano</a>
+    <a href={pathname} class="rounded-lg hover:bg-slate-100">Español</a>
+    <a href={"/en" + pathname} class="rounded-lg hover:bg-slate-100">English</a>
+    <a href={"/it" + pathname} class="rounded-lg hover:bg-slate-100">Italiano</a>
   </div>
 </div>
 
