@@ -5,10 +5,6 @@
   let selectedLanguage = "Español";
   let showDropdown = false;
 
-  // Comentar en dev, bug entre dev y build
-  pathname.split("/").pop();
-  let pathTo = "/" + (pathname.split("/").pop() ?? "");
-
   function changeLanguage(currentLocale) {
     if (currentLocale == "it") {
       selectedLanguage = "Italiano";
@@ -29,23 +25,29 @@
 </script>
 
 <div
-  class="dropdown flex mr-2 lg:mr-5 lg:mx-auto sm:mx-0 bg-inherit rounded-lg z-20"
->
+  class="dropdown h-full flex mr-2 lg:mr-5 lg:mx-auto sm:mx-0 bg-inherit rounded-lg z-20">
   <button on:click={toggleDropdown}>
     <p
-      class="text-white text-base sm:text-lg bg-white bg-opacity-15 rounded-lg px-3 py-1"
-    >
+      class="flex flex-row items-center transition-all text-white text-base sm:text-lg hover:bg-opacity-25 bg-white bg-opacity-15 rounded-lg px-3 py-1">
       {i18n.language}: <b>{selectedLanguage}</b>
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        class="ml-1"
+        width="1em"
+        height="1em"
+        viewBox="0 0 1024 1024"
+        ><path
+          fill="white"
+          d="M831.872 340.864L512 652.672L192.128 340.864a30.59 30.59 0 0 0-42.752 0a29.12 29.12 0 0 0 0 41.6L489.664 714.24a32 32 0 0 0 44.672 0l340.288-331.712a29.12 29.12 0 0 0 0-41.728a30.59 30.59 0 0 0-42.752 0z" /></svg>
     </p>
   </button>
   <div
-    class="dropdown-content top-16 right-0.5 rounded-lg {showDropdown
+    class="dropdown-content top-[70px] right-0.5 rounded-lg {showDropdown
       ? 'show'
-      : ''}"
-  >
-    <a href={pathTo} class="rounded-lg hover:bg-slate-100">Español</a>
-    <a href={"/en" + pathTo} class="rounded-lg hover:bg-slate-100">English</a>
-    <a href={"/it" + pathTo} class="rounded-lg hover:bg-slate-100">Italiano</a>
+      : ''}">
+    <a href={pathname} class="rounded-lg hover:bg-slate-100">Español</a>
+    <a href={"/en" + pathname} class="rounded-lg hover:bg-slate-100">English</a>
+    <a href={"/it" + pathname} class="rounded-lg hover:bg-slate-100">Italiano</a>
   </div>
 </div>
 

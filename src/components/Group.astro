@@ -7,34 +7,52 @@ const i18n = getI18N(currentLocale);
 ---
 
 <Layout title="Congreso Poética">
-  <div class="flex flex-col items-center">
-    <article class="text-pretty text-xl py-4 flex flex-col gap-4 mx-5 sm:mx-20">
-      <h1 class="text-3xl sm:text-5xl font-semibold">{i18n.group.title}</h1>
-      <h2 class="text-3xl font-semibold">{i18n.group.subtitle_1}</h2>
-      <p>{i18n.group.content_1}</p>
+  <div
+    class="flex flex-col items-center mx-auto my-10 lg:my-20 w-[95%] lg:w-[65%]">
+    <article class="text-pretty text-xl py-4 flex flex-col gap-8 mx-5 sm:mx-20">
+      <h1 class="mb-5 text-4xl sm:text-5xl font-semibold">
+        {i18n.group.title}
+      </h1>
+      <div class="flex flex-col gap-2">
+        <h2 class="text-3xl font-semibold">{i18n.group.subtitle_1}</h2>
+        <p>{i18n.group.content_1}</p>
+      </div>
 
-      <h2 class="text-3xl font-semibold">{i18n.group.subtitle_2}</h2>
-      <ul class="list-disc">
-        {i18n.group.content_2.map((text) => <li>{text}</li>)}
-      </ul>
+      <div class="flex flex-col gap-2">
+        <h2 class="text-3xl font-semibold">{i18n.group.subtitle_2}</h2>
+        <ul class="list-disc pl-8">
+          {i18n.group.content_2.map((text) => <li>{text}</li>)}
+        </ul>
+      </div>
 
-      <h2 class="text-3xl font-semibold">{i18n.group.subtitle_3}</h2>
-      <ul class="list-disc">
-        {i18n.group.content_3.map((text) => <li>{text}</li>)}
-      </ul>
+      <div class="flex flex-col gap-2">
+        <h2 class="text-3xl font-semibold">{i18n.group.subtitle_3}</h2>
+        <ul class="list-disc pl-8">
+          {i18n.group.content_3.map((text) => <li>{text}</li>)}
+        </ul>
+      </div>
 
-      <h2 class="text-3xl font-semibold">{i18n.group.subtitle_4}</h2>
-      <ul class="list-disc">
-        {i18n.group.content_4.map((text) => <li>{text}</li>)}
-      </ul>
-      <p>{i18n.group.colaborating}</p>
+      <div class="flex flex-col gap-2">
+        <h2 class="text-3xl font-semibold">{i18n.group.subtitle_4}</h2>
+        <ul class="list-disc pl-8">
+          {i18n.group.content_4.map((text) => <li>{text}</li>)}
+        </ul>
+        <p>{i18n.group.colaborating}</p>
+      </div>
 
-      <h2 class="text-3xl font-semibold">{i18n.group.subtitle_5}</h2>
-      <ul class="list-disc">
-        {i18n.group.content_5.map((text) => <li>{text}</li>)}
-      </ul>
-      <h2 class="text-3xl font-semibold">{i18n.group.subtitle_6}</h2>
-      <p>{i18n.group.content_6}</p>
+      <div class="flex flex-col gap-2">
+        <h2 class="text-3xl font-semibold">{i18n.group.subtitle_5}</h2>
+        <ul class="list-disc pl-8">
+          {i18n.group.content_5.map((text) => <li>{text}</li>)}
+        </ul>
+      </div>
+
+      <div class="flex flex-col gap-2">
+        <h2 class="text-3xl font-semibold">{i18n.group.subtitle_6}</h2>
+        <ul class="list-disc pl-8">
+          <li>{i18n.group.content_6}</li>
+        </ul>
+      </div>
     </article>
   </div>
 </Layout>

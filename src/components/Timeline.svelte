@@ -11,6 +11,5 @@
   <Date
     title={i18n.dates.date_4.title}
     date={i18n.dates.date_4.date}
-    extra={i18n.dates.date_4_detail}
-  />
+    extra={i18n.dates.date_4_detail} />
 </div>

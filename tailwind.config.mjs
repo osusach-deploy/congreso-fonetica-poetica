@@ -1,6 +1,15 @@
+// 1. Import the Skeleton plugin
+import { skeleton } from "@skeletonlabs/tw-plugin";
+
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
+  content: [
+    "./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}",
+    require("path").join(
+      require.resolve("@skeletonlabs/skeleton"),
+      "../**/*.{html,js,svelte,ts}",
+    ),
+  ],
   theme: {
     keyframes: {
       bounce: {
@@ -20,5 +29,5 @@ export default {
       },
     },
   },
-  plugins: [require("tailwindcss-animated")],
+  plugins: [require("tailwindcss-animated"), skeleton],
 };

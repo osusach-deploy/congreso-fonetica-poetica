@@ -130,5 +130,19 @@
     "subtitle_6": "Contatto:",
     "content_6": "fypcongreso@gmail.com"
   },
-  "proposals": {}
+  "proposals": {},
+  "announcement": {
+    "title": "I Edizione del Congresso Internazionale di Fonetica e Poetica FyP",
+    "subtitle": "La Dimensione Acustica della Poesia: Prospettive Strumentali e Interdisciplinari",
+    "paragraph_1": "In origine, a partire dall'inizio del XX secolo, la fonetica era strettamente legata agli studi poetici e anche all'analisi strumentale del parlato (Mustazza, 2019), e la relazione tra linguistica e poesia si è mostrata fortemente connessa come dimostra Jakobson (1966). Tuttavia, nonostante il crescente numero di archivi vocali e strategie di conservazione del parlato poetico a livello internazionale (vedi Colonna, 2021, Mistrorigo 2019), questo ramo di ricerca è stato poco esplorato nel tempo.",
+    "paragraph_2": "Negli ultimi anni, questo divario si è ridotto in diverse aree internazionali, attraverso approcci teorici che hanno aperto il dibattito sull'argomento (Bernstein, 1999), comprendendo varie branche disciplinari, che stanno permettendo di iniziare a lasciare tracce per una consapevolezza, una sensibilizzazione e un incremento dello studio strumentale e interdisciplinare di questa specifica e complessa forma di parlato e della sua relazione con il testo scritto (es. Byers 1979; MacArthur et al. 2018; Colonna, 2022; Barbosa, 2023). Questo congresso vuole essere un contributo a questo specifico ramo di ricerca.",
+    "paragraph_3": "Per questa ragione, il recentemente creato gruppo internazionale di ricerca Fonetica e Poetica, in collaborazione con il progetto Voices of Spanish Poets, invita cordialmente tutte le persone interessate a quest'area di ricerca a partecipare alla prima edizione del Congresso Internazionale di Fonetica e Poetica, che si terrà il 15 novembre 2024 in modalità online.",
+    "paragraph_4": "Invitiamo tutti gli studiosi che lavorano sul tema della dimensione acustica della poesia con diversi approcci a inviare una proposta che rientri in una delle seguenti aree tematiche proposte per il congresso:",
+    "list": [
+      "Fonetica e Poesia: dedicata allo studio fonetico delle registrazioni di poesia letta o poesia orale",
+      "Fonetica e Poetica Applicata (Didattica): dedicata alle applicazioni dell'insegnamento della poesia attraverso la fonetica a diversi livelli di istruzione",
+      "Fonetica, Cognizione e Poetica: dedicata allo studio dei risultati della dimensione acustica e percettiva della lettura poetica attraverso metodologie psicolinguistiche, cognitive e di correlati psicofisiologici",
+      "Metrica: dedicata alla dimensione prosodica del testo poetico in relazione alla sua esecuzione e interpretazione ad alta voce"
+    ]
+  }
 }
