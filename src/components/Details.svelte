@@ -1,40 +1,6 @@
 <article class="mx-10 sm:w-[65%] text-xl mb-20 gap-y-4 flex flex-col">
   <h2>Instrucciones para las presentaciones</h2>
 
-  <h3>
-    Solicitamos a los interesados en participar, envíen la siguiente información
-  </h3>
-
-  <div>
-    <p>Título de la ponencia:</p>
-
-    <p>Autor(es) y filiación:</p>
-
-    <p>Presentador(es):</p>
-    <p>Palabras clave [cinco subcampos]</p>
-    <p>País de residencia: [un campo]</p>
-    <p>Idioma de la presentación: [desplegable: Castellano/ Inglés/Italiano]</p>
-
-    <p>Área temática del congreso:</p>
-    <ul>
-      <li>Fonética y poesía</li>
-      <li>Fonética y poética aplicada (por ejemplo, didáctica)</li>
-      <li>Fonética, cognición y poética</li>
-      <li>Métrica</li>
-      <li>Otra:...</li>
-    </ul>
-
-    <p>
-      Resumen (máximo 250 palabras): Principales referencias bibliográficas:
-    </p>
-    <p>
-      Archivo pdf con la presentación: (todos los asistentes la podrán
-      descargar). Esto con la finalidad de que los asistentes tengan el material
-      en su propio equipo computacional y puedan seguir con el mínimo de
-      inconvenientes dado el formato online de este congreso.
-    </p>
-  </div>
-
   <h3>La presentación debe atenerse a las siguientes condiciones</h3>
 
   <ul>

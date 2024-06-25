@@ -5,6 +5,8 @@
   import { reveal, setDefaultOptions } from "svelte-reveal";
   import Timeline from "./Timeline.svelte";
   import { getLocaleId } from "../i18n";
+  import Formulario2 from "./Formulario2.svelte";
+  import { D } from "../../dist/_astro/index.B58CjUP4";
 
   const API_URL = import.meta.env.PUBLIC_API_URL;
 
@@ -105,5 +107,43 @@
     <h2 class="font-bold text-4xl">{i18n.dates.title}</h2>
     <Timeline {i18n} />
   </section>
-  <Formulario {i18n} {currentLocale} />
+  <Formulario2 {i18n} {currentLocale}>
+    <article class="text-xl gap-y-4 flex flex-col">
+      <h2 class="font-bold text-4xl">{i18n.interest_declaration_title}</h2>
+      <p class="text-xl font-light">{i18n.interest_declaration_subtitle}</p>
+
+      <h2 class="text-5xl font-semibold">
+        Instrucciones para las presentaciones
+      </h2>
+
+      <h3 class="text-3xl font-semibold">
+        La presentación debe atenerse a las siguientes condiciones
+      </h3>
+
+      <ul>
+        <li class="list-item list-inside list-disc">
+          Tiempo de presentación de máximo 20 minutos. Posteriormente habrá un
+          tiempo para formular preguntas.
+        </li>
+        <li class="list-item list-inside list-disc">
+          Es recomendable usar alguna presentación y recomendamos letra de
+          tamaño legible y texto fundamental.
+        </li>
+        <li class="list-item list-inside list-disc">
+          Considerar que la plataforma de presentación será Zoom.
+        </li>
+      </ul>
+
+      <p>La fecha del congreso: 14 y 15 de noviembre de 2024 desde las …</p>
+
+      <p>
+        (Si la presentación se sitúa en otra área, señálalo al comité receptor.)
+      </p>
+
+      <p>Dónde: en línea, plataforma Zoom.</p>
+      <p>Datos de contacto: fypcongreso@gmail.com</p>
+
+      <p>Persona de contacto: valentinacolonna@ugr.es</p>
+    </article>
+  </Formulario2>
 </div>

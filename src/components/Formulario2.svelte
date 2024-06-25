@@ -50,9 +50,8 @@
 <div
   id="form"
   class="flex flex-col lg:flex-row w-4/5 lg:w-[60%] lg:justify-between mx-10 mt-10 lg:mt-20 mb-20">
-  <div class="flex flex-col lg:w-[35%] gap-3 text-center pt-16">
-    <h2 class="font-bold text-4xl">{i18n.interest_declaration_title}</h2>
-    <p class="text-xl font-light">{i18n.interest_declaration_subtitle}</p>
+  <div class="flex flex-col lg:w-[45%] gap-3 text-center pt-16">
+    <slot></slot>
   </div>
   <div class="lg:w-[40%] mt-10 text-lg">
     <form
@@ -226,5 +225,15 @@
   </div>
 </div>
 
-<style>
+<style scoped>
+  h2 {
+    @apply text-5xl font-semibold;
+  }
+  h3 {
+    @apply text-3xl font-semibold;
+  }
+
+  li {
+    @apply list-item list-inside list-disc;
+  }
 </style>
