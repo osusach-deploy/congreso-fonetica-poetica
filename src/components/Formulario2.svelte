@@ -21,6 +21,7 @@
   const areas = form.categories;
 
   function handleSubmit() {
+    // CUALQUIER COSA CON LISTA -> PASAR A STRING Y SEPARAR CON ;
     const body = {
       name: nombre,
       email: email,
