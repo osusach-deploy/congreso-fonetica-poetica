@@ -12,12 +12,19 @@ interface Props {
 const { title } = Astro.props;
 
 const pathname = Astro.url.pathname;
+// console.log(pathname);
 
 let pathSplit = pathname.split("/");
+// console.log(pathSplit);
 
 // Comentar en dev, bug entre dev y build
 pathSplit.pop();
-let pathTo = "/" + (pathSplit.pop() ?? "");
+let check = pathSplit.pop();
+if (check === "en" || check === "it")
+  check = "";
+let pathTo = "/" + (check ?? "");
+// console.log(pathTo);
+// console.log();
 ---
 
 <!doctype html>
