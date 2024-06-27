@@ -6,16 +6,26 @@
     "announcement": "Convocatoria",
     "proposals": "Propuestas"
   },
+  "proposal": {
+    "submission_title": "Formulario de propuestas",
+    "submission_subtitle": "Te invitamos a ser parte del Primer Congreso Internacional de Fonética y Poética. Completa este formulario para que podamos planificar tu participación.",
+    "considerations_title": "Consideraciones para las presentaciones",
+    "considerations_description": [
+      "Tiempo de presentación de máximo 20 minutos. Posteriormente habrá un tiempo para formular preguntas.",
+      "Es recomendable usar alguna presentación y recomendamos letra de tamaño legible y texto fundamental.",
+      "Considerar que la plataforma de presentación será Zoom."
+    ]
+  },
   "language": "Idioma",
   "title": "1<sup>er</sup> CONGRESO INTERNACIONAL DE FONÉTICA Y POÉTICA",
   "date": "14-15 de noviembre 2024",
   "listener_title": "¿Deseas ser oyente?",
   "listener_subtitle": "Déjanos tu correo electrónico y te enviaremos las noticias más recientes sobre el congreso",
+  "listener_alert_success": "¡Te has suscrito exitosamente!",
+  "listener_alert_fail": "Ups! Algo ha ocurrido. Intenta nuevamente.",
   "email_placeholder": "Introduce tu correo",
   "subscribe_button": "Suscribirse",
   "participant_title": "¿Te gustaría participar como exponente?",
-  "interest_declaration_title": "Declaración de Interés",
-  "interest_declaration_subtitle": "Te invitamos a ser parte del Primer Congreso Internacional de Fonética y Poética. Completa este formulario para que podamos planificar tu participación.",
   "participant": {
     "organizers_title": "Organizan"
   },

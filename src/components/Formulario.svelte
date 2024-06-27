@@ -66,11 +66,11 @@
 
 <div
   id="form"
-  class="flex flex-col lg:flex-row w-4/5 lg:w-[60%] lg:justify-between mx-10 mt-10 lg:mt-20 mb-20">
+  class="flex flex-col lg:flex-row lg:w-[60%] lg:justify-between mx-3 lg:mx-10 mt-10 lg:mt-20 mb-20">
   <div class="flex flex-col lg:w-[45%] gap-3 text-center pt-16">
     <slot></slot>
   </div>
-  <div class="lg:w-[40%] mt-10 text-lg">
+  <div class="lg:w-[45%] mt-10 text-lg">
     <form
       aria-label="form to get a invitation to participate"
       on:submit|preventDefault={handleSubmit}
@@ -135,14 +135,9 @@
             class="appearance-none border rounded-lg w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" />
         </div>
         <div>
-          <p class=" text-lg font-semibold mb-4">
-            {form.input_chip_sub_label[0]}
-            <kbd class="kbd bg-white font-normal">enter</kbd>
-            {form.input_chip_sub_label[1]}
-          </p>
           <InputChip
             aria-label="keyword chip list add your keyword and press enter"
-            class="border-none mb-4"
+            class="border-none mb-2"
             chips="bg-white text-base rounded-lg"
             regionInput="bg-white border-none rounded-lg py-2 px-3 leading-tight focus:outline-none focus:shadow-outline"
             regionChipList=""
@@ -157,6 +152,11 @@
             label="keyword chip list"
             required />
         </div>
+        <p class="text-sm pl-1 mb-4 text-right">
+          {form.input_chip_sub_label[0]}
+          <kbd class="kbd bg-white font-normal">enter</kbd>
+          {form.input_chip_sub_label[1]}
+        </p>
         <div class="mb-4">
           <input
             aria-label="country"

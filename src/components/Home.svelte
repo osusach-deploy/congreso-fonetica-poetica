@@ -22,10 +22,12 @@
       body: JSON.stringify(body),
     })
       .then((x) => {
+        alert(i18n.listener_alert_success);
         // console.log(x);
         // alert("LISTENER");
       })
       .catch((e) => {
+        alert(i18n.listener_alert_fail);
         // console.log(e);
       });
   }
@@ -105,42 +107,25 @@
     <Timeline {i18n} />
   </section>
   <Formulario {i18n}>
-    <article class="text-xl gap-y-4 flex flex-col">
-      <h2 class="font-bold text-4xl">{i18n.interest_declaration_title}</h2>
-      <p class="text-xl font-light">{i18n.interest_declaration_subtitle}</p>
+    <article class="text-xl gap-16 flex flex-col">
+      <div class="flex flex-col gap-5">
+        <h2 class="font-bold text-4xl">{i18n.proposal.submission_title}</h2>
+        <p class="text-xl font-light">{i18n.proposal.submission_subtitle}</p>
+      </div>
 
-      <h2 class="text-5xl font-semibold">
-        Instrucciones para las presentaciones
-      </h2>
-
-      <h3 class="text-3xl font-semibold">
-        La presentación debe atenerse a las siguientes condiciones
-      </h3>
-
-      <ul>
-        <li class="list-item list-inside list-disc">
-          Tiempo de presentación de máximo 20 minutos. Posteriormente habrá un
-          tiempo para formular preguntas.
-        </li>
-        <li class="list-item list-inside list-disc">
-          Es recomendable usar alguna presentación y recomendamos letra de
-          tamaño legible y texto fundamental.
-        </li>
-        <li class="list-item list-inside list-disc">
-          Considerar que la plataforma de presentación será Zoom.
-        </li>
-      </ul>
-
-      <p>La fecha del congreso: 14 y 15 de noviembre de 2024 desde las …</p>
-
-      <p>
-        (Si la presentación se sitúa en otra área, señálalo al comité receptor.)
-      </p>
-
-      <p>Dónde: en línea, plataforma Zoom.</p>
-      <p>Datos de contacto: fypcongreso@gmail.com</p>
-
-      <p>Persona de contacto: valentinacolonna@ugr.es</p>
+      <div class="hidden lg:flex flex-col gap-5">
+        <h2 class="text-3xl font-bold">
+          {i18n.proposal.considerations_title}
+        </h2>
+  
+        <div class="flex flex-col">
+          <ul class="flex flex-col list-disc pl-8 gap-5">
+            {#each i18n.proposal.considerations_description as text}
+              <li class="font-light pl-7 text-left">{text}</li>
+            {/each}
+          </ul>
+        </div>
+      </div>
     </article>
   </Formulario>
 </div>

@@ -6,11 +6,23 @@
     "announcement": "Announcement",
     "proposals": "Proposals"
   },
+  "proposal": {
+    "submission_title": "Proposal Form",
+    "submission_subtitle": "We invite you to be part of the First International Congress on Phonetics and Poetics. Complete this form so we can plan your participation.",
+    "considerations_title": "Considerations for presentations",
+    "considerations_description": [
+      "Presentation time of up to 20 minutes. There will be time for questions afterwards.",
+      "It is recommended to use a presentation and we recommend legible font size and essential text.",
+      "Please consider that the presentation platform will be Zoom."
+    ]
+  },
   "language": "Language",
   "title": "1<sup>st</sup> INTERNATIONAL CONGRESS OF PHONETICS AND POETICS",
   "date": "November 14-15, 2024",
   "listener_title": "Would you like to be a listener?",
   "listener_subtitle": "Leave us your email address and we will send you the latest news about the congress",
+  "listener_alert_success": "You have successfully subscribed!",
+"listener_alert_fail": "Oops! Something went wrong. Please try again.",
   "email_placeholder": "Enter your email",
   "subscribe_button": "Subscribe",
   "participant_title": "Would you like to participate as a speaker?",
