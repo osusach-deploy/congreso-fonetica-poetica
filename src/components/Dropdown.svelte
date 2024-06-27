@@ -47,7 +47,8 @@
       : ''}">
     <a href={pathname} class="rounded-lg hover:bg-slate-100">Español</a>
     <a href={"/en" + pathname} class="rounded-lg hover:bg-slate-100">English</a>
-    <a href={"/it" + pathname} class="rounded-lg hover:bg-slate-100">Italiano</a>
+    <a href={"/it" + pathname} class="rounded-lg hover:bg-slate-100"
+      >Italiano</a>
   </div>
 </div>
 

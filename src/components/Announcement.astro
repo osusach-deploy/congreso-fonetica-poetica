@@ -32,7 +32,11 @@ const i18n = getI18N(currentLocale);
         {i18n.announcement.paragraph_4}
       </p>
       <ul class="list-disc list-inside">
-        {i18n.announcement.list.map((item) => <li class="text-justify"> {item}</li>)}
+        {
+          i18n.announcement.list.map((item) => (
+            <li class="text-justify"> {item}</li>
+          ))
+        }
       </ul>
 
       <section class="flex flex-col w-full gap-14 items-center mt-7">
