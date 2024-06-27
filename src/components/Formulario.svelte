@@ -46,7 +46,7 @@
     formData.append("authors", autoresYFiliacion);
     formData.append("affiliation", autoresYFiliacion);
     formData.append("hosts", presentadores);
-    formData.append("pdf", files[0]);
+    formData.append("presentation", files[0]);
 
     fetch(API_URL + "speaker", {
       method: "POST",
@@ -57,6 +57,9 @@
       })
       .then((data) => {
         console.log(data);
+        if (data.success) {
+          alert("Enviado");
+        }
       })
       .catch((e) => {
         console.log(e);
@@ -116,6 +119,7 @@
             placeholder={form.presentation_title_placeholder}
             class="appearance-none border rounded-lg w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" />
         </div>
+
         <div class="mb-4">
           <input
             aria-label="authors"
@@ -135,6 +139,11 @@
             class="appearance-none border rounded-lg w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" />
         </div>
         <div>
+          <label for="keywords" class=" text-base font-medium mb-4">
+            {form.input_chip_sub_label[0]}
+            <kbd class="kbd bg-white font-normal">enter</kbd>
+            {form.input_chip_sub_label[1]}
+          </label>
           <InputChip
             aria-label="keyword chip list add your keyword and press enter"
             class="border-none mb-2"

@@ -25,21 +25,20 @@
 </script>
 
 <div
-  class="dropdown h-full flex mr-2 lg:mr-5 lg:mx-auto sm:mx-0 bg-inherit rounded-lg z-20">
-  <button on:click={toggleDropdown}>
-    <p
-      class="flex flex-row items-center transition-all text-white text-base sm:text-lg hover:bg-opacity-25 bg-white bg-opacity-15 rounded-lg px-3 py-1">
-      {i18n.language}: <b>{selectedLanguage}</b>
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        class="ml-1"
-        width="1em"
-        height="1em"
-        viewBox="0 0 1024 1024"
-        ><path
-          fill="white"
-          d="M831.872 340.864L512 652.672L192.128 340.864a30.59 30.59 0 0 0-42.752 0a29.12 29.12 0 0 0 0 41.6L489.664 714.24a32 32 0 0 0 44.672 0l340.288-331.712a29.12 29.12 0 0 0 0-41.728a30.59 30.59 0 0 0-42.752 0z" /></svg>
-    </p>
+  class="dropdown h-fit my-auto flex mr-2 lg:mr-5 lg:mx-auto sm:mx-0 bg-inherit rounded-lg z-20">
+  <button
+    class="flex flex-row h-fit my-auto items-center transition-all text-white text-base sm:text-lg hover:bg-opacity-25 bg-white bg-opacity-15 rounded-lg px-3 py-1"
+    on:click={toggleDropdown}>
+    {i18n.language}: <b>{selectedLanguage}</b>
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      class="ml-1"
+      width="1em"
+      height="1em"
+      viewBox="0 0 1024 1024"
+      ><path
+        fill="white"
+        d="M831.872 340.864L512 652.672L192.128 340.864a30.59 30.59 0 0 0-42.752 0a29.12 29.12 0 0 0 0 41.6L489.664 714.24a32 32 0 0 0 44.672 0l340.288-331.712a29.12 29.12 0 0 0 0-41.728a30.59 30.59 0 0 0-42.752 0z" /></svg>
   </button>
   <div
     class="dropdown-content top-[70px] right-0.5 rounded-lg {showDropdown

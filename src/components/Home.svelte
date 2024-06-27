@@ -7,7 +7,7 @@
 
   const API_URL = import.meta.env.PUBLIC_API_URL;
 
-  export let i18n;
+  export let i18n: any;
   export let currentLocale: string;
 
   function handleClick() {
@@ -22,9 +22,15 @@
       body: JSON.stringify(body),
     })
       .then((x) => {
-        alert(i18n.listener_alert_success);
-        // console.log(x);
-        // alert("LISTENER");
+        return x.json();
+      })
+      .then((data) => {
+        if (data.success === false) {
+          alert("Este correo ya se registró");
+        }
+        if (data.success) {
+          alert(i18n.listener_alert_success);
+        }
       })
       .catch((e) => {
         alert(i18n.listener_alert_fail);
@@ -117,7 +123,7 @@
         <h2 class="text-3xl font-bold">
           {i18n.proposal.considerations_title}
         </h2>
-  
+
         <div class="flex flex-col">
           <ul class="flex flex-col list-disc pl-8 gap-5">
             {#each i18n.proposal.considerations_description as text}
