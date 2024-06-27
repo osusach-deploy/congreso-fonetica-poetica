@@ -17,7 +17,7 @@
       alt="usachlogo"
       class="hidden lg:flex h-20 pb-1" />
     <img
-      src="/img/Usach PB.png"
+      src="/img/Usach PB.webp"
       alt="usachlogo"
       class="flex lg:hidden h-20 pb-1" />
     <div
