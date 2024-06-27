@@ -141,6 +141,7 @@
             {form.input_chip_sub_label[1]}
           </p>
           <InputChip
+            aria-label="keyword chip list add your keyword and press enter"
             class="border-none mb-4"
             chips="bg-white text-base rounded-lg"
             regionInput="bg-white border-none rounded-lg py-2 px-3 leading-tight focus:outline-none focus:shadow-outline"
