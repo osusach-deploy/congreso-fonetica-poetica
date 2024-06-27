@@ -82,10 +82,10 @@
     "file_subtitle": "(All attendees will be able to download it)",
     "policy_privacy": [
       "The data submitted through this form will only be used to contact the congress applicants and will not be shared with third parties.",
-      "In case the presentation exceeds the 8MB limit, please contact fypcongreso@gmail.com"
+      "In case the presentation exceeds the 8MB limit, please contact fypcongreso@usach.cl"
     ],
     "submit_button": "Submit Declaration",
-    "submit_file_error": "Your return has been submitted, but your file is too large. Contact fypcongreso@gmail.com",
+    "submit_file_error": "Your return has been submitted, but your file is too large. Contact fypcongreso@usach.cl",
     "submit_success": "Sent"
   },
   "footer": {
@@ -156,7 +156,7 @@
       "1st Edition of the International Congress of Phonetics and Poetics"
     ],
     "subtitle_6": "Contact:",
-    "content_6": "fypcongreso@gmail.com"
+    "content_6": "fypcongreso@usach.cl"
   },
   "proposals": {},
   "announcement": {

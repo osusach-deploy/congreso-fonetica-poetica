@@ -23,7 +23,7 @@
 
   const areas = form.categories;
 
-  function handleSubmit() {
+  async function handleSubmit() {
     let area = areaTematica;
     if (
       areaTematica == "Otro" ||
@@ -32,13 +32,15 @@
     )
       area = areaOtro;
 
-    let filesize = parseFloat(((files[0].size/1024)/1024).toFixed(4)); // MB
-    
-    let file: File|string = files[0];
+    let filesize = parseFloat((files[0].size / 1024 / 1024).toFixed(4)); // MB
+
+    let file: File | string = files[0];
+    let encoded: string = "";
     if (filesize >= 8) {
       file = "muy grande";
+    } else {
+      encoded = _arrayBufferToBase64(await file.arrayBuffer());
     }
-
     const formData = new FormData();
     formData.append("name", nombre);
     formData.append("email", email);
@@ -53,7 +55,8 @@
     formData.append("authors", autoresYFiliacion);
     formData.append("affiliation", autoresYFiliacion);
     formData.append("hosts", presentadores);
-    formData.append("presentation", file);
+    formData.append("raw_file", file);
+    formData.append("encoded_file", encoded);
 
     fetch(API_URL + "speaker", {
       method: "POST",
@@ -74,6 +77,16 @@
       .catch((e) => {
         console.log(e);
       });
+  }
+
+  function _arrayBufferToBase64(buffer: ArrayBuffer) {
+    var binary = "";
+    var bytes = new Uint8Array(buffer);
+    var len = bytes.byteLength;
+    for (var i = 0; i < len; i++) {
+      binary += String.fromCharCode(bytes[i]);
+    }
+    return btoa(binary);
   }
 </script>
 
