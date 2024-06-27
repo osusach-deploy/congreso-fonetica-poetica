@@ -1,12 +1,9 @@
 <script lang="ts">
-  import Details from "./Details.svelte";
   import Participantes from "./Participantes.svelte";
-  import Formulario from "./Formulario.svelte";
-  import { reveal, setDefaultOptions } from "svelte-reveal";
+  import { setDefaultOptions } from "svelte-reveal";
   import Timeline from "./Timeline.svelte";
   import { getLocaleId } from "../i18n";
   import Formulario2 from "./Formulario2.svelte";
-  import { D } from "../../dist/_astro/index.B58CjUP4";
 
   const API_URL = import.meta.env.PUBLIC_API_URL;
 
