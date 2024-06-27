@@ -76,7 +76,7 @@
     "category_other_placeholder": "Especifique el área temática",
     "sumary": "Resumen presentación (Máx. 250 palabras)",
     "bibliography": "Citas bibliograficas principales",
-    "file_pdf": "Archivo PDF con la presentación",
+    "file_pdf": "Archivo PDF con la presentación (Límite 8MB)",
     "file_subtitle": "(Todos los asistentes la podrán descargar)",
     "policy_privacy": "Los datos enviados a través de este formulario solo serán usados para contactar a los postulantes del congreso y no serán compartidos con terceros.",
     "submit_button": "Enviar declaración"

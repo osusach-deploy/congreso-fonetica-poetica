@@ -78,7 +78,7 @@
     "category_other_placeholder": "Specify the thematic area",
     "sumary": "Presentation Summary (Max. 250 words)",
     "bibliography": "Main Bibliographic Citations",
-    "file_pdf": "PDF File with the Presentation",
+    "file_pdf": "PDF File with the Presentation (8MB limit)",
     "file_subtitle": "(All attendees will be able to download it)",
     "policy_privacy": "The data submitted through this form will only be used to contact the congress applicants and will not be shared with third parties.",
     "submit_button": "Submit Declaration"
