@@ -78,7 +78,10 @@
     "bibliography": "Citas bibliograficas principales",
     "file_pdf": "Archivo PDF con la presentación (Límite 8MB)",
     "file_subtitle": "(Todos los asistentes la podrán descargar)",
-    "policy_privacy": "Los datos enviados a través de este formulario solo serán usados para contactar a los postulantes del congreso y no serán compartidos con terceros.",
+    "policy_privacy": [
+      "Los datos enviados a través de este formulario solo serán usados para contactar a los postulantes del congreso y no serán compartidos con terceros.",
+      " En caso de que la presentación supere el limite de 8MB, contactese con fypcongreso@gmail.com"
+    ],
     "submit_button": "Enviar declaración"
   },
   "footer": {

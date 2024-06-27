@@ -250,7 +250,10 @@
           {form.submit_button}
         </button>
         <p class="mt-6 px-1 text-xs font-light text-center">
-          {form.policy_privacy}
+          {form.policy_privacy[0]}
+        </p>
+        <p class="mt-2 px-1 text-xs font-light text-center">
+          {form.policy_privacy[1]}
         </p>
       </div>
     </form>

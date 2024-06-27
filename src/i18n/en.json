@@ -80,7 +80,10 @@
     "bibliography": "Main Bibliographic Citations",
     "file_pdf": "PDF File with the Presentation (8MB limit)",
     "file_subtitle": "(All attendees will be able to download it)",
-    "policy_privacy": "The data submitted through this form will only be used to contact the congress applicants and will not be shared with third parties.",
+    "policy_privacy": [
+      "The data submitted through this form will only be used to contact the congress applicants and will not be shared with third parties.",
+      "In case the presentation exceeds the 8MB limit, please contact fypcongreso@gmail.com"
+    ],
     "submit_button": "Submit Declaration"
   },
   "footer": {
