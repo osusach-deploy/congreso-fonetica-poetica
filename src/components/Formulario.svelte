@@ -32,6 +32,13 @@
     )
       area = areaOtro;
 
+    let filesize = parseFloat(((files[0].size/1024)/1024).toFixed(4)); // MB
+    
+    let file: File|string = files[0];
+    if (filesize >= 8) {
+      file = "muy grande";
+    }
+
     const formData = new FormData();
     formData.append("name", nombre);
     formData.append("email", email);
@@ -46,7 +53,7 @@
     formData.append("authors", autoresYFiliacion);
     formData.append("affiliation", autoresYFiliacion);
     formData.append("hosts", presentadores);
-    formData.append("presentation", files[0]);
+    formData.append("presentation", file);
 
     fetch(API_URL + "speaker", {
       method: "POST",
@@ -57,8 +64,11 @@
       })
       .then((data) => {
         console.log(data);
+        if (data.success && file == "muy grande") {
+          alert(form.submit_file_error);
+        }
         if (data.success) {
-          alert("Enviado");
+          alert(form.submit_success);
         }
       })
       .catch((e) => {
@@ -203,7 +213,6 @@
             placeholder={form.category_other_placeholder}
             class="appearance-none border mb-4 rounded-lg w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" />
         {/if}
-
         <textarea
           aria-label="sumary 250 words max"
           bind:value={resumen}

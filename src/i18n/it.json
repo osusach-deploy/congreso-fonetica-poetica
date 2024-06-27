@@ -84,7 +84,9 @@
       "I dati inviati tramite questo modulo saranno utilizzati solo per contattare i candidati del congresso e non saranno condivisi con terzi.",
       "Nel caso in cui la presentazione superi il limite di 8 MB, contattare fypcongreso@gmail.com"
     ],
-    "submit_button": "Invia Dichiarazione"
+    "submit_button": "Invia Dichiarazione",
+    "submit_file_error": "La tua restituzione è stata inviata, ma il tuo file è troppo grande. Contatta fypcongreso@gmail.com",
+    "submit_success": "Inviato"
   },
   "footer": {
     "organizers_title": "Organizzatori",
