@@ -20,8 +20,7 @@ let pathSplit = pathname.split("/");
 // Comentar en dev, bug entre dev y build
 pathSplit.pop();
 let check = pathSplit.pop();
-if (check === "en" || check === "it")
-  check = "";
+if (check === "en" || check === "it") check = "";
 let pathTo = "/" + (check ?? "");
 // console.log(pathTo);
 // console.log();

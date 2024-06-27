@@ -22,7 +22,7 @@
   "listener_title": "Would you like to be a listener?",
   "listener_subtitle": "Leave us your email address and we will send you the latest news about the congress",
   "listener_alert_success": "You have successfully subscribed!",
-"listener_alert_fail": "Oops! Something went wrong. Please try again.",
+  "listener_alert_fail": "Oops! Something went wrong. Please try again.",
   "email_placeholder": "Enter your email",
   "subscribe_button": "Subscribe",
   "participant_title": "Would you like to participate as a speaker?",

@@ -22,7 +22,7 @@
   "listener_title": "Vuoi essere un ascoltatore?",
   "listener_subtitle": "Lasciaci il tuo indirizzo email e ti invieremo le ultime notizie sul congresso",
   "listener_alert_success": "Ti sei iscritto con successo!",
-"listener_alert_fail": "Ops! Qualcosa è andato storto. Per favore riprova.",
+  "listener_alert_fail": "Ops! Qualcosa è andato storto. Per favore riprova.",
   "email_placeholder": "Inserisci la tua email",
   "subscribe_button": "Iscriviti",
   "participant_title": "Vuoi partecipare come relatore?",

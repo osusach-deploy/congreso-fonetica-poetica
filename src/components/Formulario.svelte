@@ -138,29 +138,22 @@
             placeholder={form.hosts}
             class="appearance-none border rounded-lg w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" />
         </div>
-        <div>
-          <label for="keywords" class=" text-base font-medium mb-4">
-            {form.input_chip_sub_label[0]}
-            <kbd class="kbd bg-white font-normal">enter</kbd>
-            {form.input_chip_sub_label[1]}
-          </label>
-          <InputChip
-            aria-label="keyword chip list add your keyword and press enter"
-            class="border-none mb-2"
-            chips="bg-white text-base rounded-lg"
-            regionInput="bg-white border-none rounded-lg py-2 px-3 leading-tight focus:outline-none focus:shadow-outline"
-            regionChipList=""
-            regionChipWrapper=""
-            padding="p-0"
-            name="keywords"
-            bind:value={tags}
-            placeholder={form.input_chip_placeholder}
-            maxlength={16}
-            max={5}
-            allowUpperCase
-            label="keyword chip list"
-            required />
-        </div>
+        <InputChip
+          aria-label="keyword chip list add your keyword and press enter"
+          class="border-none mb-2"
+          chips="bg-white text-base rounded-lg"
+          regionInput="bg-white border-none rounded-lg py-2 px-3 leading-tight focus:outline-none focus:shadow-outline"
+          regionChipList=""
+          regionChipWrapper=""
+          padding="p-0"
+          name="keywords"
+          bind:value={tags}
+          placeholder={form.input_chip_placeholder}
+          maxlength={16}
+          max={5}
+          allowUpperCase
+          label="keyword chip list"
+          required />
         <p class="text-sm pl-1 mb-4 text-right">
           {form.input_chip_sub_label[0]}
           <kbd class="kbd bg-white font-normal">enter</kbd>
