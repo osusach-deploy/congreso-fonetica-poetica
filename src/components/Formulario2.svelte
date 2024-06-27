@@ -1,5 +1,4 @@
 <script lang="ts">
-  import { getLocaleId } from "../i18n";
   import { InputChip, FileDropzone } from "@skeletonlabs/skeleton";
 
   const API_URL = import.meta.env.PUBLIC_API_URL;
@@ -8,39 +7,56 @@
   let institucion = "";
   let titulo = "";
   let areaTematica = "";
+  let idioma = "";
   let areaOtro = "";
+  let autoresYFiliacion = "";
+  let presentadores = "";
+  let pais = "";
+  let resumen = "";
+  let referencias = "";
   let tags: string[] = [];
   let files: FileList;
-  $: console.log(files);
 
   export let i18n;
-  export let currentLocale: string;
 
   const { form } = i18n;
 
   const areas = form.categories;
 
   function handleSubmit() {
-    // CUALQUIER COSA CON LISTA -> PASAR A STRING Y SEPARAR CON ;
-    const body = {
-      name: nombre,
-      email: email,
-      institution: institucion,
-      title: titulo,
-      theme: areaTematica,
-      lang: getLocaleId(currentLocale),
-    };
-    // console.log(body);
+    let area = areaTematica;
+    if (
+      areaTematica == "Otro" ||
+      areaTematica == "Other" ||
+      areaTematica == "Altro"
+    )
+      area = areaOtro;
 
-    fetch(API_URL + "interested", {
+    const formData = new FormData();
+    formData.append("name", nombre);
+    formData.append("email", email);
+    formData.append("institution", institucion);
+    formData.append("country", pais);
+    formData.append("title", titulo);
+    formData.append("lang", idioma);
+    formData.append("theme", area);
+    formData.append("abstract", resumen);
+    formData.append("bibliography", referencias);
+    formData.append("keywords", tags.join(";"));
+    formData.append("authors", autoresYFiliacion);
+    formData.append("affiliation", autoresYFiliacion);
+    formData.append("hosts", presentadores);
+    formData.append("pdf", files[0]);
+
+    fetch(API_URL + "speaker", {
       method: "POST",
-      body: JSON.stringify(body),
+      body: formData,
     })
       .then((x) => {
-        console.log(x);
-        if (x.status == 200) {
-          window.location.href = "/instructions";
-        }
+        return x.json();
+      })
+      .then((data) => {
+        console.log(data);
       })
       .catch((e) => {
         console.log(e);
@@ -62,7 +78,7 @@
       <div class="mb-4">
         <p class=" text-lg font-semibold mb-4">{form.personal_info_title}</p>
         <input
-          aria-label="name field"
+          aria-label="name"
           required
           type="text"
           bind:value={nombre}
@@ -72,7 +88,7 @@
       <div class="mb-4">
         <div class="mb-4">
           <input
-            aria-label="email field"
+            aria-label="email"
             required
             type="email"
             bind:value={email}
@@ -81,7 +97,7 @@
         </div>
         <div class="mb-4">
           <input
-            aria-label="institution field"
+            aria-label="institution"
             required
             type="text"
             bind:value={institucion}
@@ -93,7 +109,7 @@
             {form.exposition_info_title}
           </p>
           <input
-            aria-label="presentation title field"
+            aria-label="presentation title"
             required
             type="text"
             bind:value={titulo}
@@ -102,69 +118,73 @@
         </div>
         <div class="mb-4">
           <input
-            aria-label="presentation title field"
+            aria-label="authors"
             required
             type="text"
-            bind:value={titulo}
-            placeholder={"Autores y filiación:"}
+            bind:value={autoresYFiliacion}
+            placeholder={form.authors}
             class="appearance-none border rounded-lg w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" />
         </div>
         <div class="mb-4">
           <input
-            aria-label="presentation title field"
+            aria-label="hosts"
             required
             type="text"
-            bind:value={titulo}
-            placeholder="Presentadores"
+            bind:value={presentadores}
+            placeholder={form.hosts}
             class="appearance-none border rounded-lg w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" />
         </div>
-        <InputChip
-          class="border-none mb-4"
-          chips="bg-white text-base rounded-lg"
-          regionInput="bg-white border-none rounded-lg py-2 px-3 leading-tight focus:outline-none focus:shadow-outline"
-          regionChipList=""
-          regionChipWrapper=""
-          padding="p-0"
-          name="keywords"
-          bind:value={tags}
-          placeholder="Ingresa 5 palabras clave"
-          maxlength={16}
-          max={5}
-          allowUpperCase
-          label="keyword chip list"
-          required />
-        <!-- <Tags class="bg-white" bind:tags={tags} maxTags={5} addKeys={[32,13]} onlyUnique={true} placeholder={"Ingresa 5 palabras clave"}  /> -->
-
+        <div>
+          <p class=" text-lg font-semibold mb-4">
+            {form.input_chip_sub_label[0]}
+            <kbd class="kbd bg-white font-normal">enter</kbd>
+            {form.input_chip_sub_label[1]}
+          </p>
+          <InputChip
+            class="border-none mb-4"
+            chips="bg-white text-base rounded-lg"
+            regionInput="bg-white border-none rounded-lg py-2 px-3 leading-tight focus:outline-none focus:shadow-outline"
+            regionChipList=""
+            regionChipWrapper=""
+            padding="p-0"
+            name="keywords"
+            bind:value={tags}
+            placeholder={form.input_chip_placeholder}
+            maxlength={16}
+            max={5}
+            allowUpperCase
+            label="keyword chip list"
+            required />
+        </div>
         <div class="mb-4">
           <input
-            aria-label="presentation title field"
+            aria-label="country"
             required
             type="text"
-            bind:value={titulo}
-            placeholder="País de residencia:"
+            bind:value={pais}
+            placeholder={form.country}
             class="appearance-none border rounded-lg w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" />
         </div>
 
         <div class="mb-4">
           <select
-            aria-label="category selector for the theme of the presentation"
+            aria-label="category selector for the language of the presentation"
             required
-            bind:value={areaTematica}
-            class="block w-full bg-white border px-4 py-2 pr-8 rounded-lg leading-tight focus:outline-none focus:shadow-outline">
-            <option hidden disabled value=""
-              >{"Idioma de la presentación"}</option>
-            {#each ["English", "Español", "Italiano"] as area}
-              <option value={area}>{area}</option>
+            bind:value={idioma}
+            class="block w-full bg-white border px-4 py-2 pr-8 rounded-lg leading-tight">
+            <option hidden disabled value="">{form.language}</option>
+            {#each ["English", "Español", "Italiano"] as language, index}
+              <option value={index + 1}>{language}</option>
             {/each}
           </select>
         </div>
 
-        <div class="">
+        <div>
           <select
             aria-label="category selector for the theme of the presentation"
             required
             bind:value={areaTematica}
-            class="block w-full bg-white border px-4 py-2 pr-8 rounded-lg leading-tight focus:outline-none focus:shadow-outline">
+            class="block w-full mb-4 bg-white border px-4 py-2 pr-8 rounded-lg leading-tight">
             <option disabled hidden value=""
               >{form.category_select_placeholder}</option>
             {#each areas as area}
@@ -174,22 +194,30 @@
         </div>
         {#if areaTematica == "Otro" || areaTematica == "Other" || areaTematica == "Altro"}
           <input
+            aria-label="other category input"
             type="text"
             bind:value={areaOtro}
             placeholder={form.category_other_placeholder}
-            class="appearance-none border rounded-lg mb-4 w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" />
+            class="appearance-none border mb-4 rounded-lg w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" />
         {/if}
 
-        <div class="flex flex-col gap-4 mb-4">
-          <label class="text-lg font-semibold" for="resume"></label>
-          <textarea
-            class="w-full px-2 py-1 rounded-lg"
-            name="resume"
-            id="resume"
-            maxlength="250"
-            placeholder="Resumen presentación (Máx. 250 palabras)"
-            required />
-        </div>
+        <textarea
+          aria-label="sumary 250 words max"
+          bind:value={resumen}
+          class="w-full mb-4 px-2 py-1 rounded-lg focus:outline-none focus:shadow-outline"
+          name="sumary"
+          id="sumary"
+          maxlength="250"
+          placeholder={form.sumary}
+          required />
+        <textarea
+          aria-label="bibliography 250 words max"
+          bind:value={referencias}
+          class="w-full mb-4 px-2 py-1 rounded-lg focus:outline-none focus:shadow-outline"
+          name="bibliography"
+          id="bibliography"
+          placeholder={form.bibliography}
+          required />
         <FileDropzone
           name="pdf"
           bind:files
@@ -202,9 +230,9 @@
               class="h-14 mx-auto" /></svelte:fragment>
           <svelte:fragment slot="message">
             {#if files == undefined}
-              <p>Archivo PDF con la presentación</p>
+              <p>{form.file_pdf}</p>
               <p class="text-sm font-light">
-                (Todos los asistentes la podrán descargar)
+                {form.file_subtitle}
               </p>
             {:else}
               <div>{files[0].name}</div>
@@ -225,16 +253,3 @@
     </form>
   </div>
 </div>
-
-<style scoped>
-  h2 {
-    @apply text-5xl font-semibold;
-  }
-  h3 {
-    @apply text-3xl font-semibold;
-  }
-
-  li {
-    @apply list-item list-inside list-disc;
-  }
-</style>

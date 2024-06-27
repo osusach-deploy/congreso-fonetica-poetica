@@ -48,6 +48,13 @@
     "institution_placeholder": "Institución",
     "exposition_info_title": "Información exposición",
     "presentation_title_placeholder": "Título presentación",
+    "authors": "Autores y filiación",
+    "hosts": "Presentadores",
+    "input_chip_label": "Palabras clave",
+    "input_chip_sub_label": ["Presiona", "para agregar"],
+    "input_chip_placeholder": "Ingresa 5 palabras clave",
+    "country": "País de residencia",
+    "language": "Idioma de la presentación",
     "category_select_placeholder": "Seleccione una categoría",
     "categories": [
       "Fonética y poesía",
@@ -57,6 +64,10 @@
       "Otro"
     ],
     "category_other_placeholder": "Especifique el área temática",
+    "sumary": "Resumen presentación (Máx. 250 palabras)",
+    "bibliography": "Citas bibliograficas principales",
+    "file_pdf": "Archivo PDF con la presentación",
+    "file_subtitle": "(Todos los asistentes la podrán descargar)",
     "policy_privacy": "Los datos enviados a través de este formulario solo serán usados para contactar a los postulantes del congreso y no serán compartidos con terceros.",
     "submit_button": "Enviar declaración"
   },

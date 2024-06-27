@@ -38,7 +38,7 @@ console.log("path2", pathname);
     />
     <title>{title}</title>
   </head>
-  <body class="fondo">
+  <body class="fondo selection:bg-purple-300 selection:text-purple-900">
     <Header client:load {i18n} {currentLocale} pathname={pathTo} />
     <slot />
     <Footer {i18n} />

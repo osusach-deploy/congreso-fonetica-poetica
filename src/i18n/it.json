@@ -42,23 +42,34 @@
     "date_4_detail": "Modalità: online"
   },
   "form": {
-    "personal_info_title": "Informazioni personali",
+    "personal_info_title": "Informazioni Personali",
     "name_placeholder": "Nome",
     "email_placeholder": "Email",
     "institution_placeholder": "Istituzione",
-    "exposition_info_title": "Informazioni sull'esposizione",
-    "presentation_title_placeholder": "Titolo della presentazione",
-    "category_select_placeholder": "Seleziona una categoria",
+    "exposition_info_title": "Informazioni sull'Esposizione",
+    "presentation_title_placeholder": "Titolo della Presentazione",
+    "authors": "Autori e Affiliazione",
+    "hosts": "Presentatori",
+    "input_chip_label": "Parole Chiave",
+    "input_chip_sub_label": ["Premi", "per aggiungere"],
+    "input_chip_placeholder": "Inserisci 5 parole chiave",
+    "country": "Paese di Residenza",
+    "language": "Lingua della Presentazione",
+    "category_select_placeholder": "Seleziona una Categoria",
     "categories": [
-      "Fonetica e poesia",
-      "Fonetica e poesia applicata",
-      "Fonetica, cognizione e poetica",
+      "Fonetica e Poesia",
+      "Fonetica e Poesia Applicata",
+      "Fonetica, Cognizione e Poetica",
       "Metrica",
       "Altro"
     ],
     "category_other_placeholder": "Specifica l'area tematica",
-    "policy_privacy": "I dati inviati tramite questo modulo saranno utilizzati solo per contattare i candidati del congresso e non saranno condivisi con terzi.",
-    "submit_button": "Invia dichiarazione"
+    "sumary": "Riassunto della Presentazione (Max. 250 parole)",
+    "bibliography": "Principali Citazioni Bibliografiche",
+    "file_pdf": "File PDF con la Presentazione",
+    "file_subtitle": "(Tutti i partecipanti potranno scaricarlo)",
+    "policy_privacy": "I dati inviati tramite questo modulo saranno utilizzati solo per contattare i candidati al congresso e non saranno condivisi con terzi.",
+    "submit_button": "Invia Dichiarazione"
   },
   "footer": {
     "organizers_title": "Organizzatori",
