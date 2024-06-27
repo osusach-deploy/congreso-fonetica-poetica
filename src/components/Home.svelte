@@ -3,7 +3,7 @@
   import { setDefaultOptions } from "svelte-reveal";
   import Timeline from "./Timeline.svelte";
   import { getLocaleId } from "../i18n";
-  import Formulario2 from "./Formulario2.svelte";
+  import Formulario from "./Formulario.svelte";
 
   const API_URL = import.meta.env.PUBLIC_API_URL;
 
@@ -104,7 +104,7 @@
     <h2 class="font-bold text-4xl">{i18n.dates.title}</h2>
     <Timeline {i18n} />
   </section>
-  <Formulario2 {i18n}>
+  <Formulario {i18n}>
     <article class="text-xl gap-y-4 flex flex-col">
       <h2 class="font-bold text-4xl">{i18n.interest_declaration_title}</h2>
       <p class="text-xl font-light">{i18n.interest_declaration_subtitle}</p>
@@ -142,5 +142,5 @@
 
       <p>Persona de contacto: valentinacolonna@ugr.es</p>
     </article>
-  </Formulario2>
+  </Formulario>
 </div>
