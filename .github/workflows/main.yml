@@ -45,7 +45,7 @@ jobs:
         uses: actions/checkout@v3
 
       - name: Set up Node.js
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
           node-version: "20"
 
@@ -63,7 +63,7 @@ jobs:
           CI: true
 
       - name: Wait for server to be ready
-        run: npx wait-on http://localhost:4321
+        run: npx wait-on http://localhost:4321 --timeout=30000
 
       - name: Run Pa11y on all routes
         run: |

@@ -1,10 +1,9 @@
 <script lang="ts">
-  import Details from "./Details.svelte";
   import Participantes from "./Participantes.svelte";
-  import Formulario from "./Formulario.svelte";
-  import { reveal, setDefaultOptions } from "svelte-reveal";
+  import { setDefaultOptions } from "svelte-reveal";
   import Timeline from "./Timeline.svelte";
   import { getLocaleId } from "../i18n";
+  import Formulario from "./Formulario.svelte";
 
   const API_URL = import.meta.env.PUBLIC_API_URL;
 
@@ -23,10 +22,12 @@
       body: JSON.stringify(body),
     })
       .then((x) => {
+        alert(i18n.listener_alert_success);
         // console.log(x);
         // alert("LISTENER");
       })
       .catch((e) => {
+        alert(i18n.listener_alert_fail);
         // console.log(e);
       });
   }
@@ -105,5 +106,26 @@
     <h2 class="font-bold text-4xl">{i18n.dates.title}</h2>
     <Timeline {i18n} />
   </section>
-  <Formulario {i18n} {currentLocale} />
+  <Formulario {i18n}>
+    <article class="text-xl gap-16 flex flex-col">
+      <div class="flex flex-col gap-5">
+        <h2 class="font-bold text-4xl">{i18n.proposal.submission_title}</h2>
+        <p class="text-xl font-light">{i18n.proposal.submission_subtitle}</p>
+      </div>
+
+      <div class="hidden lg:flex flex-col gap-5">
+        <h2 class="text-3xl font-bold">
+          {i18n.proposal.considerations_title}
+        </h2>
+  
+        <div class="flex flex-col">
+          <ul class="flex flex-col list-disc pl-8 gap-5">
+            {#each i18n.proposal.considerations_description as text}
+              <li class="font-light pl-7 text-left">{text}</li>
+            {/each}
+          </ul>
+        </div>
+      </div>
+    </article>
+  </Formulario>
 </div>

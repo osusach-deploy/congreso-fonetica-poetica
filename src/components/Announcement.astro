@@ -15,24 +15,28 @@ const i18n = getI18N(currentLocale);
         {i18n.announcement.title}
       </h1>
 
-      <h2 class="text-2xl lg:text-3xl font-semibold">
+      <h2 class="text-2xl lg:text-3xl font-semibold text-justify">
         {i18n.announcement.subtitle}
       </h2>
-      <p>
+      <p class="text-justify">
         {i18n.announcement.paragraph_1}
       </p>
 
-      <p>
+      <p class="text-justify">
         {i18n.announcement.paragraph_2}
       </p>
-      <p>
+      <p class="text-justify">
         {i18n.announcement.paragraph_3}
       </p>
-      <p>
+      <p class="text-justify">
         {i18n.announcement.paragraph_4}
       </p>
       <ul class="list-disc list-inside">
-        {i18n.announcement.list.map((item) => <li> {item}</li>)}
+        {
+          i18n.announcement.list.map((item) => (
+            <li class="text-justify"> {item}</li>
+          ))
+        }
       </ul>
 
       <section class="flex flex-col w-full gap-14 items-center mt-7">

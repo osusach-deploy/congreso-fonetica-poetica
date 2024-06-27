@@ -6,16 +6,26 @@
     "announcement": "Convocatoria",
     "proposals": "Propuestas"
   },
+  "proposal": {
+    "submission_title": "Formulario de propuestas",
+    "submission_subtitle": "Te invitamos a ser parte del Primer Congreso Internacional de Fonética y Poética. Completa este formulario para que podamos planificar tu participación.",
+    "considerations_title": "Consideraciones para las presentaciones",
+    "considerations_description": [
+      "Tiempo de presentación de máximo 20 minutos. Posteriormente habrá un tiempo para formular preguntas.",
+      "Es recomendable usar alguna presentación y recomendamos letra de tamaño legible y texto fundamental.",
+      "Considerar que la plataforma de presentación será Zoom."
+    ]
+  },
   "language": "Idioma",
   "title": "1<sup>er</sup> CONGRESO INTERNACIONAL DE FONÉTICA Y POÉTICA",
   "date": "14-15 de noviembre 2024",
   "listener_title": "¿Deseas ser oyente?",
   "listener_subtitle": "Déjanos tu correo electrónico y te enviaremos las noticias más recientes sobre el congreso",
+  "listener_alert_success": "¡Te has suscrito exitosamente!",
+  "listener_alert_fail": "Ups! Algo ha ocurrido. Intenta nuevamente.",
   "email_placeholder": "Introduce tu correo",
   "subscribe_button": "Suscribirse",
   "participant_title": "¿Te gustaría participar como exponente?",
-  "interest_declaration_title": "Declaración de Interés",
-  "interest_declaration_subtitle": "Te invitamos a ser parte del Primer Congreso Internacional de Fonética y Poética. Completa este formulario para que podamos planificar tu participación.",
   "participant": {
     "organizers_title": "Organizan"
   },
@@ -24,11 +34,11 @@
   "dates": {
     "title": "Fechas relevantes",
     "date_1": {
-      "title": "Declaración de interés",
+      "title": "Comienzo recepción de propuestas",
       "date": "02/08/2024"
     },
     "date_2": {
-      "title": "Recepción de propuestas",
+      "title": "Fin recepción de propuestas",
       "date": "02/09/2024"
     },
     "date_3": {
@@ -48,6 +58,13 @@
     "institution_placeholder": "Institución",
     "exposition_info_title": "Información exposición",
     "presentation_title_placeholder": "Título presentación",
+    "authors": "Autores y filiación",
+    "hosts": "Presentadores",
+    "input_chip_label": "Palabras clave",
+    "input_chip_sub_label": ["Presiona", "para agregar"],
+    "input_chip_placeholder": "Ingresa 5 palabras clave",
+    "country": "País de residencia",
+    "language": "Idioma de la presentación",
     "category_select_placeholder": "Seleccione una categoría",
     "categories": [
       "Fonética y poesía",
@@ -57,6 +74,10 @@
       "Otro"
     ],
     "category_other_placeholder": "Especifique el área temática",
+    "sumary": "Resumen presentación (Máx. 250 palabras)",
+    "bibliography": "Citas bibliograficas principales",
+    "file_pdf": "Archivo PDF con la presentación",
+    "file_subtitle": "(Todos los asistentes la podrán descargar)",
     "policy_privacy": "Los datos enviados a través de este formulario solo serán usados para contactar a los postulantes del congreso y no serán compartidos con terceros.",
     "submit_button": "Enviar declaración"
   },

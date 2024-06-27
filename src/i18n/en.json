@@ -6,11 +6,23 @@
     "announcement": "Announcement",
     "proposals": "Proposals"
   },
+  "proposal": {
+    "submission_title": "Proposal Form",
+    "submission_subtitle": "We invite you to be part of the First International Congress on Phonetics and Poetics. Complete this form so we can plan your participation.",
+    "considerations_title": "Considerations for presentations",
+    "considerations_description": [
+      "Presentation time of up to 20 minutes. There will be time for questions afterwards.",
+      "It is recommended to use a presentation and we recommend legible font size and essential text.",
+      "Please consider that the presentation platform will be Zoom."
+    ]
+  },
   "language": "Language",
   "title": "1<sup>st</sup> INTERNATIONAL CONGRESS OF PHONETICS AND POETICS",
   "date": "November 14-15, 2024",
   "listener_title": "Would you like to be a listener?",
   "listener_subtitle": "Leave us your email address and we will send you the latest news about the congress",
+  "listener_alert_success": "You have successfully subscribed!",
+"listener_alert_fail": "Oops! Something went wrong. Please try again.",
   "email_placeholder": "Enter your email",
   "subscribe_button": "Subscribe",
   "participant_title": "Would you like to participate as a speaker?",
@@ -24,12 +36,12 @@
   "dates": {
     "title": "Relevant dates",
     "date_1": {
-      "title": "Declaration of interest",
-      "date": "August 2, 2024"
+      "title": "Start of proposal reception",
+      "date": "02/08/2024"
     },
     "date_2": {
-      "title": "Receipt of proposals",
-      "date": "September 2, 2024"
+      "title": "End of proposal reception",
+      "date": "02/09/2024"
     },
     "date_3": {
       "title": "Communication of acceptance",
@@ -42,23 +54,34 @@
     "date_4_detail": "Modality: online"
   },
   "form": {
-    "personal_info_title": "Personal information",
+    "personal_info_title": "Personal Information",
     "name_placeholder": "Name",
     "email_placeholder": "Email",
     "institution_placeholder": "Institution",
-    "exposition_info_title": "Exposition information",
+    "exposition_info_title": "Exposition Information",
     "presentation_title_placeholder": "Presentation Title",
-    "category_select_placeholder": "Select a category",
+    "authors": "Authors and Affiliation",
+    "hosts": "Presenters",
+    "input_chip_label": "Keywords",
+    "input_chip_sub_label": ["Press", "to add"],
+    "input_chip_placeholder": "Enter 5 keywords",
+    "country": "Country of Residence",
+    "language": "Presentation Language",
+    "category_select_placeholder": "Select a Category",
     "categories": [
-      "Phonetics and poetry",
-      "Applied phonetics and poetry",
-      "Phonetics, cognition, and poetics",
+      "Phonetics and Poetry",
+      "Phonetics and Applied Poetry",
+      "Phonetics, Cognition, and Poetics",
       "Metrics",
       "Other"
     ],
     "category_other_placeholder": "Specify the thematic area",
-    "policy_privacy": "The data sent through this form will only be used to contact the applicants of the congress and will not be shared with third parties.",
-    "submit_button": "Submit statement"
+    "sumary": "Presentation Summary (Max. 250 words)",
+    "bibliography": "Main Bibliographic Citations",
+    "file_pdf": "PDF File with the Presentation",
+    "file_subtitle": "(All attendees will be able to download it)",
+    "policy_privacy": "The data submitted through this form will only be used to contact the congress applicants and will not be shared with third parties.",
+    "submit_button": "Submit Declaration"
   },
   "footer": {
     "organizers_title": "Organizers",
