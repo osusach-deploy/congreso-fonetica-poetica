@@ -62,9 +62,6 @@ jobs:
         env:
           CI: true
 
-      - name: Wait for server to be ready
-        run: npx wait-on http://127.0.0.1:4321 --timeout=30000
-
       - name: Run Pa11y on all routes
         run: |
           while read route; do
