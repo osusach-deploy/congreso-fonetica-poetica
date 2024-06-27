@@ -107,7 +107,7 @@
     <h2 class="font-bold text-4xl">{i18n.dates.title}</h2>
     <Timeline {i18n} />
   </section>
-  <Formulario2 {i18n} {currentLocale}>
+  <Formulario2 {i18n}>
     <article class="text-xl gap-y-4 flex flex-col">
       <h2 class="font-bold text-4xl">{i18n.interest_declaration_title}</h2>
       <p class="text-xl font-light">{i18n.interest_declaration_subtitle}</p>
