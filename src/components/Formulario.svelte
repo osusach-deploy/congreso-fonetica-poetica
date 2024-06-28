@@ -241,6 +241,7 @@
 
         <div class="mb-4">
           <select
+            aria-label="country selector"
             required
             bind:value={pais}
             class="block w-full bg-white border px-4 py-2 pr-8 rounded-lg leading-tight">
