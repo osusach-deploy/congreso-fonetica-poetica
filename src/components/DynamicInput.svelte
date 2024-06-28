@@ -20,20 +20,16 @@
   function dispatchUpdate() {
     dispatch("update", { inputs });
   }
-  function handleEnter() {
-    addInput()
-  }
 </script>
 
 <div class="flex flex-col w-full gap-2 mb-4">
   {#each inputs as input, index (input.id)}
     <div class="flex flex-row w-full gap-3">
       <input
+        required={index == 0 ? true : false}
         id={label + index}
         aria-label={label}
         type="text"
-        
-        on:keydown|preventDefault={handleEnter}
         {placeholder}
         bind:value={input.value}
         on:input={dispatchUpdate}
@@ -54,10 +50,10 @@
         </button>
       {:else}
         <button
+          type="button"
           for={label + index}
           aria-label={"add a " + label + " field"}
-          on:click|preventDefault={addInput}>
-          
+          on:click={addInput}>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="26px"

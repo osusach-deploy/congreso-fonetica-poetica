@@ -1,0 +1,39 @@
+diff --git a/node_modules/@skeletonlabs/skeleton/dist/components/InputChip/InputChip.svelte b/node_modules/@skeletonlabs/skeleton/dist/components/InputChip/InputChip.svelte
+index 6d82c05..3a35ccf 100644
+--- a/node_modules/@skeletonlabs/skeleton/dist/components/InputChip/InputChip.svelte
++++ b/node_modules/@skeletonlabs/skeleton/dist/components/InputChip/InputChip.svelte
+@@ -29,6 +29,7 @@ export let regionChipWrapper = "";
+ export let regionChipList = "";
+ export let regionInput = "";
+ export let label = "Chips select";
++export let chips_label = "Remove chip";
+ export let transitions = !$prefersReducedMotionStore;
+ export let listTransitionIn = fly;
+ export let listTransitionInParams = { duration: 150, opacity: 0, y: -20 };
+@@ -128,6 +129,10 @@ export function removeChip(chip) {
+   removeChipCommon(chip);
+   dispatch("removeManually", { chipValue: chip });
+ }
++function prunedRestProps() {
++  delete $$restProps.class;
++  return $$restProps;
++}
+ $:
+   classesInvalid = inputValid === false ? invalid : "";
+ $:
+@@ -158,6 +163,7 @@ $:
+ 	<div class="input-chip-wrapper {classesChipWrapper}">
+ 		<!-- Input Field -->
+ 		<input
++    {...prunedRestProps()}
+ 			type="text"
+ 			bind:value={input}
+ 			placeholder={$$restProps.placeholder ?? 'Enter values...'}
+@@ -179,6 +185,7 @@ $:
+ 					<!-- Wrapping div required for FLIP animation -->
+ 					<div animate:flip={{ duration }}>
+ 						<button
++              aria-label={chips_label}
+ 							type="button"
+ 							class="chip {chips}"
+ 							on:click={(e) => removeChipInternally(e, i, val)}

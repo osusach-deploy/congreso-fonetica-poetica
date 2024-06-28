@@ -176,12 +176,17 @@
             class="appearance-none border rounded-lg w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" />
         </div>
 
-        <DynamicInput on:update={autoresUpdate} placeholder={form.authors} label="authors, afiliation" />
+        <DynamicInput
+          on:update={autoresUpdate}
+          placeholder={form.authors}
+          label="authors-afiliation" />
         <DynamicInput
           on:update={presentadoresUpdate}
-          placeholder={form.hosts}  label="hosts" />
+          placeholder={form.hosts}
+          label="hosts" />
 
         <InputChip
+          chips_label="press enter to remove this keyword"
           aria-label="keyword chip list add your keyword and press enter"
           class="border-none mb-4"
           chips="bg-white text-base rounded-lg"
