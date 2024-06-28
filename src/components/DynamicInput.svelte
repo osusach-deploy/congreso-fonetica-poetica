@@ -3,6 +3,7 @@
 
   export let placeholder;
   export let label;
+  export let title;
 
   const dispatch = createEventDispatcher();
   let inputs = [{ id: Date.now(), value: "" }];
@@ -22,6 +23,7 @@
   }
 </script>
 
+<p class=" text-base pl-1 mb-1 font-light">{title}</p>
 <div class="flex flex-col w-full gap-2 mb-4">
   {#each inputs as input, index (input.id)}
     <div class="flex flex-row w-full gap-3">

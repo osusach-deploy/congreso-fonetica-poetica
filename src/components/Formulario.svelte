@@ -197,10 +197,12 @@
         <DynamicInput
           on:update={autoresUpdate}
           placeholder={form.authors}
+          title={i18n.form.authors_label}
           label="authors-afiliation" />
         <DynamicInput
           on:update={presentadoresUpdate}
           placeholder={form.hosts}
+          title={i18n.form.hosts_label}
           label="hosts" />
 
         <InputChip
@@ -235,6 +237,18 @@
             bind:value={pais}
             placeholder={form.country}
             class="appearance-none border rounded-lg w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" />
+        </div>
+
+        <div class="mb-4">
+          <select
+            required
+            bind:value={pais}
+            class="block w-full bg-white border px-4 py-2 pr-8 rounded-lg leading-tight">
+            <option hidden disabled value="">{form.country}</option>
+            {#each i18n.countries as country, index}
+              <option value={index + 1}>{country}</option>
+            {/each}
+          </select>
         </div>
 
         <div class="mb-4">
