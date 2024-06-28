@@ -7,9 +7,11 @@
   <p class="font-light text-2xl">{i18n.participant.organizers_title}</p>
   <div
     class="flex flex-col flex-wrap md:flex-row items-center justify-center gap-10 lg:gap-12 max-w-3xl">
-    
     <img src="/img/fonetica.webp" class="h-20" alt="logo lab fonética usach" />
-    <img src="/img/granada.webp" class="h-16" alt="logo university of granada" />
+    <img
+      src="/img/granada.webp"
+      class="h-16"
+      alt="logo university of granada" />
     <img
       src="/img/conce.webp"
       class="h-16"

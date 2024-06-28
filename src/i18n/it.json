@@ -22,7 +22,7 @@
   "listener_title": "Vuoi essere un ascoltatore?",
   "listener_subtitle": "Lasciaci il tuo indirizzo email e ti invieremo le ultime notizie sul congresso",
   "listener_alert_success": "Ti sei iscritto con successo!",
-"listener_alert_fail": "Ops! Qualcosa è andato storto. Per favore riprova.",
+  "listener_alert_fail": "Ops! Qualcosa è andato storto. Per favore riprova.",
   "email_placeholder": "Inserisci la tua email",
   "subscribe_button": "Iscriviti",
   "participant_title": "Vuoi partecipare come relatore?",
@@ -60,8 +60,8 @@
     "institution_placeholder": "Istituzione",
     "exposition_info_title": "Informazioni sull'Esposizione",
     "presentation_title_placeholder": "Titolo della Presentazione",
-    "authors": "Autori e Affiliazione",
-    "hosts": "Presentatori",
+    "authors": "Autore, Affiliazione",
+    "hosts": "Presentatore",
     "input_chip_label": "Parole Chiave",
     "input_chip_sub_label": ["Premi", "per aggiungere"],
     "input_chip_placeholder": "Inserisci 5 parole chiave",
@@ -78,10 +78,15 @@
     "category_other_placeholder": "Specifica l'area tematica",
     "sumary": "Riassunto della Presentazione (Max. 250 parole)",
     "bibliography": "Principali Citazioni Bibliografiche",
-    "file_pdf": "File PDF con la Presentazione",
+    "file_pdf": "File PDF con la Presentazione (Limite 8MB)",
     "file_subtitle": "(Tutti i partecipanti potranno scaricarlo)",
-    "policy_privacy": "I dati inviati tramite questo modulo saranno utilizzati solo per contattare i candidati al congresso e non saranno condivisi con terzi.",
-    "submit_button": "Invia Dichiarazione"
+    "policy_privacy": [
+      "I dati inviati tramite questo modulo saranno utilizzati solo per contattare i candidati del congresso e non saranno condivisi con terzi.",
+      "Nel caso in cui la presentazione superi il limite di 8 MB, contattare fypcongreso@usach.cl"
+    ],
+    "submit_button": "Invia Dichiarazione",
+    "submit_file_error": "La tua restituzione è stata inviata, ma il tuo file è troppo grande. Contatta fypcongreso@usach.cl",
+    "submit_success": "Inviato"
   },
   "footer": {
     "organizers_title": "Organizzatori",
@@ -151,7 +156,7 @@
       "1a edizione del Congresso Internazionale di Fonetica e Poetica"
     ],
     "subtitle_6": "Contatto:",
-    "content_6": "fypcongreso@gmail.com"
+    "content_6": "fypcongreso@usach.cl"
   },
   "proposals": {},
   "announcement": {

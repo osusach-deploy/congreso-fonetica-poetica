@@ -22,7 +22,7 @@
   "listener_title": "Would you like to be a listener?",
   "listener_subtitle": "Leave us your email address and we will send you the latest news about the congress",
   "listener_alert_success": "You have successfully subscribed!",
-"listener_alert_fail": "Oops! Something went wrong. Please try again.",
+  "listener_alert_fail": "Oops! Something went wrong. Please try again.",
   "email_placeholder": "Enter your email",
   "subscribe_button": "Subscribe",
   "participant_title": "Would you like to participate as a speaker?",
@@ -60,11 +60,11 @@
     "institution_placeholder": "Institution",
     "exposition_info_title": "Exposition Information",
     "presentation_title_placeholder": "Presentation Title",
-    "authors": "Authors and Affiliation",
-    "hosts": "Presenters",
+    "authors": "Author, Affiliation",
+    "hosts": "Presenter",
     "input_chip_label": "Keywords",
     "input_chip_sub_label": ["Press", "to add"],
-    "input_chip_placeholder": "Enter 5 keywords",
+    "input_chip_placeholder": "Enter 5 keywords (Enter to add)",
     "country": "Country of Residence",
     "language": "Presentation Language",
     "category_select_placeholder": "Select a Category",
@@ -78,10 +78,15 @@
     "category_other_placeholder": "Specify the thematic area",
     "sumary": "Presentation Summary (Max. 250 words)",
     "bibliography": "Main Bibliographic Citations",
-    "file_pdf": "PDF File with the Presentation",
+    "file_pdf": "PDF File with the Presentation (8MB limit)",
     "file_subtitle": "(All attendees will be able to download it)",
-    "policy_privacy": "The data submitted through this form will only be used to contact the congress applicants and will not be shared with third parties.",
-    "submit_button": "Submit Declaration"
+    "policy_privacy": [
+      "The data submitted through this form will only be used to contact the congress applicants and will not be shared with third parties.",
+      "In case the presentation exceeds the 8MB limit, please contact fypcongreso@usach.cl"
+    ],
+    "submit_button": "Submit Declaration",
+    "submit_file_error": "Your return has been submitted, but your file is too large. Contact fypcongreso@usach.cl",
+    "submit_success": "Sent"
   },
   "footer": {
     "organizers_title": "Organizers",
@@ -151,7 +156,7 @@
       "1st Edition of the International Congress of Phonetics and Poetics"
     ],
     "subtitle_6": "Contact:",
-    "content_6": "fypcongreso@gmail.com"
+    "content_6": "fypcongreso@usach.cl"
   },
   "proposals": {},
   "announcement": {

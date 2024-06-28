@@ -1,5 +1,16 @@
 <script lang="ts">
   import { InputChip, FileDropzone } from "@skeletonlabs/skeleton";
+  import DynamicInput from "./DynamicInput.svelte";
+
+  type autor = {
+    id: Number;
+    value: string;
+  };
+
+  type presentador = {
+    id: Number;
+    value: string;
+  };
 
   const API_URL = import.meta.env.PUBLIC_API_URL;
   let nombre = "";
@@ -9,8 +20,8 @@
   let areaTematica = "";
   let idioma = "";
   let areaOtro = "";
-  let autoresYFiliacion = "";
-  let presentadores = "";
+  let autoresYFiliacion: autor[] = [];
+  let presentadores: presentador[] = [];
   let pais = "";
   let resumen = "";
   let referencias = "";
@@ -23,7 +34,7 @@
 
   const areas = form.categories;
 
-  function handleSubmit() {
+  async function handleSubmit() {
     let area = areaTematica;
     if (
       areaTematica == "Otro" ||
@@ -32,6 +43,15 @@
     )
       area = areaOtro;
 
+    let filesize = parseFloat((files[0].size / 1024 / 1024).toFixed(4)); // MB
+
+    let file: File | string = files[0];
+    let encoded: string = "";
+    if (filesize >= 8) {
+      file = "muy grande";
+    } else {
+      encoded = _arrayBufferToBase64(await file.arrayBuffer());
+    }
     const formData = new FormData();
     formData.append("name", nombre);
     formData.append("email", email);
@@ -43,10 +63,25 @@
     formData.append("abstract", resumen);
     formData.append("bibliography", referencias);
     formData.append("keywords", tags.join(";"));
-    formData.append("authors", autoresYFiliacion);
-    formData.append("affiliation", autoresYFiliacion);
-    formData.append("hosts", presentadores);
-    formData.append("pdf", files[0]);
+    formData.append(
+      "authors",
+      autoresYFiliacion
+        .map((s) => {
+          return s.value;
+        })
+        .join(";"),
+    );
+    formData.append("affiliation", "");
+    formData.append(
+      "hosts",
+      presentadores
+        .map((s) => {
+          return s.value;
+        })
+        .join(";"),
+    );
+    formData.append("raw_file", file);
+    formData.append("encoded_file", encoded);
 
     fetch(API_URL + "speaker", {
       method: "POST",
@@ -57,10 +92,34 @@
       })
       .then((data) => {
         console.log(data);
+        if (data.success && file == "muy grande") {
+          alert(form.submit_file_error);
+        }
+        if (data.success) {
+          alert(form.submit_success);
+        }
       })
       .catch((e) => {
         console.log(e);
       });
+  }
+
+  function autoresUpdate(event: any) {
+    autoresYFiliacion = event.detail.inputs;
+  }
+
+  function presentadoresUpdate(event: any) {
+    presentadores = event.detail.inputs;
+  }
+
+  function _arrayBufferToBase64(buffer: ArrayBuffer) {
+    var binary = "";
+    var bytes = new Uint8Array(buffer);
+    var len = bytes.byteLength;
+    for (var i = 0; i < len; i++) {
+      binary += String.fromCharCode(bytes[i]);
+    }
+    return btoa(binary);
   }
 </script>
 
@@ -116,47 +175,40 @@
             placeholder={form.presentation_title_placeholder}
             class="appearance-none border rounded-lg w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" />
         </div>
-        <div class="mb-4">
-          <input
-            aria-label="authors"
-            required
-            type="text"
-            bind:value={autoresYFiliacion}
-            placeholder={form.authors}
-            class="appearance-none border rounded-lg w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" />
-        </div>
-        <div class="mb-4">
-          <input
-            aria-label="hosts"
-            required
-            type="text"
-            bind:value={presentadores}
-            placeholder={form.hosts}
-            class="appearance-none border rounded-lg w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" />
-        </div>
-        <div>
-          <InputChip
-            aria-label="keyword chip list add your keyword and press enter"
-            class="border-none mb-2"
-            chips="bg-white text-base rounded-lg"
-            regionInput="bg-white border-none rounded-lg py-2 px-3 leading-tight focus:outline-none focus:shadow-outline"
-            regionChipList=""
-            regionChipWrapper=""
-            padding="p-0"
-            name="keywords"
-            bind:value={tags}
-            placeholder={form.input_chip_placeholder}
-            maxlength={16}
-            max={5}
-            allowUpperCase
-            label="keyword chip list"
-            required />
-        </div>
+
+        <DynamicInput
+          on:update={autoresUpdate}
+          placeholder={form.authors}
+          label="authors-afiliation" />
+        <DynamicInput
+          on:update={presentadoresUpdate}
+          placeholder={form.hosts}
+          label="hosts" />
+
+        <InputChip
+          chips_label="press enter to remove this keyword"
+          aria-label="keyword chip list add your keyword and press enter"
+          class="border-none mb-4"
+          chips="bg-white text-base rounded-lg"
+          regionInput="bg-white border-none rounded-lg py-2 px-3 leading-tight focus:outline-none focus:shadow-outline"
+          regionChipList=""
+          regionChipWrapper=""
+          padding="p-0"
+          name="keywords"
+          bind:value={tags}
+          placeholder={form.input_chip_placeholder}
+          maxlength={16}
+          max={5}
+          allowUpperCase
+          label="keyword chip list"
+          required />
+        <!--
         <p class="text-sm pl-1 mb-4 text-right">
           {form.input_chip_sub_label[0]}
           <kbd class="kbd bg-white font-normal">enter</kbd>
           {form.input_chip_sub_label[1]}
         </p>
+        -->
         <div class="mb-4">
           <input
             aria-label="country"
@@ -201,7 +253,6 @@
             placeholder={form.category_other_placeholder}
             class="appearance-none border mb-4 rounded-lg w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" />
         {/if}
-
         <textarea
           aria-label="sumary 250 words max"
           bind:value={resumen}
@@ -248,7 +299,10 @@
           {form.submit_button}
         </button>
         <p class="mt-6 px-1 text-xs font-light text-center">
-          {form.policy_privacy}
+          {form.policy_privacy[0]}
+        </p>
+        <p class="mt-2 px-1 text-xs font-light text-center">
+          {form.policy_privacy[1]}
         </p>
       </div>
     </form>
