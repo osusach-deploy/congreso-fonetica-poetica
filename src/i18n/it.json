@@ -84,10 +84,10 @@
     "file_subtitle": "(Tutti i partecipanti potranno scaricarlo)",
     "policy_privacy": [
       "I dati inviati tramite questo modulo saranno utilizzati solo per contattare i candidati del congresso e non saranno condivisi con terzi.",
-      "Nel caso in cui la presentazione superi il limite di 8 MB, contattare fypcongreso@usach.cl"
+      "Nel caso in cui la presentazione superi il limite di 8 MB, contattare foneticaypoetica@usach.cl"
     ],
     "submit_button": "Invia Dichiarazione",
-    "submit_file_error": "La tua restituzione è stata inviata, ma il tuo file è troppo grande. Contatta fypcongreso@usach.cl",
+    "submit_file_error": "La tua restituzione è stata inviata, ma il tuo file è troppo grande. Contatta foneticaypoetica@usach.cl",
     "submit_success": "Inviato"
   },
   "footer": {
@@ -158,7 +158,7 @@
       "1a edizione del Congresso Internazionale di Fonetica e Poetica"
     ],
     "subtitle_6": "Contatto:",
-    "content_6": "fypcongreso@usach.cl"
+    "content_6": "foneticaypoetica@usach.cl"
   },
   "proposals": {},
   "announcement": {
