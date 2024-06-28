@@ -97,6 +97,7 @@
         }
         if (data.success) {
           alert(form.submit_success);
+          resetForm();
         }
       })
       .catch((e) => {
@@ -120,6 +121,23 @@
       binary += String.fromCharCode(bytes[i]);
     }
     return btoa(binary);
+  }
+
+  function resetForm() {
+    nombre = "";
+    email = "";
+    institucion = "";
+    titulo = "";
+    areaTematica = "";
+    idioma = "";
+    areaOtro = "";
+    autoresYFiliacion = [];
+    presentadores = [];
+    pais = "";
+    resumen = "";
+    referencias = "";
+    tags = [];
+    files = new FileList();
   }
 </script>
 
