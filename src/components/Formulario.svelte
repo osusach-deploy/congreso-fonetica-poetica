@@ -229,15 +229,6 @@
           {form.input_chip_sub_label[1]}
         </p>
         -->
-        <div class="mb-4">
-          <input
-            aria-label="country"
-            required
-            type="text"
-            bind:value={pais}
-            placeholder={form.country}
-            class="appearance-none border rounded-lg w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" />
-        </div>
 
         <div class="mb-4">
           <select
