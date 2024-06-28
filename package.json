@@ -23,6 +23,7 @@
     "typescript": "^5.4.5"
   },
   "devDependencies": {
+    "@iconify/tailwind": "^1.1.1",
     "@skeletonlabs/skeleton": "^2.10.1",
     "@skeletonlabs/tw-plugin": "^0.4.0",
     "prettier": "^3.2.5",

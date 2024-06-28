@@ -1,5 +1,6 @@
 <script lang="ts">
   import { InputChip, FileDropzone } from "@skeletonlabs/skeleton";
+  import DynamicInput from "./DynamicInput.svelte";
 
   const API_URL = import.meta.env.PUBLIC_API_URL;
   let nombre = "";
@@ -9,8 +10,8 @@
   let areaTematica = "";
   let idioma = "";
   let areaOtro = "";
-  let autoresYFiliacion = "";
-  let presentadores = "";
+  let autoresYFiliacion = [];
+  let presentadores = [];
   let pais = "";
   let resumen = "";
   let referencias = "";
@@ -64,6 +65,14 @@
       .catch((e) => {
         console.log(e);
       });
+  }
+
+  function autoresUpdate(event) {
+        autoresYFiliacion = event.detail.inputs;
+    }
+  
+  function presentadoresUpdate(event) {
+      presentadores = event.detail.inputs;
   }
 </script>
 
@@ -120,27 +129,12 @@
             class="appearance-none border rounded-lg w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" />
         </div>
 
-        <div class="mb-4">
-          <input
-            aria-label="authors"
-            required
-            type="text"
-            bind:value={autoresYFiliacion}
-            placeholder={form.authors}
-            class="appearance-none border rounded-lg w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" />
-        </div>
-        <div class="mb-4">
-          <input
-            aria-label="hosts"
-            required
-            type="text"
-            bind:value={presentadores}
-            placeholder={form.hosts}
-            class="appearance-none border rounded-lg w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" />
-        </div>
+        <DynamicInput on:update={autoresUpdate} placeholder={form.authors}/>
+        <DynamicInput on:update={presentadoresUpdate} placeholder={form.hosts}/>
+
         <InputChip
           aria-label="keyword chip list add your keyword and press enter"
-          class="border-none mb-2"
+          class="border-none mb-4"
           chips="bg-white text-base rounded-lg"
           regionInput="bg-white border-none rounded-lg py-2 px-3 leading-tight focus:outline-none focus:shadow-outline"
           regionChipList=""
@@ -154,11 +148,13 @@
           allowUpperCase
           label="keyword chip list"
           required />
+        <!--
         <p class="text-sm pl-1 mb-4 text-right">
           {form.input_chip_sub_label[0]}
           <kbd class="kbd bg-white font-normal">enter</kbd>
           {form.input_chip_sub_label[1]}
         </p>
+        -->
         <div class="mb-4">
           <input
             aria-label="country"
