@@ -2,6 +2,16 @@
   import { InputChip, FileDropzone } from "@skeletonlabs/skeleton";
   import DynamicInput from "./DynamicInput.svelte";
 
+  type autor = {
+    id: Number;
+    value: string;
+  };
+
+  type presentador = {
+    id: Number;
+    value: string;
+  };
+
   const API_URL = import.meta.env.PUBLIC_API_URL;
   let nombre = "";
   let email = "";
@@ -10,8 +20,8 @@
   let areaTematica = "";
   let idioma = "";
   let areaOtro = "";
-  let autoresYFiliacion = [];
-  let presentadores = [];
+  let autoresYFiliacion: autor[] = [];
+  let presentadores: presentador[] = [];
   let pais = "";
   let resumen = "";
   let referencias = "";
@@ -53,9 +63,23 @@
     formData.append("abstract", resumen);
     formData.append("bibliography", referencias);
     formData.append("keywords", tags.join(";"));
-    formData.append("authors", autoresYFiliacion);
-    formData.append("affiliation", autoresYFiliacion);
-    formData.append("hosts", presentadores);
+    formData.append(
+      "authors",
+      autoresYFiliacion
+        .map((s) => {
+          return s.value;
+        })
+        .join(";"),
+    );
+    formData.append("affiliation", "");
+    formData.append(
+      "hosts",
+      presentadores
+        .map((s) => {
+          return s.value;
+        })
+        .join(";"),
+    );
     formData.append("raw_file", file);
     formData.append("encoded_file", encoded);
 
@@ -80,12 +104,12 @@
       });
   }
 
-  function autoresUpdate(event) {
-        autoresYFiliacion = event.detail.inputs;
-    }
-  
-  function presentadoresUpdate(event) {
-      presentadores = event.detail.inputs;
+  function autoresUpdate(event: any) {
+    autoresYFiliacion = event.detail.inputs;
+  }
+
+  function presentadoresUpdate(event: any) {
+    presentadores = event.detail.inputs;
   }
 
   function _arrayBufferToBase64(buffer: ArrayBuffer) {
@@ -152,8 +176,10 @@
             class="appearance-none border rounded-lg w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" />
         </div>
 
-        <DynamicInput on:update={autoresUpdate} placeholder={form.authors}/>
-        <DynamicInput on:update={presentadoresUpdate} placeholder={form.hosts}/>
+        <DynamicInput on:update={autoresUpdate} placeholder={form.authors} label="authors, afiliation" />
+        <DynamicInput
+          on:update={presentadoresUpdate}
+          placeholder={form.hosts}  label="hosts" />
 
         <InputChip
           aria-label="keyword chip list add your keyword and press enter"
