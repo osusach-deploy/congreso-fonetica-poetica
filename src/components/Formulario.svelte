@@ -238,7 +238,7 @@
             class="block w-full bg-white border px-4 py-2 pr-8 rounded-lg leading-tight">
             <option hidden disabled value="">{form.country}</option>
             {#each i18n.countries as country, index}
-              <option value={index + 1}>{country}</option>
+              <option value={country}>{country}</option>
             {/each}
           </select>
         </div>
