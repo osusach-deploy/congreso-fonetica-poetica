@@ -76,10 +76,15 @@
     "category_other_placeholder": "Especifique el área temática",
     "sumary": "Resumen presentación (Máx. 250 palabras)",
     "bibliography": "Citas bibliograficas principales",
-    "file_pdf": "Archivo PDF con la presentación",
+    "file_pdf": "Archivo PDF con la presentación (Límite 8MB)",
     "file_subtitle": "(Todos los asistentes la podrán descargar)",
-    "policy_privacy": "Los datos enviados a través de este formulario solo serán usados para contactar a los postulantes del congreso y no serán compartidos con terceros.",
-    "submit_button": "Enviar declaración"
+    "policy_privacy": [
+      "Los datos enviados a través de este formulario solo serán usados para contactar a los postulantes del congreso y no serán compartidos con terceros.",
+      " En caso de que la presentación supere el limite de 8MB, contactese con fypcongreso@usach.cl"
+    ],
+    "submit_button": "Enviar declaración",
+    "submit_file_error": "Se envió su declaración, pero su archivo es muy grande. Pongase en contacto con fypcongreso@usach.cl",
+    "submit_success": "Enviado"
   },
   "footer": {
     "organizers_title": "Organizadores",
@@ -147,7 +152,7 @@
     "subtitle_5": "Eventos:",
     "content_5": ["I edición del Congreso internacional de fonética y poética"],
     "subtitle_6": "Contacto:",
-    "content_6": "fypcongreso@gmail.com"
+    "content_6": "fypcongreso@usach.cl"
   },
   "proposals": {},
   "announcement": {
