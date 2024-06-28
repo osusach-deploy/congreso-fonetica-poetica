@@ -8,10 +8,7 @@
   <div
     class="flex flex-col flex-wrap md:flex-row items-center justify-center gap-10 lg:gap-12 max-w-3xl">
     <img src="/img/fonetica.webp" class="h-20" alt="logo lab fonética usach" />
-    <img
-      src="/img/granada.png"
-      class="h-16"
-      alt="logo university of granada" />
+    <img src="/img/granada.png" class="h-16" alt="logo university of granada" />
     <img
       src="/img/conce.webp"
       class="h-16"
