@@ -3,23 +3,23 @@
     "congress": "Congresso",
     "investigation": "Gruppo di ricerca",
     "committees": "Comitati",
-    "announcement": "Convocazione",
+    "announcement": "Call for Paper",
     "proposals": "Proposte"
   },
   "proposal": {
     "submission_title": "Modulo di proposta",
-    "submission_subtitle": "Ti invitiamo a far parte del Primo Congresso Internazionale di Fonetica e Poetica. Completa questo modulo in modo che possiamo pianificare la tua partecipazione.",
-    "considerations_title": "Considerazioni per le presentazioni",
+    "submission_subtitle": "Ti invitiamo a far parte del I° Congresso Internazionale di Fonetica e Poetica. Completa questo modulo in modo che possiamo pianificare la tua partecipazione.",
+    "considerations_title": "Dati utili per le presentazioni",
     "considerations_description": [
-      "Tempo di presentazione massimo di 20 minuti. Successivamente ci sarà un tempo per formulare domande.",
-      "Si consiglia di utilizzare una presentazione e consigliamo un carattere di dimensioni leggibili e testo essenziale.",
-      "Considera che la piattaforma di presentazione sarà Zoom."
+      "Tempo di presentazione massimo di 20 minuti + alcuni minuti di discussione.",
+      "È consigliabile, nel caso di ricorso a una presentazione Power Point, l'uso di caratteri di dimensioni leggibili e un testo essenziale.",
+      "La piattaforma adottata sarà Zoom."
     ]
   },
   "language": "Lingua",
-  "title": "1° CONGRESSO INTERNAZIONALE DI FONETICA E POETICA",
+  "title": ["I CONGRESSO INTERNAZIONALE DI FONETICA E POETICA"],
   "date": "14-15 novembre 2024",
-  "listener_title": "Vuoi essere un ascoltatore?",
+  "listener_title": "Non hai inviato una proposta e vuoi lo stesso partecipare come uditore?",
   "listener_subtitle": "Lasciaci il tuo indirizzo email e ti invieremo le ultime notizie sul congresso",
   "listener_alert_success": "Ti sei iscritto con successo!",
   "listener_alert_fail": "Ops! Qualcosa è andato storto. Per favore riprova.",
@@ -27,20 +27,20 @@
   "subscribe_button": "Iscriviti",
   "participant_title": "Vuoi partecipare come relatore?",
   "interest_declaration_title": "Dichiarazione di Interesse",
-  "interest_declaration_subtitle": "Vi invitiamo a partecipare al Primo Congresso Internazionale di Fonetica e Poetica. Vi preghiamo di compilare questo modulo in modo da poter pianificare la vostra partecipazione.",
+  "interest_declaration_subtitle": "Modulo di proposta. Ti invitiamo a far parte del I° Congresso Internazionale di Fonetica e Poetica. Vi preghiamo di compilare questo modulo in modo da poter pianificare la vostra partecipazione.",
   "participant": {
     "organizers_title": "Organizzano"
   },
-  "presentation_title": "Il I Congresso Internazionale di Fonetica e Poetica",
-  "presentation_text": "Il I Congresso Internazionale di Fonetica e Poetica -creato dall'omonimo gruppo che unisce le università di Granada, Santiago del Cile e Concepción, in collaborazione con il progetto europeo Voices of Spanish Poets- è il primo incontro scientifico degli ultimi tempi dedicato alla divulgazione dello studio fonetico-acustico della poesia in una prospettiva interdisciplinare. Sarà completamente virtuale e gratuito, per favorire la partecipazione di tutti i ricercatori di quest'area di studio sparsi in tutto il mondo.",
+  "presentation_title": "Il Congresso Internazionale di Fonetica e Poetica",
+  "presentation_text": "Il Congresso Internazionale di Fonetica e Poetica, creato dall'omonimo gruppo che unisce le università di Granada, Santiago del Cile e Concepción, in collaborazione con il progetto europeo Voices of Spanish Poets, è il primo incontro scientifico dedicato in tempi recenti alla divulgazione dello studio fonetico-acustico della poesia in una prospettiva interdisciplinare. Sarà completamente virtuale e gratuito, per favorire la partecipazione di tutti i ricercatori di quest'area di studio sparsi in tutto il mondo.",
   "dates": {
-    "title": "Date rilevanti",
+    "title": "Date importanti",
     "date_1": {
-      "title": "Inizio della ricezione delle proposte",
-      "date": "02/08/2024"
+      "title": "Apertura dell'invio delle proposte",
+      "date": "02/07/2024"
     },
     "date_2": {
-      "title": "Fine della ricezione delle proposte",
+      "title": "Termine ultimo per l'invio delle proposte",
       "date": "02/09/2024"
     },
     "date_3": {
@@ -48,7 +48,7 @@
       "date": "02/10/2024"
     },
     "date_4": {
-      "title": "Data del congresso",
+      "title": "Date del congresso",
       "date": "14 - 15/11/2024"
     },
     "date_4_detail": "Modalità: online"
@@ -58,16 +58,16 @@
     "name_placeholder": "Nome",
     "email_placeholder": "Email",
     "institution_placeholder": "Istituzione",
-    "exposition_info_title": "Informazioni sull'Esposizione",
-    "presentation_title_placeholder": "Titolo della Presentazione",
+    "exposition_info_title": "Informazioni sulla presentazione",
+    "presentation_title_placeholder": "Titolo della presentazione",
     "authors": "Autore, Affiliazione",
     "hosts": "Presentatore",
     "input_chip_label": "Parole Chiave",
     "input_chip_sub_label": ["Premi", "per aggiungere"],
     "input_chip_placeholder": "Inserisci 5 parole chiave",
-    "country": "Paese di Residenza",
-    "language": "Lingua della Presentazione",
-    "category_select_placeholder": "Seleziona una Categoria",
+    "country": "Paese di residenza",
+    "language": "Lingua della presentazione",
+    "category_select_placeholder": "Area di riferimento",
     "categories": [
       "Fonetica e Poesia",
       "Fonetica e Poesia Applicata",
@@ -76,15 +76,15 @@
       "Altro"
     ],
     "category_other_placeholder": "Specifica l'area tematica",
-    "sumary": "Riassunto della Presentazione (Max. 250 parole)",
-    "bibliography": "Principali Citazioni Bibliografiche",
-    "file_pdf": "File PDF con la Presentazione (Limite 8MB)",
+    "sumary": "Abstract",
+    "bibliography": "Bibliografia essenziale",
+    "file_pdf": "File PDF con la presentazione (Limite 8MB)",
     "file_subtitle": "(Tutti i partecipanti potranno scaricarlo)",
     "policy_privacy": [
       "I dati inviati tramite questo modulo saranno utilizzati solo per contattare i candidati del congresso e non saranno condivisi con terzi.",
       "Nel caso in cui la presentazione superi il limite di 8 MB, contattare foneticaypoetica@usach.cl"
     ],
-    "submit_button": "Invia Dichiarazione",
+    "submit_button": "Invia proposta",
     "submit_file_error": "La tua restituzione è stata inviata, ma il tuo file è troppo grande. Contatta foneticaypoetica@usach.cl",
     "submit_success": "Inviato"
   },
@@ -139,21 +139,19 @@
       "Affrontare lo studio fonetico strumentale della poesia in lingua spagnola",
       "Diffondere lo studio fonetico strumentale della poesia come un'area di ricerca legittima (e trascurata)",
       "Costruire una rete internazionale di ricercatori che lavorano sull'argomento con approcci scientifici simili e diversi",
-      "Proporre diverse istanze per diffondere questa prospettiva di ricerca dell'oggetto poetico"
+      "Proporre diversi approcci per diffondere questa prospettiva di ricerca dell'oggetto poetico"
     ],
-    "subtitle_4": "Istituzioni correlate:",
+    "subtitle_4": "Enti coinvolti:",
     "content_4": [
       "Università di Granada",
       "Università di Santiago del Cile",
       "Laboratorio di Fonetica dell'Università di Santiago del Cile",
-      "Università di Concepción",
-      "Voices of Spanish Poets",
-      "Unione Europea"
+      "Università di Concepción"
     ],
-    "colaborating": "In collaborazione con il progetto Voices of Spanish Poets: Archivio Vocale e Studio Sperimentale sulla Lettura della Poesia, Finanziato dall'Unione Europea",
+    "colaborating": "In collaborazione con il progetto Voices of Spanish Poets: Archivio Vocale e Studio Sperimentale sulla Lettura della Poesia, finanziato dall'Unione Europea",
     "subtitle_5": "Eventi:",
     "content_5": [
-      "1a edizione del Congresso Internazionale di Fonetica e Poetica"
+      "I edizione del Congresso Internazionale di Fonetica e Poetica"
     ],
     "subtitle_6": "Contatto:",
     "content_6": "foneticaypoetica@usach.cl"
@@ -161,16 +159,16 @@
   "proposals": {},
   "announcement": {
     "title": "I Edizione del Congresso Internazionale di Fonetica e Poetica FyP",
-    "subtitle": "La Dimensione Acustica della Poesia: Prospettive Strumentali e Interdisciplinari",
+    "subtitle": "La dimensione acustica della poesia: prospettive strumentali e interdisciplinari",
     "paragraph_1": "In origine, a partire dall'inizio del XX secolo, la fonetica era strettamente legata agli studi poetici e anche all'analisi strumentale del parlato (Mustazza, 2019), e la relazione tra linguistica e poesia si è mostrata fortemente connessa come dimostra Jakobson (1966). Tuttavia, nonostante il crescente numero di archivi vocali e strategie di conservazione del parlato poetico a livello internazionale (vedi Colonna, 2021, Mistrorigo 2019), questo ramo di ricerca è stato poco esplorato nel tempo.",
-    "paragraph_2": "Negli ultimi anni, questo divario si è ridotto in diverse aree internazionali, attraverso approcci teorici che hanno aperto il dibattito sull'argomento (Bernstein, 1999), comprendendo varie branche disciplinari, che stanno permettendo di iniziare a lasciare tracce per una consapevolezza, una sensibilizzazione e un incremento dello studio strumentale e interdisciplinare di questa specifica e complessa forma di parlato e della sua relazione con il testo scritto (es. Byers 1979; MacArthur et al. 2018; Colonna, 2022; Barbosa, 2023). Questo congresso vuole essere un contributo a questo specifico ramo di ricerca.",
-    "paragraph_3": "Per questa ragione, il recentemente creato gruppo internazionale di ricerca Fonetica e Poetica, in collaborazione con il progetto Voices of Spanish Poets, invita cordialmente tutte le persone interessate a quest'area di ricerca a partecipare alla prima edizione del Congresso Internazionale di Fonetica e Poetica, che si terrà il 15 novembre 2024 in modalità online.",
+    "paragraph_2": "Negli ultimi anni,  in diverse aree questo divario si è ridotto, attraverso approcci teorici che hanno aperto il dibattito sull'argomento (Bernstein, 1999), comprendendo varie branche disciplinari, che stanno permettendo di iniziare a lasciare tracce per una consapevolezza, una sensibilizzazione e un incremento dello studio strumentale e interdisciplinare di questa specifica e complessa forma di parlato e della sua relazione con il testo scritto (es. Byers 1979; MacArthur et al. 2018; Colonna, 2022; Barbosa, 2023). Questo congresso vuole essere un contributo a questo specifico ramo di ricerca.",
+    "paragraph_3": "Per questa ragione,  il gruppo internazionale di ricerca Fonetica e Poetica recentemente creato, in collaborazione con il progetto Voices of Spanish Poets, invita cordialmente tutte le persone interessate a quest'area di ricerca a partecipare alla prima edizione del Congresso Internazionale di Fonetica e Poetica, che si terrà il 15 novembre 2024 in modalità online.",
     "paragraph_4": "Invitiamo tutti gli studiosi che lavorano sul tema della dimensione acustica della poesia con diversi approcci a inviare una proposta che rientri in una delle seguenti aree tematiche proposte per il congresso:",
     "list": [
       "Fonetica e Poesia: dedicata allo studio fonetico delle registrazioni di poesia letta o poesia orale",
       "Fonetica e Poetica Applicata (Didattica): dedicata alle applicazioni dell'insegnamento della poesia attraverso la fonetica a diversi livelli di istruzione",
       "Fonetica, Cognizione e Poetica: dedicata allo studio dei risultati della dimensione acustica e percettiva della lettura poetica attraverso metodologie psicolinguistiche, cognitive e di correlati psicofisiologici",
-      "Metrica: dedicata alla dimensione prosodica del testo poetico in relazione alla sua esecuzione e interpretazione ad alta voce"
+      "Fonetica e Metrica: dedicata alla dimensione prosodica del testo poetico in relazione alla sua esecuzione e interpretazione ad alta voce"
     ]
   }
 }

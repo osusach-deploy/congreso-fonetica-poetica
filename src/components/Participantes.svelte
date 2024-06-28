@@ -9,7 +9,7 @@
     class="flex flex-col flex-wrap md:flex-row items-center justify-center gap-10 lg:gap-12 max-w-3xl">
     <img src="/img/fonetica.webp" class="h-20" alt="logo lab fonética usach" />
     <img
-      src="/img/granada.webp"
+      src="/img/granada.png"
       class="h-16"
       alt="logo university of granada" />
     <img
@@ -17,6 +17,6 @@
       class="h-16"
       alt="logo university of concepcion" />
     <img src="/img/eu.webp" class="h-16" alt="logo funded by european union" />
-    <img src="/img/vhp.webp" class="h-20" alt="logo voices of spanish poets" />
+    <img src="/img/vhp.png" class="h-20" alt="logo voices of spanish poets" />
   </div>
 </div>

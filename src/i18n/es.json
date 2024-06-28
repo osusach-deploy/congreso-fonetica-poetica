@@ -35,7 +35,7 @@
     "title": "Fechas relevantes",
     "date_1": {
       "title": "Comienzo recepción de propuestas",
-      "date": "02/08/2024"
+      "date": "02/07/2024"
     },
     "date_2": {
       "title": "Fin recepción de propuestas",
@@ -65,7 +65,7 @@
     "input_chip_placeholder": "Ingresa 5 palabras clave (Enter para agregar)",
     "country": "País de residencia",
     "language": "Idioma de la presentación",
-    "category_select_placeholder": "Seleccione una categoría",
+    "category_select_placeholder": "Área de referencia",
     "categories": [
       "Fonética y poesía",
       "Fonética y poesía aplicada",
@@ -144,9 +144,7 @@
       "Universidad de Granada",
       "Universidad de Santiago de Chile",
       "Laboratorio de Fonética de la Universidad de Santiago de Chile",
-      "Universidad de Concepción",
-      "Voices of Spanish Poets",
-      "Unión Europea"
+      "Universidad de Concepción"
     ],
     "colaborating": "En colaboración con el proyecto Voices of Spanish Poets: Vocal Archive and Experimental Study on Poetry Reading, Financiado por la Unión Europea",
     "subtitle_5": "Eventos:",
@@ -166,7 +164,7 @@
       "Fonética y poesía: dedicada al estudio de fonético de grabaciones de poesía leída o poesía oral",
       "Fonética y poética aplicada (didáctica): dedicada a las aplicaciones de la enseñanza de la poesía a través de la fonética en distintos niveles de instrucción",
       "Fonética, cognición y poética: dedicada al estudio de los resultados de la dimensión acústica y perceptiva de la lectura poética a través de metodologías psicolingüísticas, cognitivas y de correlatos psicofisiológicos",
-      "Métrica: dedicada a la dimensión prosódica del texto poético en relación con su ejecución e interpretación en voz alta"
+      "Fonética y Métrica: dedicada a la dimensión prosódica del texto poético en relación con su ejecución e interpretación en voz alta"
     ]
   }
 }
