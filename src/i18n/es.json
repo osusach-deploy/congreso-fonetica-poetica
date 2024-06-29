@@ -4,7 +4,8 @@
     "investigation": "Grupo de investigación",
     "committees": "Comités",
     "announcement": "Convocatoria",
-    "proposals": "Propuestas"
+    "proposals": "Propuestas",
+    "bibliography": "Bibliografía"
   },
   "proposal": {
     "submission_title": "Formulario de propuestas",
@@ -17,7 +18,7 @@
     ]
   },
   "language": "Idioma",
-  "title": "1<sup>er</sup> CONGRESO INTERNACIONAL DE FONÉTICA Y POÉTICA",
+  "title": "1<sup>er</sup> CONGRESO INTERNACIONAL DE FONÉTICA Y POÉTICA FyP",
   "date": "14-15 de noviembre 2024",
   "listener_title": "¿Deseas ser oyente?",
   "listener_subtitle": "Déjanos tu correo electrónico y te enviaremos las noticias más recientes sobre el congreso",

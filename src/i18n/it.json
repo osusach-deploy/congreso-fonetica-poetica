@@ -4,7 +4,8 @@
     "investigation": "Gruppo di ricerca",
     "committees": "Comitati",
     "announcement": "Call for Paper",
-    "proposals": "Proposte"
+    "proposals": "Proposte",
+    "bibliography": "Bibliografia"
   },
   "proposal": {
     "submission_title": "Modulo di proposta",
@@ -17,9 +18,9 @@
     ]
   },
   "language": "Lingua",
-  "title": ["I CONGRESSO INTERNAZIONALE DI FONETICA E POETICA"],
+  "title": ["I CONGRESSO INTERNAZIONALE DI FONETICA E POETICA FyP"],
   "date": "14-15 novembre 2024",
-  "listener_title": "Non hai inviato una proposta e vuoi lo stesso partecipare come uditore?",
+  "listener_title": "Non hai inviato una proposta ma vuoi partecipare come uditore?",
   "listener_subtitle": "Lasciaci il tuo indirizzo email e ti invieremo le ultime notizie sul congresso",
   "listener_alert_success": "Ti sei iscritto con successo!",
   "listener_alert_fail": "Ops! Qualcosa è andato storto. Per favore riprova.",
