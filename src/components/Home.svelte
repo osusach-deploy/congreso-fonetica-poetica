@@ -30,6 +30,7 @@
         }
         if (data.success) {
           alert(i18n.listener_alert_success);
+          email = "";
         }
       })
       .catch((e) => {

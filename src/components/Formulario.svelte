@@ -97,6 +97,7 @@
         }
         if (data.success) {
           alert(form.submit_success);
+          resetForm();
         }
       })
       .catch((e) => {
@@ -120,6 +121,23 @@
       binary += String.fromCharCode(bytes[i]);
     }
     return btoa(binary);
+  }
+
+  function resetForm() {
+    nombre = "";
+    email = "";
+    institucion = "";
+    titulo = "";
+    areaTematica = "";
+    idioma = "";
+    areaOtro = "";
+    autoresYFiliacion = [];
+    presentadores = [];
+    pais = "";
+    resumen = "";
+    referencias = "";
+    tags = [];
+    files = new FileList();
   }
 </script>
 
@@ -179,10 +197,12 @@
         <DynamicInput
           on:update={autoresUpdate}
           placeholder={form.authors}
+          title={i18n.form.authors_label}
           label="authors-afiliation" />
         <DynamicInput
           on:update={presentadoresUpdate}
           placeholder={form.hosts}
+          title={i18n.form.hosts_label}
           label="hosts" />
 
         <InputChip
@@ -190,7 +210,7 @@
           aria-label="keyword chip list add your keyword and press enter"
           class="border-none mb-4"
           chips="bg-white text-base rounded-lg"
-          regionInput="bg-white border-none rounded-lg py-2 px-3 leading-tight focus:outline-none focus:shadow-outline"
+          regionInput="bg-white border-none rounded-lg w-full py-2 px-3 leading-tight focus:outline-none focus:shadow-outline"
           regionChipList=""
           regionChipWrapper=""
           padding="p-0"
@@ -209,14 +229,18 @@
           {form.input_chip_sub_label[1]}
         </p>
         -->
+
         <div class="mb-4">
-          <input
-            aria-label="country"
+          <select
+            aria-label="country selector"
             required
-            type="text"
             bind:value={pais}
-            placeholder={form.country}
-            class="appearance-none border rounded-lg w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" />
+            class="block w-full bg-white border px-4 py-2 pr-8 rounded-lg leading-tight">
+            <option hidden disabled value="">{form.country}</option>
+            {#each i18n.countries as country, index}
+              <option value={country}>{country}</option>
+            {/each}
+          </select>
         </div>
 
         <div class="mb-4">
