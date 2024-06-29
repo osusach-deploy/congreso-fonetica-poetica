@@ -63,14 +63,7 @@
     formData.append("abstract", resumen);
     formData.append("bibliography", referencias);
     formData.append("keywords", tags.join(";"));
-    formData.append(
-      "authors",
-      autoresYFiliacion
-        .map((s) => {
-          return s.value;
-        })
-        .join(";"),
-    );
+    formData.append("authors", autoresYFiliacion.map((s) => s.value).join(";"));
     formData.append("affiliation", "");
     formData.append(
       "hosts",
