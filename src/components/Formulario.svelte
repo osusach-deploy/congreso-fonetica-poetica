@@ -15,6 +15,7 @@
   const API_URL = import.meta.env.PUBLIC_API_URL;
 
   let loading = false;
+  let formError = false;
 
   let nombre = "";
   let email = "";
@@ -93,6 +94,7 @@
           alert(form.submit_file_error);
         }
         if (data.success) {
+          formError = false;
           alert(form.submit_success);
           resetForm();
         }
@@ -101,6 +103,7 @@
       .catch((e) => {
         console.log(e);
         loading = false;
+        formError = true;
       });
   }
 
@@ -461,6 +464,9 @@
             {form.submit_button}
           {/if}
         </button>
+        {#if formError}
+        <p class=" font-semibold text-lg text-red-500 text-center mt-6">{i18n.listener_alert_fail}</p>
+        {/if}
         <p class="mt-6 px-1 text-xs font-light text-center">
           {form.policy_privacy[0]}
         </p>
