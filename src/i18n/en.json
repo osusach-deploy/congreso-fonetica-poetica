@@ -4,7 +4,8 @@
     "investigation": "Investigation group",
     "committees": "Committees",
     "announcement": "Announcement",
-    "proposals": "Proposals"
+    "proposals": "Proposals",
+    "bibliography": "Bibliography"
   },
   "proposal": {
     "submission_title": "Proposal Form",
@@ -17,7 +18,7 @@
     ]
   },
   "language": "Language",
-  "title": "1<sup>st</sup> INTERNATIONAL CONGRESS OF PHONETICS AND POETICS",
+  "title": "1<sup>st</sup> INTERNATIONAL CONGRESS OF PHONETICS AND POETICS FyP",
   "date": "November 14-15, 2024",
   "listener_title": "Would you like to be a listener?",
   "listener_subtitle": "Leave us your email address and we will send you the latest news about the congress",
