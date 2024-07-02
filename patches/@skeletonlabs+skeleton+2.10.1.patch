@@ -1,8 +1,8 @@
 diff --git a/node_modules/@skeletonlabs/skeleton/dist/components/InputChip/InputChip.svelte b/node_modules/@skeletonlabs/skeleton/dist/components/InputChip/InputChip.svelte
-index 6d82c05..094d643 100644
+index 6d82c05..6ce4ba8 100644
 --- a/node_modules/@skeletonlabs/skeleton/dist/components/InputChip/InputChip.svelte
 +++ b/node_modules/@skeletonlabs/skeleton/dist/components/InputChip/InputChip.svelte
-@@ -1,200 +1,245 @@
+@@ -1,200 +1,246 @@
 -<script context="module">import { fly, scale } from "svelte/transition";
 -import { prefersReducedMotionStore } from "../../index.js";
 -import { dynamicTransition } from "../../internal/transitions.js";
@@ -383,6 +383,7 @@ index 6d82c05..094d643 100644
 +        aria-label="add a keyword"
 +        on:click={() => {
 +          addChip(input);
++          input = "";
 +        }}>
 +        <svg
 +          xmlns="http://www.w3.org/2000/svg"

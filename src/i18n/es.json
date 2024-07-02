@@ -23,7 +23,7 @@
   "listener_title": "¿Deseas ser oyente?",
   "listener_subtitle": "Déjanos tu correo electrónico y te enviaremos las noticias más recientes sobre el congreso",
   "listener_alert_success": "¡Te has suscrito exitosamente!",
-  "listener_alert_fail": "Ups! Algo ha ocurrido. Intenta nuevamente.",
+  "listener_alert_fail": "Ups! Algo malo ha ocurrido. Intenta nuevamente.",
   "email_placeholder": "Introduce tu correo",
   "subscribe_button": "Suscribirse",
   "participant_title": "¿Te gustaría participar como exponente?",
