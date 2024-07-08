@@ -297,7 +297,7 @@
           placeholder={form.bibliography}
           required />
         <FileDropzone
-        required
+          required
           name="pdf"
           bind:files
           class="mb-4"
@@ -465,7 +465,9 @@
           {/if}
         </button>
         {#if formError}
-        <p class=" font-semibold text-lg text-red-500 text-center mt-6">{i18n.listener_alert_fail}</p>
+          <p class=" font-semibold text-lg text-red-500 text-center mt-6">
+            {i18n.listener_alert_fail}
+          </p>
         {/if}
         <p class="mt-6 px-1 text-xs font-light text-center">
           {form.policy_privacy[0]}

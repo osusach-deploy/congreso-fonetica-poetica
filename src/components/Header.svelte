@@ -38,8 +38,8 @@
         class="flex items-center hover:bg-slate-600 px-7 py-1 transition-all"
         href={langPath + "/#form"}>{i18n.header.proposals}</a>
       <a
-      class="flex items-center hover:bg-slate-600 px-7 py-1 transition-all"
-      href={langPath + "/bibliography"}>{i18n.header.bibliography}</a>
+        class="flex items-center hover:bg-slate-600 px-7 py-1 transition-all"
+        href={langPath + "/bibliography"}>{i18n.header.bibliography}</a>
     </div>
   </div>
   <Dropdown {i18n} {currentLocale} {pathname} />

@@ -7,7 +7,7 @@ const { currentLocale = "es" } = Astro;
 const i18n = getI18N(currentLocale);
 ---
 
-<Layout title="Congreso Poética">
+<Layout title={i18n.header.congress}>
   <div class="flex flex-col items-center">
     <Home client:load i18n={i18n} currentLocale={currentLocale} />
     <slot />

@@ -2,29 +2,31 @@
 import Layout from "../layouts/Layout.astro";
 
 import { getI18N } from "../i18n";
+import BibItems from "./BibItems.svelte";
 const { currentLocale = "es" } = Astro;
 const i18n = getI18N(currentLocale);
 
 let references = [
-"Barbosa, Pl. A. (2023). The Dance of Pauses in Poetry Declamation. Languages, 8(1), 76. https://doi.org/10.3390/languages8010076", 
-"Bernstein Ch. (a cura di) (1998). Close Listening: Poetry and the Performed Word, New York: Oxford University Press.",
-"Byers, P. P. (1979). A formula for poetic intonation. Poetics, 8, 367–380.",
-"Blohm, S., Versace, S., Methner, S., Wagner, V., Schlesewsky, M., & Menninghaus, W. (2022). Reading Poetry and Prose: Eye Movements and Acoustic Evidence. Discourse Processes, 59(3), 159–183. https://doi.org/10.1080/0163853X.2021.2015188",
-"Colonna, V. (2021). Voices of Italian Poets. Analisi fonetica e storia della lettura della poesia italiana daglianni Sessanta a oggi. Tesi di Dottorato. Università di Genova-Torino.",
-"Colonna, V. (2022). Voices of Italian Poets. Storia e analisi fonetica della lettura della poesia italiana del Novecento. Alessandria: Dell'Orso.",
-"Jakobson, R. (1960). Closing statement: Linguistics and poetics. In Sebeok, Thomas A., ed. Style in Language. Cambridge, MA: MIT Press, 350–377.",
-"MacArthur M., Zellou G. & Miller L. M. (2018). “Beyond Poet Voice: Sampling the (Non-) Performance Styles of 100 American Poets”. Journal of Cultural Analytics, April 18, 2018. DOI: 10.31235/osf.io/5vazx.",
-"Mistrorigo A. (2018). Phonodia. La voz de los poetas, uso crítico de sus grabaciones y entrevistas. Venezia: Ca’ Foscari.",
-]
+  'Barbosa, Pl. A. (2023). The Dance of Pauses in Poetry Declamation. <i>Languages</i>, 8(1), 76. <a  href="https://doi.org/10.3390/languages8010076" class="hover:underline">https://doi.org/10.3390/languages8010076</a>',
+  "Bernstein Ch. (a cura di) (1998). Close Listening: Poetry and the Performed Word, New York: Oxford University Press.",
+  "Byers, P. P. (1979). A formula for poetic intonation. <i>Poetics</i>, 8, 367–380.",
+  'Blohm, S., Versace, S., Methner, S., Wagner, V., Schlesewsky, M., & Menninghaus, W. (2022). Reading Poetry and Prose: Eye Movements and Acoustic Evidence. <i>Discourse Processes</i>, 59(3), 159–183. <a href="https://doi.org/10.1080/0163853X.2021.2015188" class="hover:underline">https://doi.org/10.1080/0163853X.2021.2015188</a>',
+  "Colonna, V. (2021). <i>Voices of Italian Poets. Analisi fonetica e storia della lettura della poesia italiana daglianni Sessanta a oggi.</i> Tesi di Dottorato. Università di Genova-Torino.",
+  "Colonna, V. (2022). <i>Voices of Italian Poets. Storia e analisi fonetica della lettura della poesia italiana del Novecento.</i> Alessandria: Dell'Orso.",
+  "Jakobson, R. (1960). Closing statement: Linguistics and poetics. In Sebeok, Thomas A., ed. <i>Style in Language.</i> Cambridge, MA: MIT Press, 350–377.",
+  "MacArthur M., Zellou G. & Miller L. M. (2018). “Beyond Poet Voice: Sampling the (Non-) Performance Styles of 100 American Poets”. <i>Journal of Cultural Analytics</i>, April 18, 2018. DOI: 10.31235/osf.io/5vazx.",
+  "Mistrorigo A. (2018). <i>Phonodia. La voz de los poetas, uso crítico de sus grabaciones y entrevistas.</i> Venezia: Ca’ Foscari.",
+  'Mustazza, Ch. (2019). <i>Speech Labs: Language Experiments, Early Poetry Audio Archives, And The Poetic Record</i> [Unpublished doctoral dissertation]. University of Pennsylvania. <a href="https://repository.upenn.edu/handle/20.500.14332/30493" class="hover:underline">https://repository.upenn.edu/handle/20.500.14332/30493</a>',
+];
 ---
 
-
-<Layout title="Bibliografía">
-    
-    <div class="flex flex-col items-center mx-auto my-10 lg:my-20 w-[88%] lg:w-[65%] max-w-5xl">
-        <p class="mb-10 text-2xl font-semibold">{i18n.header.bibliography}</p>
-        <ul class="list-disc flex flex-col pl-8 text-xl font-light text-justify gap-5">
-            {references.map((text) => <li>{text}</li>)}
-          </ul>
-    </div>
+<Layout title={i18n.header.bibliography}>
+  <div
+    class="flex flex-col items-center mx-auto my-10 lg:my-20 w-[88%] lg:w-[65%] max-w-5xl">
+    <p class="mb-10 text-2xl font-semibold">{i18n.header.bibliography}</p>
+    <ul
+      class="list-disc flex flex-col pl-8 text-xl font-light text-justify gap-5">
+      {references.map((text) => <BibItems {text} />)}
+    </ul>
+  </div>
 </Layout>

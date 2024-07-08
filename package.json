@@ -17,6 +17,7 @@
     "@fontsource/barlow": "^5.0.13",
     "astro": "^4.7.0",
     "astro-google-fonts-optimizer": "^0.2.2",
+    "astro-seo-metadata": "^0.6.0",
     "patch-package": "^8.0.0",
     "postinstall": "^0.10.3",
     "postinstall-postinstall": "^2.1.0",
