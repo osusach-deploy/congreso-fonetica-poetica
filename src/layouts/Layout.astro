@@ -37,7 +37,7 @@ let pathTo = "/" + (check ?? "");
     />
     <SEOMetadata
       siteName={"Congreso Fonética y Poética"}
-      title={"Fonética y Poética"}
+      title={title}
       description={"Únete al primer congreso de fonética y poética internacional"}
       image={"/img/afiche.jpg"}
       favicon={"/favicon.ico"}
@@ -47,7 +47,6 @@ let pathTo = "/" + (check ?? "");
       type={"website"}
       astroGenerator={true}
     />
-    <title>{title}</title>
   </head>
   <body class="fondo selection:bg-purple-300 selection:text-purple-900">
     <Header client:load {i18n} {currentLocale} pathname={pathTo} />

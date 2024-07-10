@@ -52,7 +52,10 @@
     class=" animate-fade-up animate-ease-in-out flex flex-col gap-20 lg:flex-row lg:my-10 w-[90%] lg:mx-0 lg:w-[60%] lg:justify-between">
     <div
       class="flex flex-col lg:w-[50%] gap-3 text-center items-center align-middle justify-center">
-      <img class="flex h-48 aspect-auto" src="/img/logoweb.png" alt="logocongreso">
+      <img
+        class="flex h-48 aspect-auto"
+        src="/img/logoweb.png"
+        alt="logocongreso" />
       <p class=" font-extralight text-2xl">{i18n.date}</p>
     </div>
     <div
@@ -135,5 +138,8 @@
       </div>
     </article>
   </Formulario>
-  <img class="hidden lg:block absolute opacity-10 top-[5%] -z-10" src="/img/ondasonido.png" alt="onda_sonido">
+  <img
+    class="hidden lg:block absolute opacity-10 top-[5%] -z-10"
+    src="/img/ondasonido.png"
+    alt="onda_sonido" />
 </div>
