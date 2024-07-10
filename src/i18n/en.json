@@ -20,7 +20,7 @@
   "language": "Language",
   "title": "1<sup>st</sup> INTERNATIONAL CONGRESS OF PHONETICS AND POETICS FyP",
   "date": "November 14-15, 2024",
-  "listener_title": "Would you like to be a listener?",
+  "listener_title": "Would you like to listen in and participate in discussions?",
   "listener_subtitle": "Leave us your email address and we will send you the latest news about the congress",
   "listener_alert_success": "You have successfully subscribed!",
   "listener_alert_fail": "Oops! Something went wrong. Please try again.",
@@ -33,7 +33,7 @@
     "organizers_title": "Organized by"
   },
   "presentation_title": "The 1st International Congress on Phonetics and Poetics",
-  "presentation_text": "The 1st International Congress on Phonetics and Poetics -created by the homonymous group that connects the universities of Granada, Santiago de Chile and Concepción, in collaboration with the European project Voices of Spanish Poets- is the first scientific meeting -in recent times- dedicated to the dissemination of the phonetic-acoustic study of poetry and from an interdisciplinary perspective. Its modality will be completely virtual and free of charge, in order to favor the participation of all researchers in this area of study and who are deployed around the world.",
+  "presentation_text": "The 1st International Congress on Phonetics and Poetics has been created by the homonymous international group, which connects the University of Granada, University of Santiago de Chile and University of  Concepción, in collaboration with the European project ‘Voices of Spanish Poets’. It is the first scientific meeting dedicated to the dissemination of the phonetic-acoustic study of poetry and from an interdisciplinary perspective. This congress is entirely virtual and free of charge, in order to encourage the participation of researchers in different disciplines interested in the intersection of poetics and phonetics around the world.",
   "dates": {
     "title": "Relevant dates",
     "date_1": {
@@ -107,7 +107,7 @@
       "Antonio Romano (University of Turin)",
       "Valeria Cofré (University of Santiago, Chile)",
       "Stefan Blohm (Leibniz Institute for the German Language)",
-      "Anastasia Boldireff (University of Quebec)",
+      "Anastasia Boldireff (Concordia University)",
       "Jaime Soto (University of Concepción)",
       "Isolina Lara (University of Concepción)",
       "Stefano Versace (Independent Researcher / Leopardi Centre University of Birmingham)",
@@ -164,8 +164,8 @@
   "announcement": {
     "title": "1st Edition of the International Congress on Phonetics and Poetics FyP",
     "subtitle": "The Acoustic Dimension of Poetry: Instrumental and Interdisciplinary Perspectives",
-    "paragraph_1": "Originally, from the early 20th century, phonetics was closely related to poetic studies and even to the instrumental analysis of speech (Mustazza, 2019), and the relationship between linguistics and poetry has been shown to be strongly connected, as Jakobson (1966) demonstrates. However, despite the growing number of vocal archives and strategies for preserving poetic speech internationally (see Colonna, 2021, Mistrorigo 2019), this branch of research has been little explored over time.",
-    "paragraph_2": "In recent years, this gap has been reduced in various international areas, through theoretical approaches that have opened the debate on the subject (Bernstein, 1999), encompassing various disciplinary branches, which is allowing the beginning of awareness, sensitization, and an increase in the instrumental and interdisciplinary study of this specific and very complex form of speech and its relationship with the written text (e.g., Byers 1979; MacArthur et al. 2018; Colonna, 2022; Barbosa, 2023). This congress aims to contribute to this specific branch of research.",
+    "paragraph_1": "From the early 20th century, phonetics was closely related to poetic studies and even to the instrumental analysis of speech (Mustazza, 2019), and the relationship between linguistics and poetry has been shown to be strongly connected, as Jakobson (1966) demonstrates. However, despite the growing number of vocal archives and strategies for preserving poetic speech internationally (see Colonna, 2021, Mistrorigo 2019), this branch of research has been understudied. ",
+    "paragraph_2": "In recent years, this gap has been relegated to various international areas, such as, theoretical approaches that have opened the debate on the subject of the scientific understandings of poetry reading  in connection with the text (Bernstein, 1999), encompassing various disciplinary branches, which is allowing the beginning of awareness, sensitization, and an increase in the instrumental and interdisciplinary study of this specific and very complex form of speech and its relationship with the written text (e.g., Byers 1979; MacArthur et al. 2018; Colonna, 2022; Barbosa, 2023). This congress aims to contribute to this specific branch of research.",
     "paragraph_3": "For this reason, the recently created international research group Phonetics and Poetics, in collaboration with the Voices of Spanish Poets project, cordially invites all those interested in this area of research to participate in the first edition of the International Congress on Phonetics and Poetics, to be held on November 14-15, 2024, online.",
     "paragraph_4": "We invite all researchers working on the acoustic dimension of poetry from various perspectives to submit a proposal within one of the following thematic areas:",
     "list": [
