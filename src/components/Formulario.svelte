@@ -30,7 +30,7 @@
   let resumen = "";
   let referencias = "";
   let tags: string[] = [];
-  let files: FileList;
+  let files: any;
 
   export let i18n;
 
@@ -50,7 +50,7 @@
 
     let filesize = parseFloat((files[0].size / 1024 / 1024).toFixed(4)); // MB
 
-    let file: File | string = files[0];
+    let file: any = files[0];
     let encoded: string = "";
     if (filesize >= 8) {
       file = "muy grande";
@@ -139,8 +139,9 @@
     resumen = "";
     referencias = "";
     tags = [];
-    files = new FileList();
+    files = void 0;
   }
+  resetForm();
 </script>
 
 <div
