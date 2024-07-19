@@ -212,7 +212,8 @@
           on:update={keywordsUpdate}
           placeholder={form.input_chip_label}
           title={i18n.form.input_chip_placeholder}
-          label="keywords" />
+          label="keywords"
+          maxInputs={5} />
 
         <div class="mb-4">
           <select
