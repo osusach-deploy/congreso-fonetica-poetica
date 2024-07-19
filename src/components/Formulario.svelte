@@ -2,6 +2,12 @@
   import { InputChip, FileDropzone } from "@skeletonlabs/skeleton";
   import DynamicInput from "./DynamicInput.svelte";
 
+  export let i18n;
+
+  const { form } = i18n;
+
+  const areas: string[] = form.categories;
+
   type autor = {
     id: Number;
     value: string;
@@ -29,14 +35,8 @@
   let pais = "";
   let resumen = "";
   let referencias = "";
-  let tags: string[] = [];
+  let tags: string[] = []; // other
   let files: any;
-
-  export let i18n;
-
-  const { form } = i18n;
-
-  const areas = form.categories;
 
   async function handleSubmit() {
     loading = true;
@@ -208,6 +208,9 @@
           title={i18n.form.hosts_label}
           label="hosts" />
 
+        <label for="keywords" class="text-base pl-1 mb-1 font-light">
+          {form.input_chip_placeholder}
+        </label>
         <InputChip
           chips_label="press enter to remove this keyword"
           aria-label="keyword chip list add your keyword and press enter"
@@ -219,7 +222,7 @@
           padding="p-0"
           name="keywords"
           bind:value={tags}
-          placeholder={form.input_chip_placeholder}
+          placeholder={form.input_chip_label}
           maxlength={16}
           max={5}
           allowUpperCase
