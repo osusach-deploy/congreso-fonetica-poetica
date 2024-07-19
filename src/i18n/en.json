@@ -67,7 +67,7 @@
     "hosts_label": "Add hosts",
     "input_chip_label": "Keywords",
     "input_chip_sub_label": ["Press", "to add"],
-    "input_chip_placeholder": "Enter 5 keywords (Enter to add)",
+    "input_chip_placeholder": "Enter 5 keywords",
     "country": "Country of Residence",
     "language": "Presentation Language",
     "category_select_placeholder": "Reference field",

@@ -139,7 +139,7 @@
     </article>
   </Formulario>
   <img
-    class="hidden lg:block absolute opacity-10 top-[5%] -z-10"
+    class="hidden lg:block absolute opacity-5 top-[5%] -z-10"
     src="/img/ondasonido.png"
     alt="onda_sonido" />
 </div>

@@ -18,6 +18,11 @@
     value: string;
   };
 
+  type keyword = {
+    id: Number;
+    value: string;
+  };
+
   const API_URL = import.meta.env.PUBLIC_API_URL;
 
   let loading = false;
@@ -32,10 +37,10 @@
   let areaOtro = "";
   let autoresYFiliacion: autor[] = [];
   let presentadores: presentador[] = [];
+  let tags: keyword[] = [];
   let pais = "";
   let resumen = "";
   let referencias = "";
-  let tags: string[] = []; // other
   let files: any;
 
   async function handleSubmit() {
@@ -67,17 +72,10 @@
     formData.append("theme", area);
     formData.append("abstract", resumen);
     formData.append("bibliography", referencias);
-    formData.append("keywords", tags.join(";"));
+    formData.append("keywords", tags.map((s) => s.value).join(";"));
     formData.append("authors", autoresYFiliacion.map((s) => s.value).join(";"));
     formData.append("affiliation", "");
-    formData.append(
-      "hosts",
-      presentadores
-        .map((s) => {
-          return s.value;
-        })
-        .join(";"),
-    );
+    formData.append("hosts", presentadores.map((s) => s.value).join(";"));
     formData.append("raw_file", file);
     formData.append("encoded_file", encoded);
 
@@ -114,6 +112,9 @@
   function presentadoresUpdate(event: any) {
     presentadores = event.detail.inputs;
   }
+  function keywordsUpdate(event: any) {
+    tags = event.detail.inputs;
+  }
 
   function _arrayBufferToBase64(buffer: ArrayBuffer) {
     var binary = "";
@@ -135,10 +136,10 @@
     areaOtro = "";
     autoresYFiliacion = [];
     presentadores = [];
+    tags = [];
     pais = "";
     resumen = "";
     referencias = "";
-    tags = [];
     files = void 0;
   }
   resetForm();
@@ -207,34 +208,12 @@
           placeholder={form.hosts}
           title={i18n.form.hosts_label}
           label="hosts" />
-
-        <label for="keywords" class="text-base pl-1 mb-1 font-light">
-          {form.input_chip_placeholder}
-        </label>
-        <InputChip
-          chips_label="press enter to remove this keyword"
-          aria-label="keyword chip list add your keyword and press enter"
-          class="border-none mb-4"
-          chips="bg-white text-base rounded-lg"
-          regionInput="bg-white border-none rounded-lg w-full py-2 px-3 leading-tight focus:outline-none focus:shadow-outline"
-          regionChipList=""
-          regionChipWrapper=""
-          padding="p-0"
-          name="keywords"
-          bind:value={tags}
+        <DynamicInput
+          on:update={keywordsUpdate}
           placeholder={form.input_chip_label}
-          maxlength={16}
-          max={5}
-          allowUpperCase
-          label="keyword chip list"
-          required />
-        <!--
-        <p class="text-sm pl-1 mb-4 text-right">
-          {form.input_chip_sub_label[0]}
-          <kbd class="kbd bg-white font-normal">enter</kbd>
-          {form.input_chip_sub_label[1]}
-        </p>
-        -->
+          title={i18n.form.input_chip_placeholder}
+          label="keywords"
+          maxInputs={5} />
 
         <div class="mb-4">
           <select
