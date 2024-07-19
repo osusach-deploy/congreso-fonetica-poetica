@@ -65,7 +65,7 @@
     "hosts_label": "Ingresa presentadores",
     "input_chip_label": "Palabras clave",
     "input_chip_sub_label": ["Presiona", "para agregar"],
-    "input_chip_placeholder": "Ingresa 5 palabras clave (Enter para agregar)",
+    "input_chip_placeholder": "Ingresa 5 palabras clave",
     "country": "País de residencia",
     "language": "Idioma de la presentación",
     "category_select_placeholder": "Área de referencia",
