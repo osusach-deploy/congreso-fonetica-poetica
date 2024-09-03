@@ -89,6 +89,7 @@
     ],
     "submit_button": "Invia proposta",
     "submit_file_error": "La tua restituzione è stata inviata, ma il tuo file è troppo grande. Contatta foneticaypoetica@usach.cl",
+    "submit_no_file": "Nessun file trovato",
     "submit_success": "Inviato"
   },
   "footer": {

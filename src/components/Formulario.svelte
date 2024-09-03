@@ -53,15 +53,22 @@
     )
       area = areaOtro;
 
-    let filesize = parseFloat((files[0].size / 1024 / 1024).toFixed(4)); // MB
-
-    let file: any = files[0];
     let encoded: string = "";
+    if (files === undefined) {
+      alert(form.submit_no_file);
+      return;
+    }
+    let file: any = files[0];
+    let filesize = parseFloat((files[0].size / 1024 / 1024).toFixed(4)); // MB
     if (filesize >= 8) {
       file = "muy grande";
+      alert(form.submit_file_error);
+      loading = false;
+      return;
     } else {
       encoded = _arrayBufferToBase64(await file.arrayBuffer());
     }
+
     const formData = new FormData();
     formData.append("name", nombre);
     formData.append("email", email);
@@ -88,9 +95,6 @@
       })
       .then((data) => {
         console.log(data);
-        if (data.success && file == "muy grande") {
-          alert(form.submit_file_error);
-        }
         if (data.success) {
           formError = false;
           alert(form.submit_success);
@@ -102,6 +106,7 @@
         console.log(e);
         loading = false;
         formError = true;
+        resetForm();
       });
   }
 
@@ -140,7 +145,7 @@
     pais = "";
     resumen = "";
     referencias = "";
-    files = void 0;
+    files = undefined;
   }
   resetForm();
 </script>
@@ -297,7 +302,7 @@
                 {form.file_subtitle}
               </p>
             {:else}
-              <div>{files[0].name}</div>
+              <div>{files[0]?.name ?? ""}</div>
             {/if}
           </svelte:fragment>
         </FileDropzone>
