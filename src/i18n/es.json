@@ -86,7 +86,7 @@
       " En caso de que la presentación supere el limite de 8MB, contactese con foneticaypoetica@usach.cl"
     ],
     "submit_button": "Enviar declaración",
-    "submit_file_error": "Se envió su declaración, pero su archivo es muy grande. Pongase en contacto con foneticaypoetica@usach.cl",
+    "submit_file_error": "Su archivo es muy grande. Pongase en contacto con foneticaypoetica@usach.cl",
     "submit_no_file": "No se encontró el archivo",
     "submit_success": "Enviado"
   },

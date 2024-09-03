@@ -54,20 +54,24 @@
       area = areaOtro;
 
     let encoded: string = "";
+
     if (files === undefined) {
       alert(form.submit_no_file);
       return;
     }
+
     let file: any = files[0];
     let filesize = parseFloat((files[0].size / 1024 / 1024).toFixed(4)); // MB
-    if (filesize >= 8) {
-      file = "muy grande";
+
+    if (filesize >= 16) {
+      file = undefined;
+      encoded = "";
       alert(form.submit_file_error);
       loading = false;
       return;
-    } else {
-      encoded = _arrayBufferToBase64(await file.arrayBuffer());
     }
+
+    encoded = _arrayBufferToBase64(await file.arrayBuffer());
 
     const formData = new FormData();
     formData.append("name", nombre);
