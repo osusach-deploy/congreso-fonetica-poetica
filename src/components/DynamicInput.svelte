@@ -22,6 +22,11 @@
   function dispatchUpdate() {
     dispatch("update", { inputs });
   }
+
+  export function clearAll() {
+    inputs = [{ id: Date.now(), value: "" }]
+    dispatchUpdate();
+  }
 </script>
 
 <p class=" text-base pl-1 mb-1 font-light">{title}</p>

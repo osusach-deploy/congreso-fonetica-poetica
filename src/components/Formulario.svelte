@@ -43,6 +43,10 @@
   let referencias = "";
   let files: any;
 
+  let dynamicAutoresRef: any;
+  let dynamicPresentadoresRef: any;
+  let dynamicTagsRef: any;
+
   async function handleSubmit() {
     loading = true;
     let area = areaTematica;
@@ -125,6 +129,12 @@
     tags = event.detail.inputs;
   }
 
+  function clearDynamicInputs() {
+    dynamicAutoresRef?.clearAll();
+    dynamicPresentadoresRef?.clearAll();
+    dynamicTagsRef?.clearAll();
+  }
+
   function _arrayBufferToBase64(buffer: ArrayBuffer) {
     var binary = "";
     var bytes = new Uint8Array(buffer);
@@ -150,7 +160,9 @@
     resumen = "";
     referencias = "";
     files = undefined;
+    clearDynamicInputs();
   }
+
   resetForm();
 </script>
 
@@ -209,16 +221,19 @@
 
         <DynamicInput
           on:update={autoresUpdate}
+          bind:this={dynamicAutoresRef}
           placeholder={form.authors}
           title={i18n.form.authors_label}
           label="authors-afiliation" />
         <DynamicInput
           on:update={presentadoresUpdate}
+          bind:this={dynamicPresentadoresRef}
           placeholder={form.hosts}
           title={i18n.form.hosts_label}
           label="hosts" />
         <DynamicInput
           on:update={keywordsUpdate}
+          bind:this={dynamicTagsRef}
           placeholder={form.input_chip_label}
           title={i18n.form.input_chip_placeholder}
           label="keywords"
