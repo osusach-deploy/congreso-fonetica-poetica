@@ -88,7 +88,8 @@
       "In case the presentation exceeds the 8MB limit, please contact foneticaypoetica@usach.cl"
     ],
     "submit_button": "Submit Declaration",
-    "submit_file_error": "Your return has been submitted, but your file is too large. Contact foneticaypoetica@usach.cl",
+    "submit_file_error": "Your file is too large. Contact foneticaypoetica@usach.cl",
+    "submit_no_file": "No file found",
     "submit_success": "Sent"
   },
   "footer": {

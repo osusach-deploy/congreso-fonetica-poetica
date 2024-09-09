@@ -43,6 +43,10 @@
   let referencias = "";
   let files: any;
 
+  let dynamicAutoresRef: any;
+  let dynamicPresentadoresRef: any;
+  let dynamicTagsRef: any;
+
   async function handleSubmit() {
     loading = true;
     let area = areaTematica;
@@ -53,15 +57,26 @@
     )
       area = areaOtro;
 
-    let filesize = parseFloat((files[0].size / 1024 / 1024).toFixed(4)); // MB
+    let encoded: string = "";
+
+    if (files === undefined) {
+      alert(form.submit_no_file);
+      return;
+    }
 
     let file: any = files[0];
-    let encoded: string = "";
-    if (filesize >= 8) {
-      file = "muy grande";
-    } else {
-      encoded = _arrayBufferToBase64(await file.arrayBuffer());
+    let filesize = parseFloat((files[0].size / 1024 / 1024).toFixed(4)); // MB
+
+    if (filesize >= 16) {
+      file = undefined;
+      encoded = "";
+      alert(form.submit_file_error);
+      loading = false;
+      return;
     }
+
+    encoded = _arrayBufferToBase64(await file.arrayBuffer());
+
     const formData = new FormData();
     formData.append("name", nombre);
     formData.append("email", email);
@@ -88,9 +103,6 @@
       })
       .then((data) => {
         console.log(data);
-        if (data.success && file == "muy grande") {
-          alert(form.submit_file_error);
-        }
         if (data.success) {
           formError = false;
           alert(form.submit_success);
@@ -102,6 +114,7 @@
         console.log(e);
         loading = false;
         formError = true;
+        resetForm();
       });
   }
 
@@ -114,6 +127,12 @@
   }
   function keywordsUpdate(event: any) {
     tags = event.detail.inputs;
+  }
+
+  function clearDynamicInputs() {
+    dynamicAutoresRef?.clearAll();
+    dynamicPresentadoresRef?.clearAll();
+    dynamicTagsRef?.clearAll();
   }
 
   function _arrayBufferToBase64(buffer: ArrayBuffer) {
@@ -140,8 +159,10 @@
     pais = "";
     resumen = "";
     referencias = "";
-    files = void 0;
+    files = undefined;
+    clearDynamicInputs();
   }
+
   resetForm();
 </script>
 
@@ -200,16 +221,19 @@
 
         <DynamicInput
           on:update={autoresUpdate}
+          bind:this={dynamicAutoresRef}
           placeholder={form.authors}
           title={i18n.form.authors_label}
           label="authors-afiliation" />
         <DynamicInput
           on:update={presentadoresUpdate}
+          bind:this={dynamicPresentadoresRef}
           placeholder={form.hosts}
           title={i18n.form.hosts_label}
           label="hosts" />
         <DynamicInput
           on:update={keywordsUpdate}
+          bind:this={dynamicTagsRef}
           placeholder={form.input_chip_label}
           title={i18n.form.input_chip_placeholder}
           label="keywords"
@@ -297,7 +321,7 @@
                 {form.file_subtitle}
               </p>
             {:else}
-              <div>{files[0].name}</div>
+              <div>{files[0]?.name ?? ""}</div>
             {/if}
           </svelte:fragment>
         </FileDropzone>
