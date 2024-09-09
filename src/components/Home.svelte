@@ -55,7 +55,7 @@
       class="flex flex-col lg:w-[50%] gap-3 text-center items-center align-middle justify-center">
       <img
         class="flex h-48 aspect-auto"
-        src={"/img" + langPath + "/afiche.jpg"}
+        src={"/img" + langPath + "/logoweb.png"}
         alt="logocongreso" />
       <p class=" font-extralight text-2xl">{i18n.date}</p>
     </div>
