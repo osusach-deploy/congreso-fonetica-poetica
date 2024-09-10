@@ -1,6 +1,7 @@
 <script lang="ts">
   import { InputChip, FileDropzone } from "@skeletonlabs/skeleton";
   import DynamicInput from "./DynamicInput.svelte";
+  import posthog from "posthog-js";
 
   export let i18n;
 
@@ -49,6 +50,9 @@
 
   async function handleSubmit() {
     loading = true;
+
+    posthog.capture("click submit", { email: email });
+
     let area = areaTematica;
     if (
       areaTematica == "Otro" ||
@@ -60,6 +64,7 @@
     let encoded: string = "";
 
     if (files === undefined) {
+      posthog.capture("submit no file", { email: email });
       alert(form.submit_no_file);
       return;
     }
@@ -70,6 +75,8 @@
     if (filesize >= 16) {
       file = undefined;
       encoded = "";
+
+      posthog.capture("file_error", { email: email });
       alert(form.submit_file_error);
       loading = false;
       return;
@@ -108,10 +115,13 @@
           alert(form.submit_success);
           resetForm();
         }
+        posthog.capture("what?", { email: email, data: data });
         loading = false;
       })
       .catch((e) => {
         console.log(e);
+
+        posthog.capture("fetch error", { email: email, error: e });
         loading = false;
         formError = true;
         resetForm();

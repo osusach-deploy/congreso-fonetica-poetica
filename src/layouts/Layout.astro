@@ -13,23 +13,27 @@ interface Props {
 const { title } = Astro.props;
 
 const pathname = Astro.url.pathname;
-// console.log(pathname);
 
 let pathSplit = pathname.split("/");
-// console.log(pathSplit);
 
 // Comentar en dev, bug entre dev y build
 pathSplit.pop();
 let check = pathSplit.pop();
 if (check === "en" || check === "it") check = "";
 let pathTo = "/" + (check ?? "");
-// console.log(pathTo);
-// console.log();
+
 ---
 
 <!doctype html>
 <html lang="en">
   <head>
+    <script>
+      import posthog from "posthog-js";
+      posthog.init("phc_9edNtv23wnpgqlntvMhUCVh80XUnhsPwqVuyr1C9Gd3", {
+        api_host: "https://us.i.posthog.com",
+        person_profiles: "identified_only",
+      });
+    </script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
     <GoogleFontsOptimizer
