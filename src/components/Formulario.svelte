@@ -302,7 +302,6 @@
           class="w-full mb-4 px-2 py-1 rounded-lg focus:outline-none focus:shadow-outline"
           name="sumary"
           id="sumary"
-          maxlength="250"
           placeholder={form.sumary}
           required />
         <textarea
