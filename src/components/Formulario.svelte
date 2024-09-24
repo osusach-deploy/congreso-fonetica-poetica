@@ -70,6 +70,18 @@
     }
 
     let file: any = files[0];
+    if (!(file instanceof File)) {
+      alert(form.submit_no_file);
+      return;
+    }
+
+    const name = file.name.split(".");
+    const ext = name[name.length - 1];
+    if (ext !== "pdf") {
+      alert(form.submit_wrong_file_error);
+      return;
+    }
+
     let filesize = parseFloat((files[0].size / 1024 / 1024).toFixed(4)); // MB
 
     if (filesize >= 16) {

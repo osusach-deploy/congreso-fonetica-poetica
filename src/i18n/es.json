@@ -88,7 +88,8 @@
     "submit_button": "Enviar declaración",
     "submit_file_error": "Su archivo es muy grande. Pongase en contacto con foneticaypoetica@usach.cl",
     "submit_no_file": "No se encontró el archivo",
-    "submit_success": "Enviado"
+    "submit_success": "Enviado",
+    "submit_wrong_file_error": "El archivo debe ser de tipo PDF"
   },
   "footer": {
     "organizers_title": "Organizadores",

@@ -90,7 +90,8 @@
     "submit_button": "Invia proposta",
     "submit_file_error": "Il tuo file è troppo grande. Contatta foneticaypoetica@usach.cl",
     "submit_no_file": "Nessun file trovato",
-    "submit_success": "Inviato"
+    "submit_success": "Inviato",
+    "submit_wrong_file_error": "Il file deve essere di tipo PDF"
   },
   "footer": {
     "organizers_title": "Organizzatori",
