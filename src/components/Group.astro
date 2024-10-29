@@ -1,6 +1,8 @@
 ---
 import Layout from "../layouts/Layout.astro";
 
+import Profile from "./Profile.svelte";
+
 import { getI18N } from "../i18n";
 const { currentLocale = "es" } = Astro;
 const i18n = getI18N(currentLocale);
@@ -13,21 +15,19 @@ const i18n = getI18N(currentLocale);
       <h1 class="mb-5 text-4xl sm:text-5xl font-semibold">
         {i18n.group.title}
       </h1>
-      <div class="grid xl:grid-flow-row grid-flow-col">
-        <img src="/img/nicolas.jpg" class="" alt="Valentina Colonna">
-        <img src="/img/valentina.jpg" alt="Valentina Colonna">
-        <img src="/img/domingo.jpg" alt="Valentina Colonna">
-      </div>
       <div class="flex flex-col gap-2">
         <h2 class="text-3xl font-semibold">{i18n.group.subtitle_1}</h2>
         <p>{i18n.group.content_1}</p>
       </div>
 
       <div class="flex flex-col gap-2">
-        <h2 class="text-3xl font-semibold">{i18n.group.subtitle_2}</h2>
-        <ul class="list-disc pl-8">
-          {i18n.group.content_2.map((text) => <li>{text}</li>)}
-        </ul>
+        <h2 class="text-3xl font-semibold mb-4">{i18n.group.subtitle_2}</h2>
+        <div class="grid xl:grid-cols-4 gap-4 grid-cols-1">
+          <Profile name="Valentina Colonna" institution="Universidad de Granada" img="/img/valentina.jpg" credit="Foto de Daniele Ferroni"/>
+          <Profile name="Domingo Román" institution="Universidad de Santiago de Chile" img="/img/domingo.jpg" />
+          <Profile name="Nicolás Retamal" institution="Universidad de Concepción" img="/img/nicolas.jpg" />
+          <Profile name="Antonio Pamies" institution="Universidad de Granada" img="/img/usuario.png" />
+        </div>
       </div>
 
       <div class="flex flex-col gap-2">
