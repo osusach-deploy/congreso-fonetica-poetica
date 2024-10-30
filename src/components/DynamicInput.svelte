@@ -24,7 +24,7 @@
   }
 
   export function clearAll() {
-    inputs = [{ id: Date.now(), value: "" }]
+    inputs = [{ id: Date.now(), value: "" }];
     dispatchUpdate();
   }
 </script>
