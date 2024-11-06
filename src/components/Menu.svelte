@@ -30,6 +30,9 @@
       href={langPath + "/"}>{i18n.header.congress}</a>
     <a
       class="flex items-center hover:bg-slate-600 px-3 py-1 transition-all"
+      href={langPath + "/schedule"}>{i18n.header.schedule}</a>
+    <a
+      class="flex items-center hover:bg-slate-600 px-3 py-1 transition-all"
       href={langPath + "/group"}>{i18n.header.investigation}</a>
     <a
       class="flex items-center hover:bg-slate-600 px-3 py-1 transition-all"

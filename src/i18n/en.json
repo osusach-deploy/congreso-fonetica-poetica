@@ -6,7 +6,8 @@
     "committees": "Committees",
     "announcement": "Announcement",
     "proposals": "Proposals",
-    "bibliography": "Bibliography"
+    "bibliography": "Bibliography",
+    "download_schedule": "Get schedule"
   },
   "proposal": {
     "submission_title": "Proposal Form",

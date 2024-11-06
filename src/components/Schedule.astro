@@ -10,52 +10,59 @@ const i18n = getI18N(currentLocale);
 
 <Layout title={i18n.header.schedule}>
   <div
-    class="flex flex-col items-center gap-20 mx-auto my-10 lg:my-20 w-[95%] lg:w-[65%]">
+    class="flex flex-col items-center gap-20 mx-auto my-10 lg:my-20 w-[95%] lg:w-[50%]">
     <div class="flex flex-col gap-5">
-      <h1 class="mb-5 text-3xl sm:text-4xl font-semibold">
+      <h1 class="mb-5 text-3xl sm:text-4xl font-semibold text-center lg:text-left">
         {i18n.schedule.keynotes_speakers.title}
       </h1>
       <BioProfile
         name="Plinio Barbosa"
         description={i18n.schedule.keynotes_speakers.description.plinio_barbosa}
         img="/img/fotos/plinio.jpg"
+        client:load
       />
       <BioProfile
         name="Charles Bernstein"
         description={i18n.schedule.keynotes_speakers.description
           .charles_bernstein}
         img="/img/fotos/charles.jpg"
+        client:load
       />
       <BioProfile
         name="Stefan Blohm"
         description={i18n.schedule.keynotes_speakers.description.stefan_blohm}
         img="/img/fotos/stefan.jpg"
+        client:load
       />
     </div>
 
-    <div class="flex flex-col gap-10">
-      <h1 class="mb-5 text-3xl sm:text-4xl font-semibold">
+    <div class="flex flex-col gap-5">
+      <h1 class="mb-5 text-3xl sm:text-4xl font-semibold text-center lg:text-left">
         {i18n.schedule.poets.title}
       </h1>
       <BioProfile
         name="Klaura Anchio"
         description={i18n.schedule.poets.description.klaura_anchio}
         img="/img/fotos/klaura.jpg"
+        client:load
       />
       <BioProfile
         name="Estefania Cabello"
         description={i18n.schedule.poets.description.estefania_cabello}
         img="/img/fotos/estefania.jpg"
+        client:load
       />
       <BioProfile
         name="Miguel Rodriguez"
         description={i18n.schedule.poets.description.miguel_rodriguez}
         img="/img/fotos/miguel.jpg"
+        client:load
       />
       <BioProfile
         name="Rafael Rubio"
         description={i18n.schedule.poets.description.rafael_rubio}
         img="/img/fotos/rafael.jpg"
+        client:load
       />
     </div>
   </div>
