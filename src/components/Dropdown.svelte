@@ -25,7 +25,7 @@
 </script>
 
 <div
-  class="dropdown h-fit my-auto flex mr-2 lg:mr-5 lg:mx-auto sm:mx-0 bg-inherit rounded-lg z-20">
+  class="dropdown h-fit my-auto flex lg:mr-2 lg:mr-5  sm:mx-0 bg-inherit rounded-lg z-20">
   <button
     class="flex flex-row h-fit my-auto items-center transition-all text-white text-base sm:text-lg hover:bg-opacity-25 bg-white bg-opacity-15 rounded-lg px-3 py-1"
     on:click={toggleDropdown}>
