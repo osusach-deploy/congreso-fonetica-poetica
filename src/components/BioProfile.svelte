@@ -7,7 +7,7 @@
 
   let isOverflowing = false;
   let showMore: Boolean = false;
-  let contentRef;
+  let contentRef: HTMLElement;
   let height;
 
   function toggleShowMore() {
