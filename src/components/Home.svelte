@@ -49,6 +49,42 @@
 </script>
 
 <div class="relative flex flex-col w-full items-center mt-24 lg:mt-12">
+  <div class="flex md:flex-row flex-col gap-4 my-auto text-nowrap mb-4">
+    <a
+      href="/abs_book.pdf"
+      download="schedule.pdf"
+      class="w-full inline-flex gap-1 h-fit m-auto p-1 px-2 lg:p-1 lg:px-3 text-center bg-pink-600 text-white hover:bg-pink-500 transition-all rounded-lg items-center">
+      <p class="text-center w-full text-base lg:text-lg font-medium">
+        {i18n.header.download_book}
+      </p>
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        ><path
+          fill="white"
+          d="m12 16l-5-5l1.4-1.45l2.6 2.6V4h2v8.15l2.6-2.6L17 11zm-6 4q-.825 0-1.412-.587T4 18v-3h2v3h12v-3h2v3q0 .825-.587 1.413T18 20z" />
+      </svg>
+    </a>
+    <a
+      href="/schedule.pdf"
+      download="schedule.pdf"
+      class="w-full inline-flex gap-1 h-fit m-auto p-1 px-2 lg:p-1 lg:px-3 text-center bg-pink-600 text-white hover:bg-pink-500 transition-all rounded-lg items-center">
+      <p class="text-center w-full text-base lg:text-lg font-medium">
+        {i18n.header.download_schedule}
+      </p>
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        ><path
+          fill="white"
+          d="m12 16l-5-5l1.4-1.45l2.6 2.6V4h2v8.15l2.6-2.6L17 11zm-6 4q-.825 0-1.412-.587T4 18v-3h2v3h12v-3h2v3q0 .825-.587 1.413T18 20z" />
+      </svg>
+    </a>
+  </div>
   <div
     class=" animate-fade-up animate-ease-in-out flex flex-col gap-20 lg:flex-row lg:my-10 w-[90%] lg:mx-0 lg:w-[60%] lg:justify-between">
     <div
